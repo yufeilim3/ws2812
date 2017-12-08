@@ -79,7 +79,7 @@ Elaborating module <ballcontrol_2>.
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v" Line 43: Assignment to M_myalu_z ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v" Line 44: Assignment to M_myalu_v ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v" Line 45: Assignment to M_myalu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 54: Assignment to M_myball_ballposy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 56: Assignment to M_myball_ballposy ignored, since the identifier is never used
 
 Elaborating module <ws2812b_3>.
 
@@ -97,14 +97,14 @@ Elaborating module <reset_conditioner_11>.
 
 Synthesizing Unit <mojo_top_0>.
     Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v".
-WARNING:Xst:647 - Input <io_button<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <io_button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" line 47: Output port <ballposy> of the instance <myball> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" line 49: Output port <ballposy> of the instance <myball> is unconnected or connected to loadless signal.
     Found 2-bit register for signal <M_state_q>.
     Found 2-bit register for signal <M_playing_q>.
     Found finite state machine <FSM_0> for signal <M_state_q>.
@@ -118,12 +118,12 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 145
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 145
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 145
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 145
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 145
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 145
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 147
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 147
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 147
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 147
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 147
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 147
     Summary:
 	inferred   2 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).

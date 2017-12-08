@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2017 12 8 8 23 45)
+      (timestamp 2017 12 8 11 21 52)
       (program "Xilinx ngc2edif" (version "P.20131013"))
       (author "Xilinx. Inc ")
       (comment "This EDIF netlist is to be used within supported synthesis tools")
@@ -21106,6 +21106,12 @@
             (port avr_rx_busy
               (direction INPUT)
             )
+            (port lb
+              (direction INPUT)
+            )
+            (port rb
+              (direction INPUT)
+            )
             (port spi_miso
               (direction OUTPUT)
             )
@@ -21176,15 +21182,15 @@
               (property PK_HLUTNM (string "___XLNM___6___Mmux_M_playing_d21") (owner "Xilinx"))
               (property INIT (string "11150004") (owner "Xilinx"))
             )
-            (instance (rename io_button_4_IBUF_renamed_346 "io_button_4_IBUF")
+            (instance (rename rst_n_IBUF_renamed_346 "rst_n_IBUF")
               (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename io_button_3_IBUF_renamed_347 "io_button_3_IBUF")
+            (instance (rename lb_IBUF_renamed_347 "lb_IBUF")
               (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename rst_n_IBUF_renamed_348 "rst_n_IBUF")
+            (instance (rename rb_IBUF_renamed_348 "rb_IBUF")
               (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
@@ -21423,18 +21429,6 @@
               (property NLW_MACRO_TAG (integer 14) (owner "Xilinx"))
               (property NLW_MACRO_ALIAS (string "playercontrol_1_mypc") (owner "Xilinx"))
             )
-            (net io_button_3_IBUF
-              (joined
-                (portRef O (instanceRef io_button_3_IBUF_renamed_347))
-                (portRef in (instanceRef button_cond_left))
-              )
-            )
-            (net io_button_4_IBUF
-              (joined
-                (portRef O (instanceRef io_button_4_IBUF_renamed_346))
-                (portRef in (instanceRef button_cond_right))
-              )
-            )
             (net clk_BUFGP
               (joined
                 (portRef C (instanceRef M_playing_q_0))
@@ -21453,8 +21447,20 @@
             )
             (net rst_n_IBUF
               (joined
-                (portRef O (instanceRef rst_n_IBUF_renamed_348))
+                (portRef O (instanceRef rst_n_IBUF_renamed_346))
                 (portRef I (instanceRef M_reset_cond_in1_INV_0))
+              )
+            )
+            (net lb_IBUF
+              (joined
+                (portRef O (instanceRef lb_IBUF_renamed_347))
+                (portRef in (instanceRef button_cond_left))
+              )
+            )
+            (net rb_IBUF
+              (joined
+                (portRef O (instanceRef rb_IBUF_renamed_348))
+                (portRef in (instanceRef button_cond_right))
               )
             )
             (net (rename M_mypc_out_3_ "M_mypc_out<3>")
@@ -22194,22 +22200,22 @@
                 (portRef I (instanceRef clk_BUFGP_renamed_349))
               )
             )
-            (net (rename io_button_4_ "io_button<4>")
-              (joined
-                (portRef (member io_button 0))
-                (portRef I (instanceRef io_button_4_IBUF_renamed_346))
-              )
-            )
-            (net (rename io_button_3_ "io_button<3>")
-              (joined
-                (portRef (member io_button 1))
-                (portRef I (instanceRef io_button_3_IBUF_renamed_347))
-              )
-            )
             (net rst_n
               (joined
                 (portRef rst_n)
-                (portRef I (instanceRef rst_n_IBUF_renamed_348))
+                (portRef I (instanceRef rst_n_IBUF_renamed_346))
+              )
+            )
+            (net lb
+              (joined
+                (portRef lb)
+                (portRef I (instanceRef lb_IBUF_renamed_347))
+              )
+            )
+            (net rb
+              (joined
+                (portRef rb)
+                (portRef I (instanceRef rb_IBUF_renamed_348))
               )
             )
             (net (rename led_7_ "led<7>")

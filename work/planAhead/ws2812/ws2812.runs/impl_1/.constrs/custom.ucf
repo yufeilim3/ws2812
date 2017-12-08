@@ -1,3 +1,8 @@
 NET "dataOut" LOC = P24;
 NET "dataOut" IOSTANDARD = LVTTL;
-NET "button" LOC = P51 | IOSTANDARD = LVTTL | PULLUP;
+NET "lb" LOC = P57;
+NET "lb" IOSTANDARD = LVTTL;
+NET "lb" PULLUP;
+NET "rb" LOC = P92;
+NET "rb" IOSTANDARD = LVTTL;
+NET "rb" PULLUP;

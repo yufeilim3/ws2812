@@ -19,7 +19,9 @@ module mojo_top_0 (
     input avr_rx_busy,
     output reg dataOut,
     input [4:0] io_button,
-    output reg [23:0] io_led
+    output reg [23:0] io_led,
+    input lb,
+    input rb
   );
   
   
@@ -153,8 +155,8 @@ module mojo_top_0 (
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
     io_led = 24'h000000;
-    M_button_cond_left_in = io_button[3+0-:1];
-    M_button_cond_right_in = io_button[4+0-:1];
+    M_button_cond_left_in = lb;
+    M_button_cond_right_in = rb;
     M_edge_detector_left_in = M_button_cond_left_out;
     M_edge_detector_right_in = M_button_cond_right_out;
     M_mygs_rst = rst;
@@ -162,8 +164,8 @@ module mojo_top_0 (
     M_mybrick_rst = rst;
     M_mybrick_ballpos = M_myball_ballpos;
     M_mybrick_playing = M_playing_q;
-    M_mypc_lb = io_button[3+0-:1];
-    M_mypc_rb = io_button[4+0-:1];
+    M_mypc_lb = lb;
+    M_mypc_rb = rb;
     M_mypc_rst = rst;
     M_myball_rst = rst;
     M_myball_paddlepos = M_mypc_out;

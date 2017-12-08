@@ -13,7 +13,9 @@ module mojo_top (
     input avr_rx_busy,       // AVR RX buffer full
     output dataOut,
     input io_button[5],
-    output io_led[3][8]
+    output io_led[3][8],
+    input lb,
+    input rb
   ) {
   
   sig rst;                  // reset signal
@@ -50,8 +52,8 @@ module mojo_top (
     io_led = 3x{{8h00}};  
     
     // edge detectors for 2 buttons
-    button_cond_left.in = io_button[3];  
-    button_cond_right.in = io_button[4];
+    button_cond_left.in = lb;  
+    button_cond_right.in = rb;
     edge_detector_left.in = button_cond_left.out;
     edge_detector_right.in = button_cond_right.out;
     
@@ -67,8 +69,8 @@ module mojo_top (
     mybrick.playing = playing.q;
     
     // paddle module
-    mypc.lb = io_button[3];
-    mypc.rb = io_button[4];
+    mypc.lb = lb;
+    mypc.rb = rb;
     mypc.rst = rst;
     
     // ball module

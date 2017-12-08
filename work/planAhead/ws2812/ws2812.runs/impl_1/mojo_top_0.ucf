@@ -10,6 +10,12 @@
 
 NET "dataOut" LOC = P24;
 NET "dataOut" IOSTANDARD = LVTTL;
+NET "lb" LOC = P57;
+NET "lb" IOSTANDARD = LVTTL;
+NET "lb" PULLUP;
+NET "rb" LOC = P92;
+NET "rb" IOSTANDARD = LVTTL;
+NET "rb" PULLUP;
 
 ####################################################################################
 # Constraints from file : 'io_shield.ucf'
@@ -23,7 +29,6 @@ NET "io_led[2]" LOC = P94;
 NET "io_led[2]" IOSTANDARD = LVTTL;
 NET "io_led[3]" LOC = P95;
 NET "io_led[3]" IOSTANDARD = LVTTL;
-NET "io_led[4]" LOC = P92;
 NET "io_led[4]" IOSTANDARD = LVTTL;
 NET "io_led[5]" LOC = P93;
 NET "io_led[5]" IOSTANDARD = LVTTL;

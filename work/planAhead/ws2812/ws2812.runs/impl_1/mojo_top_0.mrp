@@ -8,7 +8,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 08 08:23:58 2017
+Mapped Date    : Fri Dec 08 11:22:05 2017
 
 Design Summary
 --------------
@@ -39,7 +39,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   194 out of   1,430   13%
+  Number of occupied Slices:                   195 out of   1,430   13%
   Number of MUXCYs used:                       180 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          646
     Number with an unused Flip Flop:           371 out of     646   57%
@@ -56,8 +56,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        46 out of     102   45%
-    Number of LOCed IOBs:                       45 out of      46   97%
+  Number of bonded IOBs:                        48 out of     102   47%
+    Number of LOCed IOBs:                       46 out of      48   95%
     IOB Flip Flops:                              1
 
 Specific Feature Utilization:
@@ -87,11 +87,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.13
+Average Fanout of Non-Clock Nets:                4.12
 
 Peak Memory Usage:  309 MB
-Total REAL time to MAP completion:  10 secs 
-Total CPU time to MAP completion (all processors):   10 secs 
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion (all processors):   13 secs 
 
 Table of Contents
 -----------------
@@ -133,8 +133,8 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
 INFO:LIT:243 - Logical network avr_rx_busy_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 8 more times for the following
-   (max. 5 shown):
+INFO:LIT:395 - The above info message is repeated 10 more times for the
+   following (max. 5 shown):
    spi_mosi_IBUF,
    spi_ss_IBUF,
    spi_sck_IBUF,
@@ -151,8 +151,8 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 46 IOs, 45 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
+INFO:Place:834 - Only a subset of IOs are locked. Out of 48 IOs, 46 are locked
+   and 2 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
@@ -227,8 +227,8 @@ Section 6 - IOB Properties
 | io_button(0)                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | io_button(1)                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | io_button(2)                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| io_button[3]                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| io_button[4]                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| io_button(3)                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| io_button(4)                       | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | io_led[0]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | io_led[1]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | io_led[2]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
@@ -253,6 +253,7 @@ Section 6 - IOB Properties
 | io_led[21]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | io_led[22]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | io_led[23]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lb                                 | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLUP   |          |
 | led[0]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[1]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[2]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
@@ -261,6 +262,7 @@ Section 6 - IOB Properties
 | led[5]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[6]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[7]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| rb                                 | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLUP   |          |
 | rst_n                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | spi_mosi                           | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | spi_sck                            | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |

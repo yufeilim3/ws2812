@@ -67,59 +67,59 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 4 secs 
-Total CPU  time at the beginning of Placer: 4 secs 
+Total REAL time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:67ca5a7d) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e040d20c) REAL time: 5 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 46 IOs, 45 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
+INFO:Place:834 - Only a subset of IOs are locked. Out of 48 IOs, 46 are locked
+   and 2 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:67ca5a7d) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e040d20c) REAL time: 5 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:67ca5a7d) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e040d20c) REAL time: 5 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-...
+....
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:977ca99d) REAL time: 6 secs 
+(Checksum:228b1ccc) REAL time: 8 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:977ca99d) REAL time: 6 secs 
+Phase 5.36  Local Placement Optimization (Checksum:228b1ccc) REAL time: 8 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:977ca99d) REAL time: 6 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:228b1ccc) REAL time: 8 secs 
 
 Phase 7.3  Local Placement Optimization
 ...
-Phase 7.3  Local Placement Optimization (Checksum:f908e37d) REAL time: 7 secs 
+Phase 7.3  Local Placement Optimization (Checksum:228c86c2) REAL time: 8 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:f908e37d) REAL time: 7 secs 
+Phase 8.5  Local Placement Optimization (Checksum:228c86c2) REAL time: 8 secs 
 
 Phase 9.8  Global Placement
-...............................................................................
-.................................................................................................................................
-.............................................................................
-Phase 9.8  Global Placement (Checksum:dd60b966) REAL time: 8 secs 
+......................................................
+..................................................................................................................................................................................................
+............................................
+Phase 9.8  Global Placement (Checksum:9f46bee1) REAL time: 10 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:dd60b966) REAL time: 8 secs 
+Phase 10.5  Local Placement Optimization (Checksum:9f46bee1) REAL time: 10 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:830e11e6) REAL time: 9 secs 
+Phase 11.18  Placement Optimization (Checksum:851c22a9) REAL time: 12 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:830e11e6) REAL time: 9 secs 
+Phase 12.5  Local Placement Optimization (Checksum:851c22a9) REAL time: 12 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:830e11e6) REAL time: 9 secs 
+Phase 13.34  Placement Validation (Checksum:851c22a9) REAL time: 12 secs 
 
-Total REAL time to Placer completion: 9 secs 
-Total CPU  time to Placer completion: 9 secs 
+Total REAL time to Placer completion: 12 secs 
+Total CPU  time to Placer completion: 12 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -151,7 +151,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   194 out of   1,430   13%
+  Number of occupied Slices:                   195 out of   1,430   13%
   Number of MUXCYs used:                       180 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          646
     Number with an unused Flip Flop:           371 out of     646   57%
@@ -168,8 +168,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        46 out of     102   45%
-    Number of LOCed IOBs:                       45 out of      46   97%
+  Number of bonded IOBs:                        48 out of     102   47%
+    Number of LOCed IOBs:                       46 out of      48   95%
     IOB Flip Flops:                              1
 
 Specific Feature Utilization:
@@ -199,11 +199,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.13
+Average Fanout of Non-Clock Nets:                4.12
 
 Peak Memory Usage:  309 MB
-Total REAL time to MAP completion:  10 secs 
-Total CPU time to MAP completion (all processors):   10 secs 
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion (all processors):   13 secs 
 
 Mapping completed.
 See MAP report file "mojo_top_0.mrp" for details.
@@ -253,7 +253,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   194 out of   1,430   13%
+  Number of occupied Slices:                   195 out of   1,430   13%
   Number of MUXCYs used:                       180 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          646
     Number with an unused Flip Flop:           371 out of     646   57%
@@ -269,8 +269,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        46 out of     102   45%
-    Number of LOCed IOBs:                       45 out of      46   97%
+  Number of bonded IOBs:                        48 out of     102   47%
+    Number of LOCed IOBs:                       46 out of      48   95%
     IOB Flip Flops:                              1
 
 Specific Feature Utilization:
@@ -308,6 +308,8 @@ PAR will use up to 2 processors
 WARNING:Par:288 - The signal io_button(0)_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal io_button(1)_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal io_button(2)_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal io_button(3)_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal io_button(4)_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal cclk_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal spi_sck_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal avr_rx_busy_IBUF has no load.  PAR will not attempt to route this signal.
@@ -321,9 +323,9 @@ Phase  1  : 3305 unrouted;      REAL time: 3 secs
 
 Phase  2  : 2956 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 1473 unrouted;      REAL time: 4 secs 
+Phase  3  : 1527 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 1473 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 1527 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
 Updating file: mojo_top_0_routed.ncd with current fully routed design.
 
@@ -339,7 +341,7 @@ Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL 
 
 Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion (all processors): 5 secs 
+Total CPU time to Router completion (all processors): 6 secs 
 
 Generating "PAR" statistics.
 
@@ -370,8 +372,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |     2.408ns|    17.592ns|       0|           0
-   50%                                      | HOLD        |     0.416ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |     2.369ns|    17.631ns|       0|           0
+   50%                                      | HOLD        |     0.421ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -382,19 +384,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 9 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 11 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 Total REAL time to PAR completion: 5 secs 
 Total CPU time to PAR completion (all processors): 6 secs 
 
-Peak Memory Usage:  293 MB
+Peak Memory Usage:  291 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 11
+Number of warning messages: 13
 Number of info messages: 0
 
 Writing design to file mojo_top_0_routed.ncd
@@ -410,7 +412,7 @@ Loading device for application Rf_Device from file '6slx9.nph' in environment
 C:\Xilinx\14.7\ISE_DS\ISE\.
    "mojo_top_0" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
-Analysis completed Fri Dec 08 08:24:19 2017
+Analysis completed Fri Dec 08 11:22:30 2017
 --------------------------------------------------------------------------------
 
 Generating Report ...
