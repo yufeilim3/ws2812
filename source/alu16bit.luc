@@ -1,0 +1,54 @@
+module alu16bit (
+    input a[16],      //16-bit input(A)
+    input b[16],      //16-bit input(B)
+    input alufn[6],  //6-bit inout(ALUFN[5:0])
+    output z,        //1-bit output Z indicates if s[8] is zero
+    output v,        //1-bit output v indicates if s[8] overflows 
+    output n,        //1-bit output n indicates if s[8] is negative
+    output out[16]    //16-bit output
+  ) {
+
+  adder16bit myadder;      //instantiate the adder, boolean, shifter and comparator modules
+  boole myboole;
+  shifter myshifter;
+  cmp mycmp;
+  
+  always {
+  
+    myadder.a = a;        //assigning inputs to adder module
+    myadder.b = b;
+    myadder.alufn = alufn[1:0];
+    
+    myboole.a = a;        //assigning inputs to boolean module
+    myboole.b = b;
+    myboole.alufn = alufn[3:0];
+    
+    myshifter.a = a;      //assigning inputs to shifter module
+    myshifter.b = b;
+    myshifter.alufn = alufn[1:0];
+    
+    mycmp.z = myadder.z;  //assigning inputs to comparator module, note that the Z,V and N values are derived from adder module
+    mycmp.v = myadder.v;
+    mycmp.n = myadder.n;
+    mycmp.alufn = alufn[2:1];
+    
+    case (alufn[5:4]){    //ALUFN[5:4] controls which output to take
+      default:
+        out = 0;          //default output is 0
+      2b00:               //adder module will provide the output in this case
+        out = myadder.s;
+        z = myadder.z;
+        v = myadder.v;
+        n = myadder.n;
+      2b01:               //boolean module will provide the output in this case
+        out = myboole.boole;
+      2b10:               //shifter module will provide the output in this case
+        out = myshifter.shift;
+      2b11:               //comparator module will provide the output in this case
+        out = mycmp.cmp;
+    }
+    z = myadder.z;        //assigns Z,V and N to be from adder no matter which case for ALUFN[5:4]
+    v = myadder.v;
+    n = myadder.n; 
+  }
+}

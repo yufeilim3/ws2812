@@ -1,0 +1,10 @@
+module multiplier (
+    input a[16],      //16-bit input(A)
+    input b[16],      //16-bit input(B)
+    output mult[16]   //16-bit output
+  ) {
+
+  always {
+    mult = a*b;      //multiplication
+  }
+}

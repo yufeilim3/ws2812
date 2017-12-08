@@ -1,0 +1,408 @@
+module ballcontrol (
+    input clk,  // clock
+    input rst,  // reset
+    output ballpos[8],  //pos of ball
+    output ballposx[4],  //x of ball
+    output ballposy[4],  //y of ball
+    input paddlepos[4],  //paddle pos 
+    input playing[2],  //playing state
+    output endgame  //signal for gameover, used in mojo top
+  ) {
+  sig ball[8];  //signals for ball, paddle etc
+  sig ballx[4];
+  sig bally[4];
+  sig pleft[4];
+  sig pright[4];
+  sig pcenter[3][4];
+  alu16bit myalu;  //alu
+  sig aluout[4];
+  sig array[16][16][8];
+    
+  .clk(clk){
+    .rst(rst){
+      dff counter[22];  //count for when ball changes
+      dff tempcounter[29];  //pause for awhile before the start of game
+      dff pos[8];
+      dff posx[4];
+      dff posy[4];
+      dff end;
+      fsm state = {GAMESTART, LEFTUP, LEFTDOWN, RIGHTUP, RIGHTDOWN};
+    }
+  }
+  always {
+    myalu.a = posx.q;  //alu
+    myalu.b = 16b0;  
+    myalu.alufn = 6b0;
+    ballx = myalu.out[3:0];
+    bally = posy.q;
+    ball = pos.q;
+    endgame = end.q;
+    case(paddlepos){  //sets the pos of for paddle collisions
+      default:
+        pleft = b0000;
+        pcenter = {4b0000,4b0001,4b0010};
+        pright = b0011;
+      b0000:
+        pleft = b0000;
+        pcenter = {4b0000,4b0001,4b0010};
+        pright = b0011;
+      b0001:
+        pleft = b0000;
+        pcenter = {4b0001,4b0010,4b0011};
+        pright = b0100;
+      b0010:
+        pleft = b0001;
+        pcenter = {4b0010,4b0011,4b0100};
+        pright = b0101;
+      b0011:
+        pleft = b0010;
+        pcenter = {4b0011,4b0100,4b0101};
+        pright = b0110;
+      b0100:
+        pleft = b0011;
+        pcenter = {4b0100,4b0101,4b0110};
+        pright = b0111;
+      b0101:
+        pleft = b0100;
+        pcenter = {4b0101,4b0110,4b0111};
+        pright = b1000;
+      b0110:
+        pleft = b0101;
+        pcenter = {4b0110,4b0111,4b1000};
+        pright = b1001;
+      b0111:
+        pleft = b0110;
+        pcenter = {4b0111,4b1000,4b1001};
+        pright = b1010;
+      b1000:
+        pleft = b0111;
+        pcenter = {4b1000,4b1001,4b1010};
+        pright = b1011;
+      b1001:
+        pleft = b1000;
+        pcenter = {4b1001,4b1010,4b1011};
+        pright = b1100;
+      b1010:
+        pleft = b1001;
+        pcenter = {4b1010,4b1011,4b1100};
+        pright = b1101;
+      b1011:
+        pleft = b1010;
+        pcenter = {4b1011,4b1100,4b1101};
+        pright = b1110;
+      b1100:
+        pleft = b1011;
+        pcenter = {4b1100,4b1101,4b1110};
+        pright = b1111;
+      b1101:
+        pleft = b1100;
+        pcenter = {4b1101,4b1110,4b1111};
+        pright = b1111;
+      b1110:
+        pleft = b1101;
+        pcenter = {4b1110,4b1111,4b1111};
+        pright = b1111;
+      b1111:
+        pleft = b1110;
+        pcenter = {4b1111,4b1111,4b1111};
+        pright = b1111;
+    }
+    array[0] = {8d15,8d14,8d13,8d12,8d11,8d10,8d9,8d8,8d7,8d6,8d5,8d4,8d3,8d2,8d1,8d0};                  //generates led array
+    array[1] = {8d16,8d17,8d18,8d19,8d20,8d21,8d22,8d23,8d24,8d25,8d26,8d27,8d28,8d29,8d30,8d31};
+    array[2] = {8d47,8d46,8d45,8d44,8d43,8d42,8d41,8d40,8d39,8d38,8d37,8d36,8d35,8d34,8d33,8d32};
+    array[3] = {8d48,8d49,8d50,8d51,8d52,8d53,8d54,8d55,8d56,8d57,8d58,8d59,8d60,8d61,8d62,8d63};
+    array[4] = {8d79,8d78,8d77,8d76,8d75,8d74,8d73,8d72,8d71,8d70,8d69,8d68,8d67,8d66,8d65,8d64};
+    array[5] = {8d80,8d81,8d82,8d83,8d84,8d85,8d86,8d87,8d88,8d89,8d90,8d91,8d92,8d93,8d94,8d95};
+    array[6] = {8d111,8d110,8d109,8d108,8d107,8d106,8d105,8d104,8d103,8d102,8d101,8d100,8d99,8d98,8d97,8d96};
+    array[7] = {8d112,8d113,8d114,8d115,8d116,8d117,8d118,8d119,8d120,8d121,8d122,8d123,8d124,8d125,8d126,8d127};
+    array[8] = {143,142,141,140,139,138,137,136,135,134,133,132,131,130,129,128};
+    array[9] = {144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159};
+    array[10] = {175,174,173,172,171,170,169,168,167,166,165,164,163,162,161,160};
+    array[11] = {176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191};
+    array[12] = {207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192};
+    array[13] = {208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223};
+    array[14] = {239,238,237,236,235,234,233,232,231,230,229,228,227,226,225,224};
+    array[15] = {240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255};
+    
+    case(state.q){  
+      state.GAMESTART:  //game start
+        tempcounter.d = tempcounter.q+1;  //make ball hold for a longer time before game starts
+        ballx = b0;
+        bally = b1;
+        posx.d = ballx;
+        posy.d = bally;
+        ball = array[posy.q][posx.q];
+        pos.d = ball;
+        end.d = 0;
+        endgame = end.q; 
+        if (tempcounter.q[28]==1){  
+          tempcounter.d = 0;
+          if (playing==2b01){  //only start if state is playing 
+            state.d = state.RIGHTUP;
+          }
+          else{
+            state.d = state.GAMESTART;  //else remain in current state
+          }
+        } 
+        
+      state.RIGHTUP:  //RIGHT UP MOVEMENT
+        if (playing==2b00){  //if playing state is gamestart, go back to gamestart state
+          state.d = state.GAMESTART;
+        }
+        counter.d = counter.q+1;
+        case(counter.q){
+          b1111111111111111111000:  //increment x pos
+            if (posx.q!=b1111){
+              myalu.a = posx.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000000;
+              ballx = myalu.out[3:0];
+              posx.d = ballx;
+            } 
+            
+          b1111111111111111111001:    //+ y pos
+            if (posy.q!=b1111){
+              myalu.a = posy.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000000;
+              bally = myalu.out[3:0];
+              posy.d = bally;
+            }
+            
+          b1111111111111111111011:  //set position of ball according to array generated
+            if(posy.q == b1111 && posx.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTDOWN;
+            }
+            else if (posy.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTDOWN;
+            }
+            else if (posx.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTUP;
+            }
+            else{
+              ball = array[posy.q][posx.q];            
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTUP;
+            }
+          }
+      
+      state.LEFTUP:  //LEFT UP MOVEMENT
+        if (playing==2b00){              //same as state for right up movement, but change for left
+          state.d = state.GAMESTART;
+        }
+        counter.d = counter.q+1;
+        case(counter.q){
+          b1111111111111111111000:
+            if (posx.q!=b0000){
+              myalu.a = posx.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000001;
+              ballx = myalu.out[3:0];
+              posx.d = ballx;
+            }
+            
+          b1111111111111111111001: 
+            if (posy.q!=b1111){
+              myalu.a = posy.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000000;
+              bally = myalu.out[3:0];
+              posy.d = bally;
+            }
+            
+          b1111111111111111111011:
+            if (posx.q == b0000 && posy.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTDOWN;
+            }
+            else if (posy.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTDOWN;
+            }
+            else if (posx.q == b0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTUP;
+            }
+            else{
+              ball = array[posy.q][posx.q];            
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTUP;
+            }
+          }  
+      
+      state.RIGHTDOWN:  //RIGHT DOWN MOVEMENT
+        if (playing==2b00){
+          state.d = state.GAMESTART;
+        }
+        counter.d = counter.q+1;
+        case (counter.q){
+          b1:                                        //extra check for collision with paddle
+            if(posy.q==b0001){
+              myalu.a = posx.q;
+              myalu.b = 16b0;
+              myalu.alufn = 6b000000;
+              aluout = myalu.out[3:0];
+              if (pleft==aluout){
+                ball = array[posy.q][posx.q];
+                pos.d = ball;
+                counter.d = 0;
+                state.d = state.LEFTUP;
+              }
+              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout){
+                ball = array[posy.q][posx.q];
+                pos.d = ball;
+                counter.d = 0;
+                state.d = state.RIGHTUP;
+              }
+              else {
+                counter.d = 0;
+                end.d=1;
+                state.d = state.GAMESTART;
+              }
+            }
+            
+          b1111111111111111111001:
+            if (posx.q!=b1111){
+              myalu.a = posx.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000000;
+              ballx = myalu.out[3:0];
+              posx.d = ballx;
+            }
+            
+          b1111111111111111111000:
+            if (posy.q!=b0001){
+              myalu.a = posy.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000001;
+              bally = myalu.out[3:0];
+              posy.d = bally;
+            }
+                        
+          b1111111111111111111011:
+            if (posx.q == b1111 && posy.q == 0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTUP;
+            }
+            else if (posy.q == b0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTUP;
+            }
+            else if (posx.q == b1111){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTDOWN;
+            }
+            else{
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTDOWN;
+            }
+          }
+        
+      state.LEFTDOWN:  //LEFT DOWN MOVEMENT
+        if (playing==2b00){                      //same as rightdown but opposite
+          state.d = state.GAMESTART;
+        }
+        counter.d = counter.q+1;
+        case(counter.q){
+          b1:
+            if (posy.q==b0001){
+              myalu.a = posx.q;
+              myalu.b = 16b0;
+              myalu.alufn = 6b000000;
+              aluout = myalu.out[3:0];
+              if (pright==aluout){
+                ball = array[posy.q][posx.q];
+                pos.d = ball;
+                counter.d = 0;
+                state.d = state.RIGHTUP;
+              }
+              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout){
+                ball = array[posy.q][posx.q];
+                pos.d = ball;
+                counter.d = 0;
+                state.d = state.LEFTUP;
+              }
+              else{
+                counter.d = 0;
+                end.d=1;
+                state.d = state.GAMESTART;
+              }
+            }
+          b1111111111111111111001:
+            if (posx.q!=b0000){
+              myalu.a = posx.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000001;
+              ballx = myalu.out[3:0];
+              posx.d = ballx;
+            }
+            
+          b1111111111111111111000:
+            if (posy.q!=b0001){
+              myalu.a = posy.q;
+              myalu.b = 16b1;
+              myalu.alufn = 6b000001;
+              bally = myalu.out[3:0];
+              posy.d = bally;
+            }
+     
+          b1111111111111111111011:
+            if (posx.q == b1111 && posy.q == b0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTUP;
+            }
+            else if (posy.q == b0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTUP;
+            }
+            else if (posx.q == b0000){
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.RIGHTDOWN;
+            }
+            else{
+              ball = array[posy.q][posx.q];
+              pos.d = ball;
+              counter.d = 0;
+              state.d = state.LEFTDOWN;
+            }
+            
+          }
+       
+     }
+    endgame = end.q;
+    ballpos = ball;
+    ballposy = bally;
+    ballposx = ballx;
+  }
+}  

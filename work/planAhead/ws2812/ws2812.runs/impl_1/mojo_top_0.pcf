@@ -1,0 +1,200 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 08 08:24:07 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "io_button(0)" LOCATE = SITE "P137" LEVEL 1;
+COMP "io_button(1)" LOCATE = SITE "P140" LEVEL 1;
+COMP "io_button(2)" LOCATE = SITE "P139" LEVEL 1;
+COMP "io_button[3]" LOCATE = SITE "P142" LEVEL 1;
+COMP "io_button[4]" LOCATE = SITE "P138" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
+COMP "dataOut" LOCATE = SITE "P24" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "io_led[0]" LOCATE = SITE "P97" LEVEL 1;
+COMP "io_led[1]" LOCATE = SITE "P98" LEVEL 1;
+COMP "io_led[2]" LOCATE = SITE "P94" LEVEL 1;
+COMP "io_led[3]" LOCATE = SITE "P95" LEVEL 1;
+COMP "io_led[4]" LOCATE = SITE "P92" LEVEL 1;
+COMP "io_led[5]" LOCATE = SITE "P93" LEVEL 1;
+COMP "io_led[6]" LOCATE = SITE "P87" LEVEL 1;
+COMP "io_led[7]" LOCATE = SITE "P88" LEVEL 1;
+COMP "io_led[8]" LOCATE = SITE "P84" LEVEL 1;
+COMP "io_led[9]" LOCATE = SITE "P85" LEVEL 1;
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
+COMP "led[1]" LOCATE = SITE "P133" LEVEL 1;
+COMP "led[2]" LOCATE = SITE "P132" LEVEL 1;
+COMP "led[3]" LOCATE = SITE "P131" LEVEL 1;
+COMP "led[4]" LOCATE = SITE "P127" LEVEL 1;
+COMP "led[5]" LOCATE = SITE "P126" LEVEL 1;
+COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
+COMP "led[7]" LOCATE = SITE "P123" LEVEL 1;
+COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "io_led[10]" LOCATE = SITE "P82" LEVEL 1;
+COMP "io_led[11]" LOCATE = SITE "P83" LEVEL 1;
+COMP "io_led[12]" LOCATE = SITE "P80" LEVEL 1;
+COMP "io_led[20]" LOCATE = SITE "P22" LEVEL 1;
+COMP "io_led[13]" LOCATE = SITE "P81" LEVEL 1;
+COMP "io_led[21]" LOCATE = SITE "P23" LEVEL 1;
+COMP "io_led[14]" LOCATE = SITE "P11" LEVEL 1;
+COMP "io_led[15]" LOCATE = SITE "P14" LEVEL 1;
+COMP "io_led[23]" LOCATE = SITE "P26" LEVEL 1;
+COMP "io_led[16]" LOCATE = SITE "P15" LEVEL 1;
+COMP "io_led[17]" LOCATE = SITE "P16" LEVEL 1;
+COMP "io_led[18]" LOCATE = SITE "P17" LEVEL 1;
+COMP "io_led[19]" LOCATE = SITE "P21" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+TIMEGRP clk = BEL "M_playing_q_0" BEL "M_playing_q_1" BEL
+        "mypc/M_state_q_FSM_FFd1" BEL "mypc/M_state_q_FSM_FFd2" BEL
+        "mypc/M_pos_q_3" BEL "mypc/M_pos_q_2" BEL "mypc/M_pos_q_1" BEL
+        "mypc/M_pos_q_0" BEL "clk_BUFGP/BUFG" BEL "myws/M_ballcounter_q_0" BEL
+        "myws/M_ballcounter_q_1" BEL "myws/M_ballcounter_q_2" BEL
+        "myws/M_ballcounter_q_3" BEL "myws/M_ballcounter_q_4" BEL
+        "myws/M_ballcounter_q_5" BEL "myws/M_ballcounter_q_6" BEL
+        "myws/M_ballcounter_q_7" BEL "myws/M_paddlelencounter_q_0" BEL
+        "myws/M_paddlelencounter_q_1" BEL "myws/M_gameovercounter_q_0" BEL
+        "myws/M_gameovercounter_q_1" BEL "myws/M_gameovercounter_q_2" BEL
+        "myws/M_gameovercounter_q_3" BEL "myws/M_gameovercounter_q_4" BEL
+        "myws/M_gameovercounter_q_5" BEL "myws/M_gameovercounter_q_6" BEL
+        "myws/M_gameovercounter_q_7" BEL "myws/M_tbitcounter_q_10" BEL
+        "myws/M_tbitcounter_q_11" BEL "myws/M_tbitcounter_q_12" BEL
+        "myws/M_state_q_FSM_FFd10" BEL "myws/M_state_q_FSM_FFd11" BEL
+        "myws/M_state_q_FSM_FFd12" BEL "myws/M_state_q_FSM_FFd13" BEL
+        "myws/M_state_q_FSM_FFd14" BEL "myws/M_state_q_FSM_FFd20" BEL
+        "myws/M_state_q_FSM_FFd15" BEL "myws/M_state_q_FSM_FFd21" BEL
+        "myws/M_state_q_FSM_FFd16" BEL "myws/M_state_q_FSM_FFd22" BEL
+        "myws/M_state_q_FSM_FFd17" BEL "myws/M_state_q_FSM_FFd18" BEL
+        "myws/M_state_q_FSM_FFd23" BEL "myws/M_state_q_FSM_FFd19" BEL
+        "myws/M_state_q_FSM_FFd24" BEL "myws/M_state_q_FSM_FFd25" BEL
+        "myws/M_state_q_FSM_FFd26" BEL "myws/M_state_q_FSM_FFd27" BEL
+        "myws/M_pause_q_10" BEL "myws/M_pause_q_11" BEL "myws/M_pause_q_12"
+        BEL "myws/M_pause_q_13" BEL "myws/M_pause_q_14" BEL
+        "myws/M_pause_q_15" BEL "myws/M_pause_q_16" BEL
+        "myws/M_state_q_FSM_FFd1" BEL "myws/M_state_q_FSM_FFd2" BEL
+        "myws/M_state_q_FSM_FFd3" BEL "myws/M_state_q_FSM_FFd4" BEL
+        "myws/M_state_q_FSM_FFd5" BEL "myws/M_state_q_FSM_FFd6" BEL
+        "myws/M_state_q_FSM_FFd7" BEL "myws/M_state_q_FSM_FFd8" BEL
+        "myws/M_state_q_FSM_FFd9" BEL "myws/M_bit_q" BEL
+        "myws/M_bitcounter_q_0" BEL "myws/M_bitcounter_q_1" BEL
+        "myws/M_bitcounter_q_2" BEL "myws/M_bitcounter_q_3" BEL
+        "myws/M_bitcounter_q_4" BEL "myws/M_timecounter_q_0" BEL
+        "myws/M_timecounter_q_1" BEL "myws/M_timecounter_q_2" BEL
+        "myws/M_timecounter_q_3" BEL "myws/M_timecounter_q_4" BEL
+        "myws/M_timecounter_q_5" BEL "myws/M_timecounter_q_6" BEL
+        "myws/M_tbitcounter_q_0" BEL "myws/M_tbitcounter_q_1" BEL
+        "myws/M_tbitcounter_q_2" BEL "myws/M_tbitcounter_q_3" BEL
+        "myws/M_tbitcounter_q_4" BEL "myws/M_tbitcounter_q_5" BEL
+        "myws/M_tbitcounter_q_6" BEL "myws/M_tbitcounter_q_7" BEL
+        "myws/M_tbitcounter_q_8" BEL "myws/M_tbitcounter_q_9" BEL
+        "myws/M_paddlecounter_q_0" BEL "myws/M_paddlecounter_q_1" BEL
+        "myws/M_paddlecounter_q_2" BEL "myws/M_paddlecounter_q_3" BEL
+        "myws/M_pause_q_0" BEL "myws/M_pause_q_1" BEL "myws/M_pause_q_2" BEL
+        "myws/M_pause_q_3" BEL "myws/M_pause_q_4" BEL "myws/M_pause_q_5" BEL
+        "myws/M_pause_q_6" BEL "myws/M_pause_q_7" BEL "myws/M_pause_q_8" BEL
+        "myws/M_pause_q_9" BEL "myws/M_brickcounter_q_0" BEL
+        "myws/M_brickcounter_q_1" BEL "myws/M_brickcounter_q_2" BEL
+        "myws/M_brickcounter_q_3" BEL "myws/M_brickcounter_q_4" BEL
+        "myws/M_brickcounter_q_5" BEL "myws/M_brickcounter_q_6" BEL
+        "myws/M_brickcounter_q_7" BEL "myws/M_gamestartcounter_q_0" BEL
+        "myws/M_gamestartcounter_q_1" BEL "myws/M_gamestartcounter_q_2" BEL
+        "myws/M_gamestartcounter_q_3" BEL "myws/M_gamestartcounter_q_4" BEL
+        "myws/M_gamestartcounter_q_5" BEL "myws/M_gamestartcounter_q_6" BEL
+        "myws/M_gamestartcounter_q_7" BEL "mybrick/M_counter_q_21" BEL
+        "mybrick/M_counter_q_20" BEL "mybrick/M_counter_q_19" BEL
+        "mybrick/M_counter_q_18" BEL "mybrick/M_counter_q_17" BEL
+        "mybrick/M_counter_q_16" BEL "mybrick/M_counter_q_15" BEL
+        "mybrick/M_counter_q_14" BEL "mybrick/M_counter_q_13" BEL
+        "mybrick/M_counter_q_12" BEL "mybrick/M_counter_q_11" BEL
+        "mybrick/M_counter_q_10" BEL "mybrick/M_counter_q_9" BEL
+        "mybrick/M_counter_q_8" BEL "mybrick/M_counter_q_7" BEL
+        "mybrick/M_counter_q_6" BEL "mybrick/M_counter_q_5" BEL
+        "mybrick/M_counter_q_4" BEL "mybrick/M_counter_q_3" BEL
+        "mybrick/M_counter_q_2" BEL "mybrick/M_counter_q_1" BEL
+        "mybrick/M_counter_q_0" BEL "mybrick/M_bsixteen_q_3" BEL
+        "mybrick/M_bsixteen_q_2" BEL "mybrick/M_bfourteen_q_3" BEL
+        "mybrick/M_bthirteen_q_2" BEL "mybrick/M_bfifthteen_q_2" BEL
+        "mybrick/M_btwelve_q_1" BEL "mybrick/M_beleven_q_3" BEL
+        "mybrick/M_bten_q_0" BEL "mybrick/M_bnine_q_3" BEL
+        "mybrick/M_bseven_q_2" BEL "mybrick/M_bsix_q_2" BEL
+        "mybrick/M_beight_q_3" BEL "mybrick/M_bfive_q_1" BEL
+        "mybrick/M_bthree_q_2" BEL "mybrick/M_btwo_q_3" BEL
+        "mybrick/M_bythree_q_0" BEL "mybrick/M_bytwo_q_0" BEL
+        "mybrick/M_byone_q_0" BEL "mybrick/M_end_q" BEL "mybrick/M_state_q"
+        BEL "mybrick/M_bysixteen_q_0" BEL "mybrick/M_byfifthteen_q_0" BEL
+        "mybrick/M_byten_q_0" BEL "mybrick/M_bone_q_0" BEL
+        "mybrick/M_byfourteen_q_0" BEL "mybrick/M_bythirteen_q_0" BEL
+        "mybrick/M_bytwelve_q_0" BEL "mybrick/M_byeleven_q_0" BEL
+        "mybrick/M_bynine_q_1" BEL "mybrick/M_byseven_q_1" BEL
+        "mybrick/M_bysix_q_1" BEL "mybrick/M_byeight_q_1" BEL
+        "mybrick/M_byfive_q_1" BEL "mybrick/M_byfour_q_1" BEL
+        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+        "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0" BEL
+        "edge_detector_left/M_last_q" BEL "edge_detector_right/M_last_q" BEL
+        "button_cond_left/M_ctr_q_0" BEL "button_cond_left/M_ctr_q_1" BEL
+        "button_cond_left/M_ctr_q_2" BEL "button_cond_left/M_ctr_q_3" BEL
+        "button_cond_left/M_ctr_q_4" BEL "button_cond_left/M_ctr_q_5" BEL
+        "button_cond_left/M_ctr_q_6" BEL "button_cond_left/M_ctr_q_7" BEL
+        "button_cond_left/M_ctr_q_8" BEL "button_cond_left/M_ctr_q_9" BEL
+        "button_cond_left/M_ctr_q_10" BEL "button_cond_left/M_ctr_q_11" BEL
+        "button_cond_left/M_ctr_q_12" BEL "button_cond_left/M_ctr_q_13" BEL
+        "button_cond_left/M_ctr_q_14" BEL "button_cond_left/M_ctr_q_15" BEL
+        "button_cond_left/M_ctr_q_16" BEL "button_cond_left/M_ctr_q_17" BEL
+        "button_cond_left/M_ctr_q_18" BEL "button_cond_left/M_ctr_q_19" BEL
+        "button_cond_left/sync/M_pipe_q_1" BEL
+        "button_cond_left/sync/Mshreg_M_pipe_q_1" BEL
+        "button_cond_right/M_ctr_q_0" BEL "button_cond_right/M_ctr_q_1" BEL
+        "button_cond_right/M_ctr_q_2" BEL "button_cond_right/M_ctr_q_3" BEL
+        "button_cond_right/M_ctr_q_4" BEL "button_cond_right/M_ctr_q_5" BEL
+        "button_cond_right/M_ctr_q_6" BEL "button_cond_right/M_ctr_q_7" BEL
+        "button_cond_right/M_ctr_q_8" BEL "button_cond_right/M_ctr_q_9" BEL
+        "button_cond_right/M_ctr_q_10" BEL "button_cond_right/M_ctr_q_11" BEL
+        "button_cond_right/M_ctr_q_12" BEL "button_cond_right/M_ctr_q_13" BEL
+        "button_cond_right/M_ctr_q_14" BEL "button_cond_right/M_ctr_q_15" BEL
+        "button_cond_right/M_ctr_q_16" BEL "button_cond_right/M_ctr_q_17" BEL
+        "button_cond_right/M_ctr_q_18" BEL "button_cond_right/M_ctr_q_19" BEL
+        "button_cond_right/sync/M_pipe_q_1" BEL
+        "button_cond_right/sync/Mshreg_M_pipe_q_1" BEL
+        "myball/M_state_q_FSM_FFd2_1" BEL "myball/M_posy_q_0" BEL
+        "myball/M_posy_q_1" BEL "myball/M_posy_q_2" BEL "myball/M_posy_q_3"
+        BEL "myball/M_state_q_FSM_FFd3_1" BEL "myball/M_counter_q_0" BEL
+        "myball/M_counter_q_1" BEL "myball/M_counter_q_2" BEL
+        "myball/M_counter_q_3" BEL "myball/M_counter_q_4" BEL
+        "myball/M_counter_q_5" BEL "myball/M_counter_q_6" BEL
+        "myball/M_counter_q_7" BEL "myball/M_counter_q_8" BEL
+        "myball/M_counter_q_9" BEL "myball/M_counter_q_1_1" BEL
+        "myball/M_tempcounter_q_10" BEL "myball/M_tempcounter_q_11" BEL
+        "myball/M_tempcounter_q_12" BEL "myball/M_tempcounter_q_13" BEL
+        "myball/M_tempcounter_q_14" BEL "myball/M_tempcounter_q_20" BEL
+        "myball/M_tempcounter_q_15" BEL "myball/M_tempcounter_q_21" BEL
+        "myball/M_tempcounter_q_16" BEL "myball/M_tempcounter_q_22" BEL
+        "myball/M_tempcounter_q_17" BEL "myball/M_tempcounter_q_23" BEL
+        "myball/M_tempcounter_q_18" BEL "myball/M_tempcounter_q_24" BEL
+        "myball/M_tempcounter_q_19" BEL "myball/M_tempcounter_q_25" BEL
+        "myball/M_tempcounter_q_26" BEL "myball/M_tempcounter_q_27" BEL
+        "myball/M_tempcounter_q_28" BEL "myball/M_state_q_FSM_FFd1" BEL
+        "myball/M_state_q_FSM_FFd2" BEL "myball/M_state_q_FSM_FFd3" BEL
+        "myball/M_tempcounter_q_0" BEL "myball/M_tempcounter_q_1" BEL
+        "myball/M_tempcounter_q_2" BEL "myball/M_tempcounter_q_3" BEL
+        "myball/M_posx_q_0" BEL "myball/M_tempcounter_q_4" BEL
+        "myball/M_posx_q_1" BEL "myball/M_posx_q_2" BEL
+        "myball/M_tempcounter_q_5" BEL "myball/M_tempcounter_q_6" BEL
+        "myball/M_posx_q_3" BEL "myball/M_tempcounter_q_7" BEL
+        "myball/M_tempcounter_q_8" BEL "myball/M_tempcounter_q_9" BEL
+        "myball/M_pos_q_0" BEL "myball/M_pos_q_1" BEL "myball/M_pos_q_2" BEL
+        "myball/M_pos_q_3" BEL "myball/M_pos_q_4" BEL "myball/M_pos_q_5" BEL
+        "myball/M_pos_q_6" BEL "myball/M_pos_q_7" BEL "myball/M_counter_q_10"
+        BEL "myball/M_counter_q_11" BEL "myball/M_counter_q_12" BEL
+        "myball/M_counter_q_13" BEL "myball/M_counter_q_14" BEL
+        "myball/M_counter_q_20" BEL "myball/M_counter_q_15" BEL
+        "myball/M_counter_q_21" BEL "myball/M_counter_q_16" BEL
+        "myball/M_counter_q_17" BEL "myball/M_counter_q_18" BEL
+        "myball/M_counter_q_19" BEL "myball/M_end_q" BEL
+        "myball/M_state_q_FSM_FFd1_1" BEL "myball/M_posy_q_0_1";
+TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

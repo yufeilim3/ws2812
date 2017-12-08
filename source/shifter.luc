@@ -1,0 +1,22 @@
+module shifter (
+    input a[16],      //16-bit input(A)
+    input b[16],      //16-bit input(B)
+    input alufn[2],  //2-bit input(ALUFN0 and ALUFN1)
+    output shift[16]  //16-bit output
+  ) {
+
+  always {
+    case(alufn[1:0]){      //different cases for ALUFN0 and ALUFN1
+      default:             //default output is 0
+        shift = 0;
+      2b00:                //left shit
+        shift = a<<b;
+      2b01:                //right shift
+        shift = a>>b;
+      2b10:                //no output
+        shift = 0;
+      2b11:                //signed right shift
+        shift = $signed(a)>>>b;
+    }            
+  }
+}

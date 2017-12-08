@@ -1,0 +1,278 @@
+module brickgen (
+    input clk,  // clock
+    input rst,  // reset
+    output brickpos[16][8],  //brick positions
+    input ballpos[8],  //ball positions
+    input playing[2],  //playing state
+    output endgame  //signal for gameover when bricks are all destroyed
+  ) {
+  
+  sig bricks[16][8];
+  sig array[16][16][8];
+  .clk(clk){
+    .rst(rst){
+      dff counter[22];
+      
+      //dffs for x pos of bricks
+      dff bone[5];
+      dff btwo[4];
+      dff bthree[4];
+      dff bfour[4];
+      dff bfive[4];
+      dff bsix[4];
+      dff bseven[4];
+      dff beight[4];
+      dff bnine[4];
+      dff bten[4];
+      dff beleven[4];
+      dff btwelve[4];
+      dff bthirteen[4];
+      dff bfourteen[4];
+      dff bfifthteen[4];
+      dff bsixteen[4];
+      
+      //dffs for y pos of bricks
+      dff byone[4];
+      dff bytwo[4];
+      dff bythree[4];
+      dff byfour[4];
+      dff byfive[4];
+      dff bysix[4];
+      dff byseven[4];
+      dff byeight[4];
+      dff bynine[4];
+      dff byten[4];
+      dff byeleven[4];
+      dff bytwelve[4];
+      dff bythirteen[4];
+      dff byfourteen[4];
+      dff byfifthteen[4];
+      dff bysixteen[4];
+      
+      dff end;
+      
+      fsm state = {GAMESTART, MINUSBRICK};
+    }
+  }
+  always {
+  
+    // array for led matrix
+    endgame = end.q;
+    array[0] = {8d15,8d14,8d13,8d12,8d11,8d10,8d9,8d8,8d7,8d6,8d5,8d4,8d3,8d2,8d1,8d0};
+    array[1] = {8d16,8d17,8d18,8d19,8d20,8d21,8d22,8d23,8d24,8d25,8d26,8d27,8d28,8d29,8d30,8d31};
+    array[2] = {8d47,8d46,8d45,8d44,8d43,8d42,8d41,8d40,8d39,8d38,8d37,8d36,8d35,8d34,8d33,8d32};
+    array[3] = {8d48,8d49,8d50,8d51,8d52,8d53,8d54,8d55,8d56,8d57,8d58,8d59,8d60,8d61,8d62,8d63};
+    array[4] = {8d79,8d78,8d77,8d76,8d75,8d74,8d73,8d72,8d71,8d70,8d69,8d68,8d67,8d66,8d65,8d64};
+    array[5] = {8d80,8d81,8d82,8d83,8d84,8d85,8d86,8d87,8d88,8d89,8d90,8d91,8d92,8d93,8d94,8d95};
+    array[6] = {8d111,8d110,8d109,8d108,8d107,8d106,8d105,8d104,8d103,8d102,8d101,8d100,8d99,8d98,8d97,8d96};
+    array[7] = {8d112,8d113,8d114,8d115,8d116,8d117,8d118,8d119,8d120,8d121,8d122,8d123,8d124,8d125,8d126,8d127};
+    array[8] = {143,142,141,140,139,138,137,136,135,134,133,132,131,130,129,128};
+    array[9] = {144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159};
+    array[10] = {175,174,173,172,171,170,169,168,167,166,165,164,163,162,161,160};
+    array[11] = {176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191};
+    array[12] = {207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192};
+    array[13] = {208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223};
+    array[14] = {239,238,237,236,235,234,233,232,231,230,229,228,227,226,225,224};
+    array[15] = {240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255};
+    
+    //initialize bricks positions
+    bricks[0] = array[byone.q][bone.q];
+    bricks[1] = array[bytwo.q][btwo.q];
+    bricks[2] = array[bythree.q][bthree.q];
+    bricks[3] = array[byfour.q][bfour.q];
+    bricks[4] = array[byfive.q][bfive.q];
+    bricks[5] = array[bysix.q][bsix.q];
+    bricks[6] = array[byseven.q][bseven.q];
+    bricks[7] = array[byeight.q][beight.q];
+    bricks[8] = array[bynine.q][bnine.q];
+    bricks[9] = array[byten.q][bten.q];
+    bricks[10] = array[byeleven.q][beleven.q];
+    bricks[11] = array[bytwelve.q][btwelve.q];
+    bricks[12] = array[bythirteen.q][bthirteen.q];
+    bricks[13] = array[byfourteen.q][bfourteen.q];
+    bricks[14] = array[byfifthteen.q][bfifthteen.q];
+    bricks[15] = array[bysixteen.q][bsixteen.q]; 
+     
+    case (state.q){
+      state.GAMESTART:
+        end.d = 0;
+        counter.d = counter.q+1;
+        
+        bricks[0] = array[byone.q][bone.q];
+        bricks[1] = array[bytwo.q][btwo.q];
+        bricks[2] = array[bythree.q][bthree.q];
+        bricks[3] = array[byfour.q][bfour.q];
+        bricks[4] = array[byfive.q][bfive.q];
+        bricks[5] = array[bysix.q][bsix.q];
+        bricks[6] = array[byseven.q][bseven.q];
+        bricks[7] = array[byeight.q][beight.q];
+        bricks[8] = array[bynine.q][bnine.q];
+        bricks[9] = array[byten.q][bten.q];
+        bricks[10] = array[byeleven.q][beleven.q];
+        bricks[11] = array[bytwelve.q][btwelve.q];
+        bricks[12] = array[bythirteen.q][bthirteen.q];
+        bricks[13] = array[byfourteen.q][bfourteen.q];
+        bricks[14] = array[byfifthteen.q][bfifthteen.q];
+        bricks[15] = array[bysixteen.q][bsixteen.q]; 
+        
+        //hardcoded positions
+        bone.d =         0 ;
+        btwo.d =         4 ;
+        bthree.d =       10;
+        bfour.d =        15;
+        bfive.d =        13;
+        bsix.d =         11;
+        bseven.d =       9 ;
+        beight.d =       3 ;
+        bnine.d =        1 ;
+        bten.d =         14;
+        beleven.d =      4 ;
+        btwelve.d =      12;
+        bthirteen.d=     8 ;
+        bfourteen.d=     2 ;
+        bfifthteen.d=    10;
+        bsixteen.d =     6 ;
+        
+        byone.d =        15;
+        bytwo.d =        15;
+        bythree.d=       15;
+        byfour.d =       14;
+        byfive.d =       14;
+        bysix.d =        14;
+        byseven.d =      14;
+        byeight.d =      14;
+        bynine.d =       14;
+        byten.d =        13;
+        byeleven.d =     13;
+        bytwelve.d =     13;
+        bythirteen.d =   13;
+        byfourteen.d =   13;
+        byfifthteen.d =  13;
+        bysixteen.d =    13;
+        
+        //change to state to check ball pos and brick pos
+        if (counter.q[21]==1){
+          counter.d = 0;
+          state.d = state.MINUSBRICK;
+        }
+    
+      state.MINUSBRICK:
+        //if ball pos is brick pos, brick gets *eaten up*
+        counter.d = counter.q+1;
+        if (counter.q[21]==1){
+          if (bricks[0]==ballpos){
+            byone.d = 8b0;
+            bone.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[1]==ballpos){
+            bytwo.d = 8b0;
+            btwo.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[2]==ballpos){
+            bythree.d = 8b0;
+            bthree.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[3]==ballpos){
+            byfour.d = 8b0;
+            bfour.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[4]==ballpos){
+            byfive.d = 8b0;
+            bfive.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[5]==ballpos){
+            bysix.d = 8b0;
+            bsix.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[6]==ballpos){
+            byseven.d = 8b0;
+            bseven.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[7]==ballpos){
+            byeight.d = 8b0;
+            beight.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[8]==ballpos){
+            bynine.d = 8b0;
+            bnine.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[9]==ballpos){
+            byten.d = 8b0;
+            bten.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[10]==ballpos){
+            byeleven.d = 8b0;
+            beleven.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[11]==ballpos){
+            bytwelve.d = 8b0;
+            btwelve.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[12]==ballpos){
+            bythirteen.d = 8b0;
+            bthirteen.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[13]==ballpos){
+            byfourteen.d = 8b0;
+            bfourteen.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[14]==ballpos){
+            byfifthteen.d = 8b0;
+            bfifthteen.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          if (bricks[15]==ballpos){
+            bysixteen.d = 8b0;
+            bsixteen.d = 8b1111;
+            counter.d = 0;
+            state.d = state.MINUSBRICK;
+          }
+          //when no more bricks, end game
+          if (bricks==16x{{8b1111}}){
+            counter.d = 0;
+            end.d = 1;
+          } 
+          //if gamestate is start, go back to gamestart state
+          if (playing==2b00){
+            counter.d = 0;
+            end.d = 0;
+            state.d = state.GAMESTART;
+          }
+          counter.d=0;
+        }      
+          
+    }
+    brickpos = bricks;
+    endgame = end.q;
+  }
+}
+     

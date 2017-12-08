@@ -1,0 +1,132 @@
+module playercontrol (
+    input clk,  // clock
+    output out[4],
+    input rst,
+    input lb,  //left button
+    input rb   //right button
+  ) { 
+  .clk(clk) {
+    edge_detector edge_detector_left(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector_right(#RISE(1), #FALL(0));
+    button_conditioner button_cond_left;
+    button_conditioner button_cond_right;
+    
+     
+    .rst(rst) {
+       dff pos[4]; // our lovely counter
+       fsm state = {GAMESTART,CENTERSCREEN,LEFTSCREEN, RIGHTSCREEN };
+    }
+  }
+  sig alu_out[4];
+  alu16bit myalu;
+  
+  always {
+    button_cond_left.in = lb;
+    button_cond_right.in = rb;
+    edge_detector_left.in = button_cond_left.out;
+    edge_detector_right.in = button_cond_right.out;
+    myalu.a = pos.q;
+    myalu.b = 8b0;
+    myalu.alufn = 6b000000;
+    alu_out = myalu.out[3:0];
+    
+    case(state.q){
+      state.GAMESTART:
+        pos.d = b0000;  //initial pos of paddle
+        state.d = state.LEFTSCREEN;
+      
+      state.CENTERSCREEN:
+        if (pos.q ==b1100){  //decrement position if lb is pressed, increment when rb is pressed
+          if (edge_detector_left.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000001;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.CENTERSCREEN;
+          }
+          if (edge_detector_right.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000000;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.RIGHTSCREEN;
+          }
+        }
+        else if (pos.q ==b0001){  //change states at the extreme positions
+          if (edge_detector_left.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000001;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.LEFTSCREEN;
+          }
+          if (edge_detector_right.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000000;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.CENTERSCREEN;
+          }
+        }
+        else{
+          if (edge_detector_left.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000001;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.CENTERSCREEN;
+          }
+          if (edge_detector_right.out==1){
+            myalu.a = pos.q;
+            myalu.b = 8b1;
+            myalu.alufn = 6b000000;
+            alu_out = myalu.out[3:0];
+            pos.d = alu_out;
+            state.d = state.CENTERSCREEN;
+          }
+        }
+                
+      state.LEFTSCREEN:  //only can go right
+        if (edge_detector_left.out==1){
+          myalu.a = pos.q;
+          myalu.b = 8b0;
+          myalu.alufn = 6b0;
+          alu_out = myalu.out[3:0];
+          pos.d = alu_out;
+          state.d = state.LEFTSCREEN;
+        }
+        if (edge_detector_right.out==1){
+          myalu.a = pos.q;
+          myalu.b = 8b1;
+          myalu.alufn = 6b000000;
+          alu_out = myalu.out[3:0];
+          pos.d = alu_out;
+          state.d = state.CENTERSCREEN;
+        }
+      
+      state.RIGHTSCREEN:  //only go left
+        if (edge_detector_left.out==1){
+          myalu.a = pos.q;
+          myalu.b = 8b1;
+          myalu.alufn = 6b000001;
+          alu_out = myalu.out[3:0];
+          pos.d = alu_out;
+          state.d = state.CENTERSCREEN;
+        }
+        if (edge_detector_right.out==1){
+          myalu.a = pos.q;
+          myalu.b = 8b0;
+          myalu.alufn = 6b0;
+          alu_out =myalu.out[3:0];
+          pos.d = alu_out;
+          state.d = state.RIGHTSCREEN;
+        }
+    } 
+    out = alu_out;
+  }
+}

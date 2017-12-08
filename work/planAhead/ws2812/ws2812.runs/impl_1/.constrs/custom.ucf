@@ -1,0 +1,3 @@
+NET "dataOut" LOC = P24;
+NET "dataOut" IOSTANDARD = LVTTL;
+NET "button" LOC = P51 | IOSTANDARD = LVTTL | PULLUP;

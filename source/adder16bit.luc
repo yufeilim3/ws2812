@@ -1,0 +1,51 @@
+module adder16bit (
+    input a[16],      //16-bit input(A)
+    input b[16],      //16-bit input(B)
+    input alufn[2],  //2-bit input(ALUFN0 and ALUFN1)
+    output s[16],     //16-bit output
+    output z,        //1-bit output Z indicates if s[8] is zero
+    output v,        //1-bit output v indicates if s[8] overflows
+    output n         //1-bit output n indicates if s[8] is negative
+  ) {
+  
+  adder myadder;    //instantiate adder module
+  multiplier mymultiplier;      //instantiate multiplier module
+
+  always {
+    
+    myadder.a = a;      //assigning the inputs to adder module
+    myadder.b = b;
+    myadder.alufn0 = alufn[0];
+    
+    mymultiplier.a = a; //assigning the inputs to multiplier module
+    mymultiplier.b = b;
+    
+    case(alufn[1:0]){   //for different cases of ALUFN0 and ALUFN1
+      default:          //default outputs
+        s = 0;
+        z = 0;
+        v = 0;
+        n = 0;
+      2b00:             //addition carried out 
+        s = myadder.s;
+        z = myadder.z; 
+        v = myadder.v;
+        n = myadder.n;
+      2b01:             //subtraction carried out
+        s = myadder.s;
+        z = myadder.z; 
+        v = myadder.v;
+        n = myadder.n;
+      2b10:             //multiplication carried out. Z,V and N is still calculated by adder
+        s = mymultiplier.mult;
+        z = myadder.z; 
+        v = myadder.v;
+        n = myadder.n;
+      2b11:             //no operation is supposed to be carried out. However, Z,V and N is still calculated by adder. S is assigned still to avoid errors
+        s = myadder.s;
+        z = myadder.z; 
+        v = myadder.v;
+        n = myadder.n;
+    }     
+  }
+}

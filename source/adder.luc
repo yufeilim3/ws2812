@@ -1,0 +1,27 @@
+module adder (
+    input a[16],      //16-bit input(A)
+    input b[16],      //16-bit input(B)
+    input alufn0,    //1-bit input(ALUFN0)
+    output s[16],     //16-bit output
+    output z,        //1-bit output Z indicates if s[8] is zero
+    output v,        //1-bit output v indicates if s[8] overflows
+    output n         //1-bit output n indicates if s[8] is negative
+  ) {
+sig sum[16];          //creates a 16-bit signal named sum
+sig xb[16];           //creates a 16-bit signal named xb
+
+  always {
+    if (alufn0){     //if alufn0 is 1
+      xb = ~b;       //xb will be inverted(XOR between b and alufn0)
+      sum = a-b;     //subtraction is carried out
+    }
+    else{
+      xb = b;        //if alufn0 is 0, xb will not be inverted(XOR between b and alufn0)
+      sum = a+b;     //addition is carried out
+    }
+    s = sum;         //sum is assigned as the value for s
+    z =  (sum[15:0] == 0);        //z checks if the output is all zeros
+    v = (a[15] & xb[15] & !(sum[15])) |(!(a[15]) & !(xb[15]) & sum[15]);     //v checks for overflow(equation from Lab 3)
+    n = sum[15];      //n checks whether the final result is negative
+  }
+}

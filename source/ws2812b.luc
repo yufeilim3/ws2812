@@ -1,0 +1,413 @@
+// ws2812 inteprets data through timing of high/lowbits sent to the leds. datasheet link:https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
+module ws2812b
+  (
+    input clk,  // clock
+    input rst,  // reset
+    input paddle[4],  //paddle pos
+    input ball[8],  //ball pos
+    input brick[16][8],  //brick positions
+    output datain, // the output 24 bit data
+    input playing[2],  //00=gamestart, 01=playing, 10=gameover
+    input gamestart[39][8],  // gamestart display positions
+    input gameover[24][8]  // gameover display positions
+  ){
+
+  sig value[7]; //track time for led driver
+
+  .clk(clk) {
+    .rst(rst) {
+      dff timecounter[7];  //counts time
+      dff tbitcounter[13];  //counts up to 256*24 bits for total data sent in
+      dff bitcounter[5];  //counts up to 24 bits for one data sent in, order of bits (GRB), each colour 8bits.
+      
+      dff paddlecounter[4];  //counts pos of paddle
+      dff paddlelencounter[2];  //counts len of paddle
+      
+      dff ballcounter[8];  //counts pos of ball
+      
+      dff gamestartcounter[8];  //counts pos of gamestart leds
+      
+      dff gameovercounter[8];  //counts pos of gameover leds
+      
+      dff brickcounter[8];  //counts pos of bricks
+      
+      dff bit;  //output for data
+      dff pause[17];  //pause counter for led to latch
+
+      fsm state = {GSONELOW, GSZEROLOW, GSGREENONELOW, GSGREENONEHIGH, GSGREENZEROLOW, GSGREENZEROHIGH,  //gamestart states
+                   PONELOW, PZEROLOW, PONEHIGH, PZEROHIGH,   //paddle states
+                   BONELOW, BZEROLOW, BREDONELOW, BREDONEHIGH, BREDZEROLOW, BREDZEROHIGH,  //ball states
+                   BBLUEONELOW, BBLUEONEHIGH, BBLUEZEROLOW, BBLUEZEROHIGH,   //brick states
+                   GOONELOW, GOZEROLOW, GOREDONELOW, GOREDONEHIGH, GOREDZEROLOW, GOREDZEROHIGH,  //gameover states
+                   PAUSE};  //pause for led latch
+     }
+  } 
+
+  always {
+    value = 45;
+
+    case (state.q) { 
+      state.GSONELOW:  //LOW BITS FOR GS(GREEN)
+        bit.d= b1;
+        timecounter.d = timecounter.q+1;  //time specific counter to adjust timing for ws2812
+        if (timecounter.q>17){
+          state.d = state.GSZEROLOW;
+        } 
+        if(bitcounter.q==24){
+          gamestartcounter.d = gamestartcounter.q+1;
+          bitcounter.d = 0;
+        }
+        if (tbitcounter.q == b1100000000000){
+          state.d = state.PAUSE;
+        } 
+        if (gamestartcounter.q==gamestart[0]||gamestartcounter.q==gamestart[1]||gamestartcounter.q==gamestart[2]||gamestartcounter.q==gamestart[3]
+          ||gamestartcounter.q==gamestart[4]||gamestartcounter.q==gamestart[5]||gamestartcounter.q==gamestart[6]||gamestartcounter.q==gamestart[7]
+          ||gamestartcounter.q==gamestart[8]||gamestartcounter.q==gamestart[9]||gamestartcounter.q==gamestart[10]||gamestartcounter.q==gamestart[11]
+          ||gamestartcounter.q==gamestart[12]||gamestartcounter.q==gamestart[13]||gamestartcounter.q==gamestart[14]||gamestartcounter.q==gamestart[15]
+          ||gamestartcounter.q==gamestart[16]||gamestartcounter.q==gamestart[17]||gamestartcounter.q==gamestart[18]||gamestartcounter.q==gamestart[19]
+          ||gamestartcounter.q==gamestart[20]||gamestartcounter.q==gamestart[21]||gamestartcounter.q==gamestart[22]||gamestartcounter.q==gamestart[23]
+          ||gamestartcounter.q==gamestart[24]||gamestartcounter.q==gamestart[25]||gamestartcounter.q==gamestart[26]||gamestartcounter.q==gamestart[27]
+          ||gamestartcounter.q==gamestart[28]||gamestartcounter.q==gamestart[29]||gamestartcounter.q==gamestart[30]||gamestartcounter.q==gamestart[31]
+          ||gamestartcounter.q==gamestart[32]||gamestartcounter.q==gamestart[33]||gamestartcounter.q==gamestart[34]||gamestartcounter.q==gamestart[35]
+          ||gamestartcounter.q==gamestart[36]||gamestartcounter.q==gamestart[37]||gamestartcounter.q==gamestart[38]){
+          state.d = state.GSGREENONELOW;  //checks if corresponds to position of leds to be displayed
+        } 
+      
+      state.GSZEROLOW:  //LOW BITS FOR GS(GREEN)
+        bit.d = b0;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q == b111110){
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GSONELOW;
+        } 
+        
+      state.GSGREENONELOW:  //HIGH BITS FOR GS(GREEN)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > 17){
+          state.d = state.GSGREENZEROLOW;
+        }
+        if (bitcounter.q == 0){
+          state.d = state.GSGREENONEHIGH;
+        }   
+        if(bitcounter.q==24){
+          bitcounter.d = 0;
+          gamestartcounter.d = gamestartcounter.q+1;   
+          state.d = state.GSONELOW;
+        } 
+        
+      state.GSGREENZEROLOW:  //HIGH BITS FOR GS(GREEN)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GSGREENONELOW;
+        } 
+        
+      state.GSGREENONEHIGH:  //HIGH BITS FOR GS(GREEN)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > value){
+          state.d = state.GSGREENZEROHIGH;
+        }
+        if (bitcounter.q==9){
+          state.d = state.GSGREENONELOW;
+        }
+             
+
+      state.GSGREENZEROHIGH:  //HIGH BITS FOR GS(GREEN)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GSGREENONEHIGH;
+        } 
+
+      state.PONELOW:  //LOW BITS FOR PADDLE(WHITE)
+        bit.d= b1;
+        ballcounter.d = 16;
+        brickcounter.d = 16;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q>17){
+          state.d = state.PZEROLOW;
+        } 
+        if(bitcounter.q==24){
+          paddlecounter.d = paddlecounter.q+1;
+          bitcounter.d = 0;
+        }
+        if (paddlecounter.q == paddle){
+          state.d = state.PONEHIGH;
+        }
+        if (tbitcounter.q == b110000000){
+          bitcounter.d = 0;
+          state.d = state.BONELOW;
+        }
+        
+      state.PZEROLOW:  //LOW BITS FOR PADDLE(WHITE)
+        bit.d = b0;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q == b111110){
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.PONELOW;
+        } 
+        
+      state.PONEHIGH:  //HIGH BITS FOR PADDLE(WHITE)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > value){
+          state.d = state.PZEROHIGH;
+        }
+        if(bitcounter.q==24){
+          paddlecounter.d = paddlecounter.q+1;
+          paddlelencounter.d = paddlelencounter.q+1;  //makes length of paddle 3
+          bitcounter.d = 0;
+        }
+        if (paddlelencounter.q == 3){
+          paddlelencounter.d = 0;
+          state.d = state.PONELOW;
+        }
+
+      state.PZEROHIGH:  //HIGH BITS FOR PADDLE(WHITE)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.PONEHIGH;
+        } 
+        
+      state.BONELOW:  //LOW BITS FOR BALL(RED)
+        bit.d= b1;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q>17){
+          state.d = state.BZEROLOW;
+        } 
+        if(bitcounter.q==24){
+          ballcounter.d = ballcounter.q+1;
+          brickcounter.d = brickcounter.q+1;
+          bitcounter.d = 0;
+        }
+        if (tbitcounter.q == b1100000000000){
+          state.d = state.PAUSE;
+        } 
+        if (ballcounter.q == ball){
+          state.d = state.BREDONELOW;
+        }
+        if (brickcounter.q == brick[0]||brickcounter.q ==brick[1]||brickcounter.q ==brick[2]||brickcounter.q ==brick[3]
+          ||brickcounter.q ==brick[4]||brickcounter.q ==brick[5]||brickcounter.q ==brick[6]||brickcounter.q ==brick[7]
+          ||brickcounter.q ==brick[8]||brickcounter.q ==brick[9]||brickcounter.q ==brick[10]||brickcounter.q ==brick[11]
+          ||brickcounter.q ==brick[12]||brickcounter.q ==brick[13]||brickcounter.q ==brick[14]||brickcounter.q ==brick[15]){
+          state.d = state.BBLUEONELOW;  //checks if corresponds to position of leds to be displayed
+        } 
+      
+      state.BZEROLOW:  //LOW BITS FOR BALL(RED)
+        bit.d = b0;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q == b111110){
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.BONELOW;
+        } 
+        
+      state.BREDONELOW:  //HIGH BITS FOR BALL(RED)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > 17){
+          state.d = state.BREDZEROLOW;
+        }
+        if (bitcounter.q == 9){
+          state.d = state.BREDONEHIGH;
+        }
+        if(bitcounter.q==24){
+          if (brickcounter.q == ballcounter.q){
+            brickcounter.d = brickcounter.q +1;
+          }
+          bitcounter.d = 0;
+          ballcounter.d = ballcounter.q+1;   
+          state.d = state.BONELOW;
+        }  
+        
+      state.BREDZEROLOW:  //HIGH BITS FOR BALL(RED)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.BREDONELOW;
+        } 
+        
+      state.BREDONEHIGH:  //HIGH BITS FOR BALL(RED)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > value){
+          state.d = state.BREDZEROHIGH;
+        }
+        if(bitcounter.q==17){
+          state.d = state.BREDONELOW;
+        }      
+
+      state.BREDZEROHIGH:  //HIGH BITS FOR BALL(RED)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.BREDONEHIGH;
+        } 
+
+      state.BBLUEONELOW:  //HIGH BITS FOR BRICK(BLUE)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > 17){
+          state.d = state.BBLUEZEROLOW;
+        }
+        if (bitcounter.q == 17){
+          state.d = state.BBLUEONEHIGH;
+        }   
+        
+      state.BBLUEZEROLOW:  //HIGH BITS FOR BRICK(BLUE)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.BBLUEONELOW;
+        } 
+        
+      state.BBLUEONEHIGH:  //HIGH BITS FOR BRICK(BLUE)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > value){
+          state.d = state.BBLUEZEROHIGH;
+        }
+        if(bitcounter.q==24){
+          if (brickcounter.q == ballcounter.q){
+            ballcounter.d = ballcounter.q +1;
+          }
+          bitcounter.d = 0;
+          brickcounter.d = brickcounter.q+1;   
+          state.d = state.BONELOW;
+        }      
+
+      state.BBLUEZEROHIGH:  //HIGH BITS FOR BRICK(BLUE)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.BBLUEONEHIGH;
+        } 
+        
+      state.GOONELOW:  //LOW BITS FOR GO(RED)
+        bit.d= b1;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q>17){
+          state.d = state.GOZEROLOW;
+        } 
+        if(bitcounter.q==24){
+          gameovercounter.d = gameovercounter.q+1;
+          bitcounter.d = 0;
+        }
+        if (tbitcounter.q == b1100000000000){
+          state.d = state.PAUSE;
+        } 
+        if (gameovercounter.q==gameover[0]||gameovercounter.q==gameover[1]||gameovercounter.q==gameover[2]||gameovercounter.q==gameover[3]
+          ||gameovercounter.q==gameover[4]||gameovercounter.q==gameover[5]||gameovercounter.q==gameover[6]||gameovercounter.q==gameover[7]
+          ||gameovercounter.q==gameover[8]||gameovercounter.q==gameover[9]||gameovercounter.q==gameover[10]||gameovercounter.q==gameover[11]
+          ||gameovercounter.q==gameover[12]||gameovercounter.q==gameover[13]||gameovercounter.q==gameover[14]||gameovercounter.q==gameover[15]
+          ||gameovercounter.q==gameover[16]||gameovercounter.q==gameover[17]||gameovercounter.q==gameover[18]||gameovercounter.q==gameover[19]
+          ||gameovercounter.q==gameover[20]||gameovercounter.q==gameover[21]||gameovercounter.q==gameover[22]||gameovercounter.q==gameover[23]){
+          state.d = state.GOREDONELOW;  //checks if corresponds to position of leds to be displayed
+        } 
+      
+      state.GOZEROLOW:  //LOW BITS FOR GS(GREEN)
+        bit.d = b0;
+        timecounter.d = timecounter.q+1;
+        if (timecounter.q == b111110){
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GOONELOW;
+        }  
+        
+      state.GOREDONELOW:  //HIGH BITS FOR BALL(RED)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > 17){
+          state.d = state.GOREDZEROLOW;
+        }
+        if (bitcounter.q == 9){
+          state.d = state.GOREDONEHIGH;
+        }
+        if(bitcounter.q==24){
+          bitcounter.d = 0;
+          gameovercounter.d = gameovercounter.q+1;   
+          state.d = state.GOONELOW;
+        }  
+        
+      state.GOREDZEROLOW:  //HIGH BITS FOR BALL(RED)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GOREDONELOW;
+        } 
+        
+      state.GOREDONEHIGH:  //HIGH BITS FOR BALL(RED)
+        bit.d = b1;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q > value){
+          state.d = state.GOREDZEROHIGH;
+        }
+        if(bitcounter.q==17){
+          state.d = state.GOREDONELOW;
+        }      
+
+      state.GOREDZEROHIGH:  //HIGH BITS FOR BALL(RED)
+        bit.d = b0;
+        timecounter.d = timecounter.q + 1;
+        if (timecounter.q == b111110) {
+          tbitcounter.d = tbitcounter.q+1;
+          bitcounter.d = bitcounter.q+1;
+          timecounter.d = b0;
+          state.d = state.GOREDONEHIGH;
+        }  
+        
+      state.PAUSE:
+        bit.d = b0;
+        pause.d = pause.q+1;
+        if (pause.q[16] ==b1 ){                 
+          tbitcounter.d  = b0;
+          pause.d  = b0;
+          timecounter.d = b0;   
+          if (playing==2b00){
+            state.d = state.GSONELOW;  //if state is gamestart
+          }
+          if (playing==2b01){
+            state.d = state.PONELOW;  //if state is playing
+          }     
+          if (playing==2b10){
+            state.d = state.GOONELOW;  //if state is gameover
+          }
+        }
+    
+      }    
+     datain = bit.q;            
+  }
+}

@@ -1,0 +1,46 @@
+module boole (
+    input a[16],      //8-bit input(A)
+    input b[16],      //8-bit input(B)
+    input alufn[4],  //4-bit input(ALUFN[3:0])
+    output boole[16]  //8-bit output
+  ) {
+
+  always {
+    case (alufn[3:0]){      //for different permutations of 4-bit input ALUFN, run different boolean functions
+      default:              //default output is zero
+        boole = 0;
+      4b0000:               //ZERO
+        boole = 0;
+      4b0001:               //NOR
+        boole = ~(a|b);
+      4b0010:               //A AND (NOT B)
+        boole = a&(~b);     
+      4b0011:               //NOT B
+        boole = ~b;
+      4b0100:               //B AND (NOT A)
+        boole = b&(~a);
+      4b0101:               //NOT A
+        boole = ~a;
+      4b0110:               //XOR
+        boole = a^b;
+      4b0111:               //NAND
+        boole = ~(a&b);
+      4b1000:               //AND
+        boole = a&b;
+      4b1001:               //XNOR
+        boole = ~(a^b);
+      4b1010:               //A
+        boole = a;
+      4b1011:               //A OR (NOT B)
+        boole = a|(~b);
+      4b1100:               //B
+        boole = b;
+      4b1101:               //B OR (NOT A)
+        boole = b|(~a);
+      4b1110:               //OR
+        boole = a|b;
+      4b1111:               //ALL
+        boole = 16b1111111111111111;
+    }       
+  }
+}

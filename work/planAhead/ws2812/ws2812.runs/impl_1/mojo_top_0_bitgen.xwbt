@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\Users\User\Documents\mojo\ws2812\work\planAhead\ws2812\ws2812.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=C:\Users\User\Documents\mojo\ws2812\work\planAhead\ws2812\ws2812.runs\impl_1\mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\User\Documents\mojo\ws2812\work\planAhead\ws2812\ws2812.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211404334_0_0_154

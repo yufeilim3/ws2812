@@ -1,0 +1,23 @@
+module cmp (
+    input alufn[2], //2-bit input(ALUFN1 and ALUFN2)
+    input z,        //1-bit input(Z)
+    input v,        //1-bit input(V)
+    input n,        //1-bit input(N)
+    output cmp[16]
+  ) {
+
+  always {
+    case(alufn[1:0]){
+      default:          //default output is zero
+        cmp[0] = 0;
+      2b00:             //no comparison
+        cmp[0] = 0;
+      2b01:             //compare if a and b is equal
+        cmp[0] = z;
+      2b10:             //compare if a<b
+        cmp[0] = v^n;
+      2b11:             //compare if a<=b
+        cmp[0] = z|(v^n);
+    }
+  }
+}
