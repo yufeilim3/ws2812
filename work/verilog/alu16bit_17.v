@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module alu16bit_16 (
+module alu16bit_17 (
     input [15:0] a,
     input [15:0] b,
     input [5:0] alufn,
@@ -23,7 +23,7 @@ module alu16bit_16 (
   reg [16-1:0] M_myadder_a;
   reg [16-1:0] M_myadder_b;
   reg [2-1:0] M_myadder_alufn;
-  adder16bit_22 myadder (
+  adder16bit_24 myadder (
     .a(M_myadder_a),
     .b(M_myadder_b),
     .alufn(M_myadder_alufn),
@@ -37,7 +37,7 @@ module alu16bit_16 (
   reg [16-1:0] M_myboole_a;
   reg [16-1:0] M_myboole_b;
   reg [4-1:0] M_myboole_alufn;
-  boole_23 myboole (
+  boole_25 myboole (
     .a(M_myboole_a),
     .b(M_myboole_b),
     .alufn(M_myboole_alufn),
@@ -48,7 +48,7 @@ module alu16bit_16 (
   reg [16-1:0] M_myshifter_a;
   reg [16-1:0] M_myshifter_b;
   reg [2-1:0] M_myshifter_alufn;
-  shifter_24 myshifter (
+  shifter_26 myshifter (
     .a(M_myshifter_a),
     .b(M_myshifter_b),
     .alufn(M_myshifter_alufn),
@@ -60,7 +60,7 @@ module alu16bit_16 (
   reg [1-1:0] M_mycmp_z;
   reg [1-1:0] M_mycmp_v;
   reg [1-1:0] M_mycmp_n;
-  cmp_25 mycmp (
+  cmp_27 mycmp (
     .alufn(M_mycmp_alufn),
     .z(M_mycmp_z),
     .v(M_mycmp_v),

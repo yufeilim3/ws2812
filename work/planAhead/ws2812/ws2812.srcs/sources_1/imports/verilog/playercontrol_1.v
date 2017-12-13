@@ -16,28 +16,28 @@ module playercontrol_1 (
   
   wire [1-1:0] M_edge_detector_left_out;
   reg [1-1:0] M_edge_detector_left_in;
-  edge_detector_7 edge_detector_left (
+  edge_detector_8 edge_detector_left (
     .clk(clk),
     .in(M_edge_detector_left_in),
     .out(M_edge_detector_left_out)
   );
   wire [1-1:0] M_edge_detector_right_out;
   reg [1-1:0] M_edge_detector_right_in;
-  edge_detector_7 edge_detector_right (
+  edge_detector_8 edge_detector_right (
     .clk(clk),
     .in(M_edge_detector_right_in),
     .out(M_edge_detector_right_out)
   );
   wire [1-1:0] M_button_cond_left_out;
   reg [1-1:0] M_button_cond_left_in;
-  button_conditioner_9 button_cond_left (
+  button_conditioner_10 button_cond_left (
     .clk(clk),
     .in(M_button_cond_left_in),
     .out(M_button_cond_left_out)
   );
   wire [1-1:0] M_button_cond_right_out;
   reg [1-1:0] M_button_cond_right_in;
-  button_conditioner_9 button_cond_right (
+  button_conditioner_10 button_cond_right (
     .clk(clk),
     .in(M_button_cond_right_in),
     .out(M_button_cond_right_out)
@@ -59,7 +59,7 @@ module playercontrol_1 (
   reg [16-1:0] M_myalu_a;
   reg [16-1:0] M_myalu_b;
   reg [6-1:0] M_myalu_alufn;
-  alu16bit_16 myalu (
+  alu16bit_17 myalu (
     .a(M_myalu_a),
     .b(M_myalu_b),
     .alufn(M_myalu_alufn),
@@ -147,7 +147,7 @@ module playercontrol_1 (
         if (M_edge_detector_left_out == 1'h1) begin
           M_myalu_a = M_pos_q;
           M_myalu_b = 8'h00;
-          M_myalu_alufn = 6'h00;
+          M_myalu_alufn = 6'h1a;
           alu_out = M_myalu_out[0+3-:4];
           M_pos_d = alu_out;
           M_state_d = LEFTSCREEN_state;
@@ -173,7 +173,7 @@ module playercontrol_1 (
         if (M_edge_detector_right_out == 1'h1) begin
           M_myalu_a = M_pos_q;
           M_myalu_b = 8'h00;
-          M_myalu_alufn = 6'h00;
+          M_myalu_alufn = 6'h1a;
           alu_out = M_myalu_out[0+3-:4];
           M_pos_d = alu_out;
           M_state_d = RIGHTSCREEN_state;

@@ -95,7 +95,7 @@ module playercontrol (
         if (edge_detector_left.out==1){
           myalu.a = pos.q;
           myalu.b = 8b0;
-          myalu.alufn = 6b0;
+          myalu.alufn = 6b011010;
           alu_out = myalu.out[3:0];
           pos.d = alu_out;
           state.d = state.LEFTSCREEN;
@@ -121,7 +121,7 @@ module playercontrol (
         if (edge_detector_right.out==1){
           myalu.a = pos.q;
           myalu.b = 8b0;
-          myalu.alufn = 6b0;
+          myalu.alufn = 6b011010;
           alu_out =myalu.out[3:0];
           pos.d = alu_out;
           state.d = state.RIGHTSCREEN;

@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module gameover_6 (
+module gameover_7 (
     input clk,
     input rst,
     output reg [191:0] gameover

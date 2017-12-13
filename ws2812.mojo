@@ -14,10 +14,11 @@
     <src>ballcontrol.luc</src>
     <src>adder.luc</src>
     <src>boole.luc</src>
+    <src>secondballcontrol.luc</src>
     <src>playercontrol.luc</src>
     <ucf lib="true">io_shield.ucf</ucf>
-    <ucf>custom.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
+    <ucf>custom.ucf</ucf>
     <component>pwm.luc</component>
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>

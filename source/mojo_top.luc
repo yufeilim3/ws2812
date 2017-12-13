@@ -23,13 +23,14 @@ module mojo_top (
   
   .clk(clk) {
     playercontrol mypc;  // paddle module
-    ballcontrol myball;  // ball logic module   
+    ballcontrol myball;  // ball logic module 
+    secondballcontrol myballtwo;  
     ws2812b myws;  // led driver
     brickgen mybrick;  // brick generator module
     gamestart mygs;  //gamestart screen generator module
     gameover mygo;  //gameover screen generator module
     dff playing[2];  //dff to keep track of game states, 00=gamestart, 01=playing, 10=gameover, 11=gameover
-    fsm state = {GAMESTART, PLAYING, GAMEOVER};  // states of game
+    fsm state = {GAMESTART, PLAYING, PLAYTWO, GAMEOVER};  // states of game
     edge_detector edge_detector_left(#RISE(1), #FALL(0));  // edge detectors for buttons
     edge_detector edge_detector_right(#RISE(1), #FALL(0));
     button_conditioner button_cond_left;
@@ -66,6 +67,7 @@ module mojo_top (
     // brick module
     mybrick.rst = rst;
     mybrick.ballpos = myball.ballpos; 
+    mybrick.secondballpos = myballtwo.ballpos;
     mybrick.playing = playing.q;
     
     // paddle module
@@ -78,12 +80,18 @@ module mojo_top (
     myball.paddlepos = mypc.out;
     myball.playing = playing.q;
     
+    // second ball module
+    myballtwo.rst = rst;
+    myballtwo.paddlepos = mypc.out;
+    myballtwo.playing = playing.q;
+    
     // led driver module
     myws.playing = playing.q;
     myws.gameover = mygo.gameover;
     myws.gamestart = mygs.gamestart;
     myws.rst = rst;
     myws.ball = myball.ballpos;
+    myws.secondball = myballtwo.ballpos;
     myws.paddle = mypc.out;
     myws.brick = mybrick.brickpos;
     dataOut = myws.datain;
@@ -101,9 +109,13 @@ module mojo_top (
         myws.gamestart = mygs.gamestart;
         dataOut = myws.datain;
         playing.d = 2b00;
-        if (edge_detector_left.out==1||edge_detector_right.out==1){  //if left/right button pressed, start game
+        if (edge_detector_left.out==1){  //if left/right button pressed, start game
           playing.d = 2b01;
           state.d = state.PLAYING;
+        }
+        if (edge_detector_right.out==1){
+          playing.d = 2b10;
+          state.d = state.PLAYTWO;
         }
         
       state.PLAYING:  // playing state
@@ -114,12 +126,25 @@ module mojo_top (
         myws.brick = mybrick.brickpos;
         dataOut = myws.datain;
         if (myball.endgame==1||mybrick.endgame==1){  // if ball not caught by paddle/bricks are all cleared, game ends
-          playing.d = 2b10;
+          playing.d = 2b11;
+          state.d = state.GAMEOVER;
+        }
+      
+      state.PLAYTWO:
+        playing.d = 2b10;
+        myws.playing=playing.q;
+        myws.ball = myball.ballpos;
+        myws.secondball = myballtwo.ballpos;
+        myws.paddle = mypc.out;
+        myws.brick = mybrick.brickpos;
+        dataOut = myws.datain;
+        if (myballtwo.endgame==1||myball.endgame==1||mybrick.endgame==1){  // if ball not caught by paddle/bricks are all cleared, game ends
+          playing.d = 2b11;
           state.d = state.GAMEOVER;
         }
         
       state.GAMEOVER:  // gameover state
-        playing.d = 2b10;
+        playing.d = 2b11;
         myws.playing = playing.q;
         myws.gameover = mygo.gameover;
         dataOut = myws.datain;

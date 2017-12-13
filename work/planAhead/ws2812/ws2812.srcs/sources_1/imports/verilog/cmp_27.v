@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module cmp_25 (
+module cmp_27 (
     input [1:0] alufn,
     input z,
     input v,

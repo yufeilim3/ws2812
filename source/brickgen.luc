@@ -3,6 +3,7 @@ module brickgen (
     input rst,  // reset
     output brickpos[16][8],  //brick positions
     input ballpos[8],  //ball positions
+    input secondballpos[8],
     input playing[2],  //playing state
     output endgame  //signal for gameover when bricks are all destroyed
   ) {
@@ -11,7 +12,7 @@ module brickgen (
   sig array[16][16][8];
   .clk(clk){
     .rst(rst){
-      dff counter[22];
+      dff counter[20];
       
       //dffs for x pos of bricks
       dff bone[5];
@@ -116,6 +117,7 @@ module brickgen (
         bricks[15] = array[bysixteen.q][bsixteen.q]; 
         
         //hardcoded positions
+        
         bone.d =         0 ;
         btwo.d =         4 ;
         bthree.d =       10;
@@ -132,7 +134,7 @@ module brickgen (
         bfourteen.d=     2 ;
         bfifthteen.d=    10;
         bsixteen.d =     6 ;
-        
+          
         byone.d =        15;
         bytwo.d =        15;
         bythree.d=       15;
@@ -150,8 +152,9 @@ module brickgen (
         byfifthteen.d =  13;
         bysixteen.d =    13;
         
+          
         //change to state to check ball pos and brick pos
-        if (counter.q[21]==1){
+        if (counter.q[19]==1){
           counter.d = 0;
           state.d = state.MINUSBRICK;
         }
@@ -159,98 +162,98 @@ module brickgen (
       state.MINUSBRICK:
         //if ball pos is brick pos, brick gets *eaten up*
         counter.d = counter.q+1;
-        if (counter.q[21]==1){
-          if (bricks[0]==ballpos){
+        if (counter.q[19]==1){
+          if (bricks[0]==ballpos||bricks[0] == secondballpos){
             byone.d = 8b0;
             bone.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[1]==ballpos){
+          if (bricks[1]==ballpos||bricks[1] == secondballpos){
             bytwo.d = 8b0;
             btwo.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[2]==ballpos){
+          if (bricks[2]==ballpos||bricks[2] == secondballpos){
             bythree.d = 8b0;
             bthree.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[3]==ballpos){
+          if (bricks[3]==ballpos||bricks[3] == secondballpos){
             byfour.d = 8b0;
             bfour.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[4]==ballpos){
+          if (bricks[4]==ballpos||bricks[4] == secondballpos){
             byfive.d = 8b0;
             bfive.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[5]==ballpos){
+          if (bricks[5]==ballpos||bricks[5] == secondballpos){
             bysix.d = 8b0;
             bsix.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[6]==ballpos){
+          if (bricks[6]==ballpos||bricks[6] == secondballpos){
             byseven.d = 8b0;
             bseven.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[7]==ballpos){
+          if (bricks[7]==ballpos||bricks[7] == secondballpos){
             byeight.d = 8b0;
             beight.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[8]==ballpos){
+          if (bricks[8]==ballpos||bricks[8] == secondballpos){
             bynine.d = 8b0;
             bnine.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[9]==ballpos){
+          if (bricks[9]==ballpos||bricks[9] == secondballpos){
             byten.d = 8b0;
             bten.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[10]==ballpos){
+          if (bricks[10]==ballpos||bricks[10] == secondballpos){
             byeleven.d = 8b0;
             beleven.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[11]==ballpos){
+          if (bricks[11]==ballpos||bricks[11] == secondballpos){
             bytwelve.d = 8b0;
             btwelve.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[12]==ballpos){
+          if (bricks[12]==ballpos||bricks[12] == secondballpos){
             bythirteen.d = 8b0;
             bthirteen.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[13]==ballpos){
+          if (bricks[13]==ballpos||bricks[13] == secondballpos){
             byfourteen.d = 8b0;
             bfourteen.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[14]==ballpos){
+          if (bricks[14]==ballpos||bricks[14] == secondballpos){
             byfifthteen.d = 8b0;
             bfifthteen.d = 8b1111;
             counter.d = 0;
             state.d = state.MINUSBRICK;
           }
-          if (bricks[15]==ballpos){
+          if (bricks[15]==ballpos||bricks[15] == secondballpos){
             bysixteen.d = 8b0;
             bsixteen.d = 8b1111;
             counter.d = 0;

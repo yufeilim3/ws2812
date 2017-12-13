@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module adder16bit_22 (
+module adder16bit_24 (
     input [15:0] a,
     input [15:0] b,
     input [1:0] alufn,
@@ -23,7 +23,7 @@ module adder16bit_22 (
   reg [16-1:0] M_myadder_a;
   reg [16-1:0] M_myadder_b;
   reg [1-1:0] M_myadder_alufn0;
-  adder_30 myadder (
+  adder_36 myadder (
     .a(M_myadder_a),
     .b(M_myadder_b),
     .alufn0(M_myadder_alufn0),
@@ -36,7 +36,7 @@ module adder16bit_22 (
   wire [16-1:0] M_mymultiplier_mult;
   reg [16-1:0] M_mymultiplier_a;
   reg [16-1:0] M_mymultiplier_b;
-  multiplier_31 mymultiplier (
+  multiplier_37 mymultiplier (
     .a(M_mymultiplier_a),
     .b(M_mymultiplier_b),
     .mult(M_mymultiplier_mult)

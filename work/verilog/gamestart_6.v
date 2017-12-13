@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module gamestart_5 (
+module gamestart_6 (
     input clk,
     input rst,
     output reg [311:0] gamestart

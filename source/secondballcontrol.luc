@@ -1,4 +1,4 @@
-module ballcontrol (
+module secondballcontrol (
     input clk,  // clock
     input rst,  // reset
     output ballpos[8],  //pos of ball
@@ -20,7 +20,7 @@ module ballcontrol (
     
   .clk(clk){
     .rst(rst){
-      dff counter[22];  //count for when ball changes
+      dff counter[23];  //count for when ball changes
       dff tempcounter[29];  //pause for awhile before the start of game
       dff pos[8];
       dff posx[4];
@@ -127,7 +127,7 @@ module ballcontrol (
     case(state.q){  
       state.GAMESTART:  //game start
         tempcounter.d = tempcounter.q+1;  //make ball hold for a longer time before game starts
-        ballx = b0;
+        ballx = b1;
         bally = b1;
         posx.d = ballx;
         posy.d = bally;
@@ -137,7 +137,7 @@ module ballcontrol (
         endgame = end.q; 
         if (tempcounter.q[28]==1){  
           tempcounter.d = 0;
-          if (playing==2b01||playing==2b10){  //only start if state is playing 
+          if (playing==2b10){  //only start if state is playing 
             state.d = state.RIGHTUP;
           }
           else{
@@ -151,7 +151,7 @@ module ballcontrol (
         }
         counter.d = counter.q+1;
         case(counter.q){
-          b1111111111111111111000:  //increment x pos
+          b11111111111111111111000:  //increment x pos
             if (posx.q!=b1111){
               myalu.a = posx.q;
               myalu.b = 16b1;
@@ -160,7 +160,7 @@ module ballcontrol (
               posx.d = ballx;
             } 
             
-          b1111111111111111111001:    //+ y pos
+          b11111111111111111111001:    //+ y pos
             if (posy.q!=b1111){
               myalu.a = posy.q;
               myalu.b = 16b1;
@@ -169,7 +169,7 @@ module ballcontrol (
               posy.d = bally;
             }
             
-          b1111111111111111111011:  //set position of ball according to array generated
+          b11111111111111111111011:  //set position of ball according to array generated
             if(posy.q == b1111 && posx.q == b1111){
               ball = array[posy.q][posx.q];
               pos.d = ball;
@@ -202,7 +202,7 @@ module ballcontrol (
         }
         counter.d = counter.q+1;
         case(counter.q){
-          b1111111111111111111000:
+          b11111111111111111111000:
             if (posx.q!=b0000){
               myalu.a = posx.q;
               myalu.b = 16b1;
@@ -211,7 +211,7 @@ module ballcontrol (
               posx.d = ballx;
             }
             
-          b1111111111111111111001: 
+          b11111111111111111111001: 
             if (posy.q!=b1111){
               myalu.a = posy.q;
               myalu.b = 16b1;
@@ -220,7 +220,7 @@ module ballcontrol (
               posy.d = bally;
             }
             
-          b1111111111111111111011:
+          b11111111111111111111011:
             if (posx.q == b0000 && posy.q == b1111){
               ball = array[posy.q][posx.q];
               pos.d = ball;
@@ -278,7 +278,7 @@ module ballcontrol (
               }
             }
             
-          b1111111111111111111001:
+          b11111111111111111111001:
             if (posx.q!=b1111){
               myalu.a = posx.q;
               myalu.b = 16b1;
@@ -287,7 +287,7 @@ module ballcontrol (
               posx.d = ballx;
             }
             
-          b1111111111111111111000:
+          b11111111111111111111000:
             if (posy.q!=b0001){
               myalu.a = posy.q;
               myalu.b = 16b1;
@@ -296,7 +296,7 @@ module ballcontrol (
               posy.d = bally;
             }
                         
-          b1111111111111111111011:
+          b11111111111111111111011:
             if (posx.q == b1111 && posy.q == 0000){
               ball = array[posy.q][posx.q];
               pos.d = ball;
@@ -353,7 +353,7 @@ module ballcontrol (
                 state.d = state.GAMESTART;
               }
             }
-          b1111111111111111111001:
+          b11111111111111111111001:
             if (posx.q!=b0000){
               myalu.a = posx.q;
               myalu.b = 16b1;
@@ -362,7 +362,7 @@ module ballcontrol (
               posx.d = ballx;
             }
             
-          b1111111111111111111000:
+          b11111111111111111111000:
             if (posy.q!=b0001){
               myalu.a = posy.q;
               myalu.b = 16b1;
@@ -371,7 +371,7 @@ module ballcontrol (
               posy.d = bally;
             }
      
-          b1111111111111111111011:
+          b11111111111111111111011:
             if (posx.q == b1111 && posy.q == b0000){
               ball = array[posy.q][posx.q];
               pos.d = ball;

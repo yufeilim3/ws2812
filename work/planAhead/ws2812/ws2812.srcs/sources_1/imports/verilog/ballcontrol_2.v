@@ -36,7 +36,7 @@ module ballcontrol_2 (
   reg [16-1:0] M_myalu_a;
   reg [16-1:0] M_myalu_b;
   reg [6-1:0] M_myalu_alufn;
-  alu16bit_16 myalu (
+  alu16bit_17 myalu (
     .a(M_myalu_a),
     .b(M_myalu_b),
     .alufn(M_myalu_alufn),
@@ -198,7 +198,7 @@ module ballcontrol_2 (
         endgame = M_end_q;
         if (M_tempcounter_q[28+0-:1] == 1'h1) begin
           M_tempcounter_d = 1'h0;
-          if (playing == 2'h1) begin
+          if (playing == 2'h1 || playing == 2'h2) begin
             M_state_d = RIGHTUP_state;
           end else begin
             M_state_d = GAMESTART_state;

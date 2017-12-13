@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module ballcontrol_2 (
+module secondballcontrol_3 (
     input clk,
     input rst,
     output reg [7:0] ballpos,
@@ -50,7 +50,7 @@ module ballcontrol_2 (
   
   reg [2047:0] array;
   
-  reg [21:0] M_counter_d, M_counter_q = 1'h0;
+  reg [22:0] M_counter_d, M_counter_q = 1'h0;
   reg [28:0] M_tempcounter_d, M_tempcounter_q = 1'h0;
   reg [7:0] M_pos_d, M_pos_q = 1'h0;
   reg [3:0] M_posx_d, M_posx_q = 1'h0;
@@ -188,7 +188,7 @@ module ballcontrol_2 (
     case (M_state_q)
       GAMESTART_state: begin
         M_tempcounter_d = M_tempcounter_q + 1'h1;
-        ballx = 1'h0;
+        ballx = 1'h1;
         bally = 1'h1;
         M_posx_d = ballx;
         M_posy_d = bally;
@@ -198,7 +198,7 @@ module ballcontrol_2 (
         endgame = M_end_q;
         if (M_tempcounter_q[28+0-:1] == 1'h1) begin
           M_tempcounter_d = 1'h0;
-          if (playing == 2'h1 || playing == 2'h2) begin
+          if (playing == 2'h2) begin
             M_state_d = RIGHTUP_state;
           end else begin
             M_state_d = GAMESTART_state;
@@ -212,7 +212,7 @@ module ballcontrol_2 (
         M_counter_d = M_counter_q + 1'h1;
         
         case (M_counter_q)
-          22'h3ffff8: begin
+          23'h7ffff8: begin
             if (M_posx_q != 4'hf) begin
               M_myalu_a = M_posx_q;
               M_myalu_b = 16'h0001;
@@ -221,7 +221,7 @@ module ballcontrol_2 (
               M_posx_d = ballx;
             end
           end
-          22'h3ffff9: begin
+          23'h7ffff9: begin
             if (M_posy_q != 4'hf) begin
               M_myalu_a = M_posy_q;
               M_myalu_b = 16'h0001;
@@ -230,7 +230,7 @@ module ballcontrol_2 (
               M_posy_d = bally;
             end
           end
-          22'h3ffffb: begin
+          23'h7ffffb: begin
             if (M_posy_q == 4'hf && M_posx_q == 4'hf) begin
               ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
               M_pos_d = ball;
@@ -266,7 +266,7 @@ module ballcontrol_2 (
         M_counter_d = M_counter_q + 1'h1;
         
         case (M_counter_q)
-          22'h3ffff8: begin
+          23'h7ffff8: begin
             if (M_posx_q != 4'h0) begin
               M_myalu_a = M_posx_q;
               M_myalu_b = 16'h0001;
@@ -275,7 +275,7 @@ module ballcontrol_2 (
               M_posx_d = ballx;
             end
           end
-          22'h3ffff9: begin
+          23'h7ffff9: begin
             if (M_posy_q != 4'hf) begin
               M_myalu_a = M_posy_q;
               M_myalu_b = 16'h0001;
@@ -284,7 +284,7 @@ module ballcontrol_2 (
               M_posy_d = bally;
             end
           end
-          22'h3ffffb: begin
+          23'h7ffffb: begin
             if (M_posx_q == 4'h0 && M_posy_q == 4'hf) begin
               ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
               M_pos_d = ball;
@@ -345,7 +345,7 @@ module ballcontrol_2 (
               end
             end
           end
-          22'h3ffff9: begin
+          23'h7ffff9: begin
             if (M_posx_q != 4'hf) begin
               M_myalu_a = M_posx_q;
               M_myalu_b = 16'h0001;
@@ -354,7 +354,7 @@ module ballcontrol_2 (
               M_posx_d = ballx;
             end
           end
-          22'h3ffff8: begin
+          23'h7ffff8: begin
             if (M_posy_q != 4'h1) begin
               M_myalu_a = M_posy_q;
               M_myalu_b = 16'h0001;
@@ -363,7 +363,7 @@ module ballcontrol_2 (
               M_posy_d = bally;
             end
           end
-          22'h3ffffb: begin
+          23'h7ffffb: begin
             if (M_posx_q == 4'hf && M_posy_q == 1'h0) begin
               ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
               M_pos_d = ball;
@@ -424,7 +424,7 @@ module ballcontrol_2 (
               end
             end
           end
-          22'h3ffff9: begin
+          23'h7ffff9: begin
             if (M_posx_q != 4'h0) begin
               M_myalu_a = M_posx_q;
               M_myalu_b = 16'h0001;
@@ -433,7 +433,7 @@ module ballcontrol_2 (
               M_posx_d = ballx;
             end
           end
-          22'h3ffff8: begin
+          23'h7ffff8: begin
             if (M_posy_q != 4'h1) begin
               M_myalu_a = M_posy_q;
               M_myalu_b = 16'h0001;
@@ -442,7 +442,7 @@ module ballcontrol_2 (
               M_posy_d = bally;
             end
           end
-          22'h3ffffb: begin
+          23'h7ffffb: begin
             if (M_posx_q == 4'hf && M_posy_q == 4'h0) begin
               ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
               M_pos_d = ball;

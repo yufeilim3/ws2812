@@ -4,11 +4,12 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module ws2812b_3 (
+module ws2812b_4 (
     input clk,
     input rst,
     input [3:0] paddle,
     input [7:0] ball,
+    input [7:0] secondball,
     input [127:0] brick,
     output reg datain,
     input [1:0] playing,
@@ -26,40 +27,55 @@ module ws2812b_3 (
   reg [3:0] M_paddlecounter_d, M_paddlecounter_q = 1'h0;
   reg [1:0] M_paddlelencounter_d, M_paddlelencounter_q = 1'h0;
   reg [7:0] M_ballcounter_d, M_ballcounter_q = 1'h0;
+  reg [7:0] M_secondballcounter_d, M_secondballcounter_q = 1'h0;
   reg [7:0] M_gamestartcounter_d, M_gamestartcounter_q = 1'h0;
   reg [7:0] M_gameovercounter_d, M_gameovercounter_q = 1'h0;
   reg [7:0] M_brickcounter_d, M_brickcounter_q = 1'h0;
   reg M_bit_d, M_bit_q = 1'h0;
   reg [16:0] M_pause_d, M_pause_q = 1'h0;
-  localparam GSONELOW_state = 5'd0;
-  localparam GSZEROLOW_state = 5'd1;
-  localparam GSGREENONELOW_state = 5'd2;
-  localparam GSGREENONEHIGH_state = 5'd3;
-  localparam GSGREENZEROLOW_state = 5'd4;
-  localparam GSGREENZEROHIGH_state = 5'd5;
-  localparam PONELOW_state = 5'd6;
-  localparam PZEROLOW_state = 5'd7;
-  localparam PONEHIGH_state = 5'd8;
-  localparam PZEROHIGH_state = 5'd9;
-  localparam BONELOW_state = 5'd10;
-  localparam BZEROLOW_state = 5'd11;
-  localparam BREDONELOW_state = 5'd12;
-  localparam BREDONEHIGH_state = 5'd13;
-  localparam BREDZEROLOW_state = 5'd14;
-  localparam BREDZEROHIGH_state = 5'd15;
-  localparam BBLUEONELOW_state = 5'd16;
-  localparam BBLUEONEHIGH_state = 5'd17;
-  localparam BBLUEZEROLOW_state = 5'd18;
-  localparam BBLUEZEROHIGH_state = 5'd19;
-  localparam GOONELOW_state = 5'd20;
-  localparam GOZEROLOW_state = 5'd21;
-  localparam GOREDONELOW_state = 5'd22;
-  localparam GOREDONEHIGH_state = 5'd23;
-  localparam GOREDZEROLOW_state = 5'd24;
-  localparam GOREDZEROHIGH_state = 5'd25;
-  localparam PAUSE_state = 5'd26;
+  localparam GSONELOW_state = 6'd0;
+  localparam GSZEROLOW_state = 6'd1;
+  localparam GSGREENONELOW_state = 6'd2;
+  localparam GSGREENONEHIGH_state = 6'd3;
+  localparam GSGREENZEROLOW_state = 6'd4;
+  localparam GSGREENZEROHIGH_state = 6'd5;
+  localparam PONELOW_state = 6'd6;
+  localparam PZEROLOW_state = 6'd7;
+  localparam PONEHIGH_state = 6'd8;
+  localparam PZEROHIGH_state = 6'd9;
+  localparam BONELOW_state = 6'd10;
+  localparam BZEROLOW_state = 6'd11;
+  localparam BREDONELOW_state = 6'd12;
+  localparam BREDONEHIGH_state = 6'd13;
+  localparam BREDZEROLOW_state = 6'd14;
+  localparam BREDZEROHIGH_state = 6'd15;
+  localparam BBLUEONELOW_state = 6'd16;
+  localparam BBLUEONEHIGH_state = 6'd17;
+  localparam BBLUEZEROLOW_state = 6'd18;
+  localparam BBLUEZEROHIGH_state = 6'd19;
+  localparam SPONELOW_state = 6'd20;
+  localparam SPZEROLOW_state = 6'd21;
+  localparam SPONEHIGH_state = 6'd22;
+  localparam SPZEROHIGH_state = 6'd23;
+  localparam SBONELOW_state = 6'd24;
+  localparam SBZEROLOW_state = 6'd25;
+  localparam SBREDONELOW_state = 6'd26;
+  localparam SBREDONEHIGH_state = 6'd27;
+  localparam SBREDZEROLOW_state = 6'd28;
+  localparam SBREDZEROHIGH_state = 6'd29;
+  localparam SBBLUEONELOW_state = 6'd30;
+  localparam SBBLUEONEHIGH_state = 6'd31;
+  localparam SBBLUEZEROLOW_state = 6'd32;
+  localparam SBBLUEZEROHIGH_state = 6'd33;
+  localparam GOONELOW_state = 6'd34;
+  localparam GOZEROLOW_state = 6'd35;
+  localparam GOREDONELOW_state = 6'd36;
+  localparam GOREDONEHIGH_state = 6'd37;
+  localparam GOREDZEROLOW_state = 6'd38;
+  localparam GOREDZEROHIGH_state = 6'd39;
+  localparam PAUSE_state = 6'd40;
   
-  reg [4:0] M_state_d, M_state_q = GSONELOW_state;
+  reg [5:0] M_state_d, M_state_q = GSONELOW_state;
   
   always @* begin
     M_state_d = M_state_q;
@@ -67,6 +83,7 @@ module ws2812b_3 (
     M_bit_d = M_bit_q;
     M_paddlelencounter_d = M_paddlelencounter_q;
     M_paddlecounter_d = M_paddlecounter_q;
+    M_secondballcounter_d = M_secondballcounter_q;
     M_brickcounter_d = M_brickcounter_q;
     M_gameovercounter_d = M_gameovercounter_q;
     M_ballcounter_d = M_ballcounter_q;
@@ -330,6 +347,192 @@ module ws2812b_3 (
           M_state_d = BBLUEONEHIGH_state;
         end
       end
+      SPONELOW_state: begin
+        M_bit_d = 1'h1;
+        M_ballcounter_d = 5'h10;
+        M_secondballcounter_d = 5'h10;
+        M_brickcounter_d = 5'h10;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > 5'h11) begin
+          M_state_d = SPZEROLOW_state;
+        end
+        if (M_bitcounter_q == 5'h18) begin
+          M_paddlecounter_d = M_paddlecounter_q + 1'h1;
+          M_bitcounter_d = 1'h0;
+        end
+        if (M_paddlecounter_q == paddle) begin
+          M_state_d = SPONEHIGH_state;
+        end
+        if (M_tbitcounter_q == 9'h180) begin
+          M_bitcounter_d = 1'h0;
+          M_state_d = SBONELOW_state;
+        end
+      end
+      SPZEROLOW_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SPONELOW_state;
+        end
+      end
+      SPONEHIGH_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > value) begin
+          M_state_d = SPZEROHIGH_state;
+        end
+        if (M_bitcounter_q == 5'h18) begin
+          M_paddlecounter_d = M_paddlecounter_q + 1'h1;
+          M_paddlelencounter_d = M_paddlelencounter_q + 1'h1;
+          M_bitcounter_d = 1'h0;
+        end
+        if (M_paddlelencounter_q == 2'h3) begin
+          M_paddlelencounter_d = 1'h0;
+          M_state_d = SPONELOW_state;
+        end
+      end
+      SPZEROHIGH_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SPONEHIGH_state;
+        end
+      end
+      SBONELOW_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > 5'h11) begin
+          M_state_d = SBZEROLOW_state;
+        end
+        if (M_bitcounter_q == 5'h18) begin
+          M_secondballcounter_d = M_secondballcounter_q + 1'h1;
+          M_ballcounter_d = M_ballcounter_q + 1'h1;
+          M_brickcounter_d = M_brickcounter_q + 1'h1;
+          M_bitcounter_d = 1'h0;
+        end
+        if (M_tbitcounter_q == 13'h1800) begin
+          M_state_d = PAUSE_state;
+        end
+        if (M_ballcounter_q == ball || M_secondballcounter_q == secondball) begin
+          M_state_d = SBREDONELOW_state;
+        end
+        if (M_brickcounter_q == brick[0+7-:8] || M_brickcounter_q == brick[8+7-:8] || M_brickcounter_q == brick[16+7-:8] || M_brickcounter_q == brick[24+7-:8] || M_brickcounter_q == brick[32+7-:8] || M_brickcounter_q == brick[40+7-:8] || M_brickcounter_q == brick[48+7-:8] || M_brickcounter_q == brick[56+7-:8] || M_brickcounter_q == brick[64+7-:8] || M_brickcounter_q == brick[72+7-:8] || M_brickcounter_q == brick[80+7-:8] || M_brickcounter_q == brick[88+7-:8] || M_brickcounter_q == brick[96+7-:8] || M_brickcounter_q == brick[104+7-:8] || M_brickcounter_q == brick[112+7-:8] || M_brickcounter_q == brick[120+7-:8]) begin
+          M_state_d = SBBLUEONELOW_state;
+        end
+      end
+      SBZEROLOW_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SBONELOW_state;
+        end
+      end
+      SBREDONELOW_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > 5'h11) begin
+          M_state_d = SBREDZEROLOW_state;
+        end
+        if (M_bitcounter_q == 4'h9) begin
+          M_state_d = SBREDONEHIGH_state;
+        end
+        if (M_bitcounter_q == 5'h18) begin
+          if (M_brickcounter_q == M_ballcounter_q || M_brickcounter_q == M_secondballcounter_q) begin
+            M_brickcounter_d = M_brickcounter_q + 1'h1;
+          end
+          M_bitcounter_d = 1'h0;
+          M_ballcounter_d = M_ballcounter_q + 1'h1;
+          M_secondballcounter_d = M_secondballcounter_q + 1'h1;
+          M_state_d = SBONELOW_state;
+        end
+      end
+      SBREDZEROLOW_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SBREDONELOW_state;
+        end
+      end
+      SBREDONEHIGH_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > value) begin
+          M_state_d = SBREDZEROHIGH_state;
+        end
+        if (M_bitcounter_q == 5'h11) begin
+          M_state_d = SBREDONELOW_state;
+        end
+      end
+      SBREDZEROHIGH_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SBREDONEHIGH_state;
+        end
+      end
+      SBBLUEONELOW_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > 5'h11) begin
+          M_state_d = SBBLUEZEROLOW_state;
+        end
+        if (M_bitcounter_q == 5'h11) begin
+          M_state_d = SBBLUEONEHIGH_state;
+        end
+      end
+      SBBLUEZEROLOW_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SBBLUEONELOW_state;
+        end
+      end
+      SBBLUEONEHIGH_state: begin
+        M_bit_d = 1'h1;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q > value) begin
+          M_state_d = SBBLUEZEROHIGH_state;
+        end
+        if (M_bitcounter_q == 5'h18) begin
+          if (M_brickcounter_q == M_ballcounter_q) begin
+            M_ballcounter_d = M_ballcounter_q + 1'h1;
+          end
+          if (M_brickcounter_q == M_secondballcounter_q) begin
+            M_secondballcounter_d = M_secondballcounter_q + 1'h1;
+          end
+          M_bitcounter_d = 1'h0;
+          M_brickcounter_d = M_brickcounter_q + 1'h1;
+          M_state_d = SBONELOW_state;
+        end
+      end
+      SBBLUEZEROHIGH_state: begin
+        M_bit_d = 1'h0;
+        M_timecounter_d = M_timecounter_q + 1'h1;
+        if (M_timecounter_q == 6'h3e) begin
+          M_tbitcounter_d = M_tbitcounter_q + 1'h1;
+          M_bitcounter_d = M_bitcounter_q + 1'h1;
+          M_timecounter_d = 1'h0;
+          M_state_d = SBBLUEONEHIGH_state;
+        end
+      end
       GOONELOW_state: begin
         M_bit_d = 1'h1;
         M_timecounter_d = M_timecounter_q + 1'h1;
@@ -416,6 +619,9 @@ module ws2812b_3 (
             M_state_d = PONELOW_state;
           end
           if (playing == 2'h2) begin
+            M_state_d = SPONELOW_state;
+          end
+          if (playing == 2'h3) begin
             M_state_d = GOONELOW_state;
           end
         end
@@ -432,6 +638,7 @@ module ws2812b_3 (
       M_paddlecounter_q <= 1'h0;
       M_paddlelencounter_q <= 1'h0;
       M_ballcounter_q <= 1'h0;
+      M_secondballcounter_q <= 1'h0;
       M_gamestartcounter_q <= 1'h0;
       M_gameovercounter_q <= 1'h0;
       M_brickcounter_q <= 1'h0;
@@ -445,6 +652,7 @@ module ws2812b_3 (
       M_paddlecounter_q <= M_paddlecounter_d;
       M_paddlelencounter_q <= M_paddlelencounter_d;
       M_ballcounter_q <= M_ballcounter_d;
+      M_secondballcounter_q <= M_secondballcounter_d;
       M_gamestartcounter_q <= M_gamestartcounter_d;
       M_gameovercounter_q <= M_gameovercounter_d;
       M_brickcounter_q <= M_brickcounter_d;

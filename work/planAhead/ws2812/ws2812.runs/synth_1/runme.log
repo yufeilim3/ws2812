@@ -7,38 +7,40 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/multiplier_31.v" into library work
-Parsing module <multiplier_31>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder_30.v" into library work
-Parsing module <adder_30>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/shifter_24.v" into library work
-Parsing module <shifter_24>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/pipeline_18.v" into library work
-Parsing module <pipeline_18>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/cmp_25.v" into library work
-Parsing module <cmp_25>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/boole_23.v" into library work
-Parsing module <boole_23>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder16bit_22.v" into library work
-Parsing module <adder16bit_22>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/edge_detector_7.v" into library work
-Parsing module <edge_detector_7>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/button_conditioner_9.v" into library work
-Parsing module <button_conditioner_9>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/alu16bit_16.v" into library work
-Parsing module <alu16bit_16>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ws2812b_3.v" into library work
-Parsing module <ws2812b_3>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/reset_conditioner_11.v" into library work
-Parsing module <reset_conditioner_11>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/multiplier_37.v" into library work
+Parsing module <multiplier_37>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder_36.v" into library work
+Parsing module <adder_36>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/shifter_26.v" into library work
+Parsing module <shifter_26>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/pipeline_20.v" into library work
+Parsing module <pipeline_20>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/cmp_27.v" into library work
+Parsing module <cmp_27>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/boole_25.v" into library work
+Parsing module <boole_25>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder16bit_24.v" into library work
+Parsing module <adder16bit_24>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/edge_detector_8.v" into library work
+Parsing module <edge_detector_8>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/button_conditioner_10.v" into library work
+Parsing module <button_conditioner_10>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/alu16bit_17.v" into library work
+Parsing module <alu16bit_17>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ws2812b_4.v" into library work
+Parsing module <ws2812b_4>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" into library work
+Parsing module <secondballcontrol_3>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/reset_conditioner_12.v" into library work
+Parsing module <reset_conditioner_12>.
 Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/playercontrol_1.v" into library work
 Parsing module <playercontrol_1>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gamestart_5.v" into library work
-Parsing module <gamestart_5>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gameover_6.v" into library work
-Parsing module <gameover_6>.
-Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/brickgen_4.v" into library work
-Parsing module <brickgen_4>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gamestart_6.v" into library work
+Parsing module <gamestart_6>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gameover_7.v" into library work
+Parsing module <gameover_7>.
+Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/brickgen_5.v" into library work
+Parsing module <brickgen_5>.
 Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v" into library work
 Parsing module <ballcontrol_2>.
 Analyzing Verilog file "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
@@ -52,25 +54,25 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <playercontrol_1>.
 
-Elaborating module <edge_detector_7>.
+Elaborating module <edge_detector_8>.
 
-Elaborating module <button_conditioner_9>.
+Elaborating module <button_conditioner_10>.
 
-Elaborating module <pipeline_18>.
+Elaborating module <pipeline_20>.
 
-Elaborating module <alu16bit_16>.
+Elaborating module <alu16bit_17>.
 
-Elaborating module <adder16bit_22>.
+Elaborating module <adder16bit_24>.
 
-Elaborating module <adder_30>.
+Elaborating module <adder_36>.
 
-Elaborating module <multiplier_31>.
+Elaborating module <multiplier_37>.
 
-Elaborating module <boole_23>.
+Elaborating module <boole_25>.
 
-Elaborating module <shifter_24>.
+Elaborating module <shifter_26>.
 
-Elaborating module <cmp_25>.
+Elaborating module <cmp_27>.
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/playercontrol_1.v" Line 66: Assignment to M_myalu_z ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/playercontrol_1.v" Line 67: Assignment to M_myalu_v ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/playercontrol_1.v" Line 68: Assignment to M_myalu_n ignored, since the identifier is never used
@@ -81,15 +83,22 @@ WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/w
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v" Line 45: Assignment to M_myalu_n ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 56: Assignment to M_myball_ballposy ignored, since the identifier is never used
 
-Elaborating module <ws2812b_3>.
+Elaborating module <secondballcontrol_3>.
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" Line 43: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" Line 44: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" Line 45: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 72: Assignment to M_myballtwo_ballposx ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Assignment to M_myballtwo_ballposy ignored, since the identifier is never used
 
-Elaborating module <brickgen_4>.
+Elaborating module <ws2812b_4>.
 
-Elaborating module <gamestart_5>.
+Elaborating module <brickgen_5>.
 
-Elaborating module <gameover_6>.
+Elaborating module <gamestart_6>.
 
-Elaborating module <reset_conditioner_11>.
+Elaborating module <gameover_7>.
+
+Elaborating module <reset_conditioner_12>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -105,25 +114,28 @@ WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" line 49: Output port <ballposy> of the instance <myball> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" line 66: Output port <ballposx> of the instance <myballtwo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/mojo_top_0.v" line 66: Output port <ballposy> of the instance <myballtwo> is unconnected or connected to loadless signal.
     Found 2-bit register for signal <M_state_q>.
     Found 2-bit register for signal <M_playing_q>.
     Found finite state machine <FSM_0> for signal <M_state_q>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 6                                              |
-    | Inputs             | 2                                              |
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | 00                                             |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 147
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 147
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 147
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 147
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 147
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 147
+    Found 2-bit 4-to-1 multiplexer for signal <M_playing_d> created at line 213.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 169
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 169
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 169
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 169
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 169
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 169
     Summary:
 	inferred   2 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
@@ -153,73 +165,74 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 16-bit 4-to-1 multiplexer for signal <M_myalu_b> created at line 85.
+    Found 6-bit 4-to-1 multiplexer for signal <M_myalu_alufn> created at line 85.
     Summary:
 	inferred   4 D-type flip-flop(s).
 	inferred   8 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <playercontrol_1> synthesized.
 
-Synthesizing Unit <edge_detector_7>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/edge_detector_7.v".
+Synthesizing Unit <edge_detector_8>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/edge_detector_8.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_7> synthesized.
+Unit <edge_detector_8> synthesized.
 
-Synthesizing Unit <button_conditioner_9>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/button_conditioner_9.v".
+Synthesizing Unit <button_conditioner_10>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/button_conditioner_10.v".
     Found 20-bit register for signal <M_ctr_q>.
     Found 20-bit adder for signal <M_ctr_q[19]_GND_4_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_9> synthesized.
+Unit <button_conditioner_10> synthesized.
 
-Synthesizing Unit <pipeline_18>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/pipeline_18.v".
+Synthesizing Unit <pipeline_20>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/pipeline_20.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_18> synthesized.
+Unit <pipeline_20> synthesized.
 
-Synthesizing Unit <alu16bit_16>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/alu16bit_16.v".
+Synthesizing Unit <alu16bit_17>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/alu16bit_17.v".
     Found 16-bit 4-to-1 multiplexer for signal <out> created at line 86.
     Summary:
 	inferred   1 Multiplexer(s).
-Unit <alu16bit_16> synthesized.
+Unit <alu16bit_17> synthesized.
 
-Synthesizing Unit <adder16bit_22>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder16bit_22.v".
+Synthesizing Unit <adder16bit_24>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder16bit_24.v".
     Summary:
 	inferred   1 Multiplexer(s).
-Unit <adder16bit_22> synthesized.
+Unit <adder16bit_24> synthesized.
 
-Synthesizing Unit <adder_30>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder_30.v".
+Synthesizing Unit <adder_36>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/adder_36.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 26.
     Found 16-bit adder for signal <a[15]_b[15]_add_2_OUT> created at line 29.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Multiplexer(s).
-Unit <adder_30> synthesized.
+Unit <adder_36> synthesized.
 
-Synthesizing Unit <multiplier_31>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/multiplier_31.v".
+Synthesizing Unit <multiplier_37>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/multiplier_37.v".
     Found 16x16-bit multiplier for signal <n0003> created at line 16.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <multiplier_31> synthesized.
+Unit <multiplier_37> synthesized.
 
-Synthesizing Unit <boole_23>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/boole_23.v".
+Synthesizing Unit <boole_25>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/boole_25.v".
     Found 16-bit 16-to-1 multiplexer for signal <boole> created at line 18.
     Summary:
 	inferred   1 Multiplexer(s).
-Unit <boole_23> synthesized.
+Unit <boole_25> synthesized.
 
-Synthesizing Unit <shifter_24>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/shifter_24.v".
+Synthesizing Unit <shifter_26>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/shifter_26.v".
     Found 16-bit shifter logical left for signal <a[15]_b[15]_shift_left_0_OUT> created at line 23
     Found 16-bit shifter logical right for signal <a[15]_b[15]_shift_right_1_OUT> created at line 26
     Found 16-bit shifter arithmetic right for signal <a[15]_b[15]_shift_right_2_OUT> created at line 32
@@ -227,15 +240,15 @@ Synthesizing Unit <shifter_24>.
     Summary:
 	inferred   4 Multiplexer(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <shifter_24> synthesized.
+Unit <shifter_26> synthesized.
 
-Synthesizing Unit <cmp_25>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/cmp_25.v".
+Synthesizing Unit <cmp_27>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/cmp_27.v".
 WARNING:Xst:653 - Signal <cmp<15:1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit 4-to-1 multiplexer for signal <cmp<0>> created at line 19.
     Summary:
 	inferred   1 Multiplexer(s).
-Unit <cmp_25> synthesized.
+Unit <cmp_27> synthesized.
 
 Synthesizing Unit <ballcontrol_2>.
     Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ballcontrol_2.v".
@@ -264,19 +277,19 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 29-bit adder for signal <M_tempcounter_q[28]_GND_16_o_add_3_OUT> created at line 190.
-    Found 22-bit adder for signal <M_counter_q[21]_GND_16_o_add_114_OUT> created at line 320.
-    Found 12-bit adder for signal <n0292> created at line 336.
-    Found 12-bit adder for signal <n0211> created at line 336.
-    Found 4095-bit shifter logical right for signal <n0212> created at line 336
+    Found 22-bit adder for signal <M_counter_q[21]_GND_16_o_add_115_OUT> created at line 320.
+    Found 12-bit adder for signal <n0294> created at line 336.
+    Found 12-bit adder for signal <n0213> created at line 336.
+    Found 4095-bit shifter logical right for signal <n0214> created at line 336
     Found 16-bit 7-to-1 multiplexer for signal <M_myalu_b> created at line 188.
     Found 8-bit 7-to-1 multiplexer for signal <ball> created at line 188.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0376> created at line 268.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0411> created at line 214.
-    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_117_o> created at line 329
-    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_121_o> created at line 335
+    Found 16-bit 3-to-1 multiplexer for signal <_n0408> created at line 214.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0443> created at line 268.
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_118_o> created at line 329
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_122_o> created at line 335
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_123_o> created at line 335
-    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_191_o> created at line 408
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_124_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_192_o> created at line 408
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  68 D-type flip-flop(s).
@@ -286,138 +299,191 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
 	inferred   1 Finite State Machine(s).
 Unit <ballcontrol_2> synthesized.
 
-Synthesizing Unit <ws2812b_3>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ws2812b_3.v".
+Synthesizing Unit <secondballcontrol_3>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v".
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" line 39: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" line 39: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/secondballcontrol_3.v" line 39: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+    Found 29-bit register for signal <M_tempcounter_q>.
+    Found 8-bit register for signal <M_pos_q>.
+    Found 4-bit register for signal <M_posx_q>.
+    Found 4-bit register for signal <M_posy_q>.
+    Found 1-bit register for signal <M_end_q>.
+    Found 3-bit register for signal <M_state_q>.
+    Found 23-bit register for signal <M_counter_q>.
+    Found finite state machine <FSM_3> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 45                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 29-bit adder for signal <M_tempcounter_q[28]_GND_17_o_add_3_OUT> created at line 190.
+    Found 23-bit adder for signal <M_counter_q[22]_GND_17_o_add_114_OUT> created at line 320.
+    Found 12-bit adder for signal <n0292> created at line 336.
+    Found 12-bit adder for signal <n0211> created at line 336.
+    Found 4095-bit shifter logical right for signal <n0212> created at line 336
+    Found 16-bit 7-to-1 multiplexer for signal <M_myalu_b> created at line 188.
+    Found 8-bit 7-to-1 multiplexer for signal <ball> created at line 188.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0399> created at line 268.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0440> created at line 214.
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_117_o> created at line 329
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_121_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_122_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_123_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_191_o> created at line 408
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  50 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <secondballcontrol_3> synthesized.
+
+Synthesizing Unit <ws2812b_4>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/ws2812b_4.v".
     Found 13-bit register for signal <M_tbitcounter_q>.
     Found 5-bit register for signal <M_bitcounter_q>.
     Found 4-bit register for signal <M_paddlecounter_q>.
     Found 2-bit register for signal <M_paddlelencounter_q>.
     Found 8-bit register for signal <M_ballcounter_q>.
+    Found 8-bit register for signal <M_secondballcounter_q>.
     Found 8-bit register for signal <M_gamestartcounter_q>.
     Found 8-bit register for signal <M_gameovercounter_q>.
     Found 8-bit register for signal <M_brickcounter_q>.
     Found 1-bit register for signal <M_bit_q>.
     Found 17-bit register for signal <M_pause_q>.
-    Found 5-bit register for signal <M_state_q>.
+    Found 6-bit register for signal <M_state_q>.
     Found 7-bit register for signal <M_timecounter_q>.
-    Found finite state machine <FSM_3> for signal <M_state_q>.
+    Found finite state machine <FSM_4> for signal <M_state_q>.
     -----------------------------------------------------------------------
-    | States             | 27                                             |
-    | Transitions        | 78                                             |
-    | Inputs             | 18                                             |
-    | Outputs            | 6                                              |
+    | States             | 41                                             |
+    | Transitions        | 117                                            |
+    | Inputs             | 19                                             |
+    | Outputs            | 7                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst (positive)                                 |
     | Reset type         | synchronous                                    |
-    | Reset State        | 00000                                          |
-    | Power Up State     | 00000                                          |
+    | Reset State        | 000000                                         |
+    | Power Up State     | 000000                                         |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <M_gamestartcounter_q[7]_GND_17_o_add_63_OUT> created at line 119.
-    Found 4-bit adder for signal <M_paddlecounter_q[3]_GND_17_o_add_112_OUT> created at line 190.
-    Found 2-bit adder for signal <M_paddlelencounter_q[1]_GND_17_o_add_113_OUT> created at line 191.
-    Found 8-bit adder for signal <M_ballcounter_q[7]_GND_17_o_add_219_OUT> created at line 316.
-    Found 8-bit adder for signal <M_brickcounter_q[7]_GND_17_o_add_221_OUT> created at line 319.
-    Found 8-bit adder for signal <M_gameovercounter_q[7]_GND_17_o_add_282_OUT> created at line 371.
-    Found 7-bit adder for signal <M_timecounter_q[6]_GND_17_o_add_299_OUT> created at line 397.
-    Found 13-bit adder for signal <M_tbitcounter_q[12]_GND_17_o_add_301_OUT> created at line 399.
-    Found 5-bit adder for signal <M_bitcounter_q[4]_GND_17_o_add_302_OUT> created at line 400.
-    Found 17-bit adder for signal <M_pause_q[16]_GND_17_o_add_307_OUT> created at line 407.
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[7]_equal_10_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[15]_equal_11_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[23]_equal_12_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[31]_equal_13_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[39]_equal_14_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[47]_equal_15_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[55]_equal_16_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[63]_equal_17_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[71]_equal_18_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[79]_equal_19_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[87]_equal_20_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[95]_equal_21_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[103]_equal_22_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[111]_equal_23_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[119]_equal_24_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[127]_equal_25_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[135]_equal_26_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[143]_equal_27_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[151]_equal_28_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[159]_equal_29_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[167]_equal_30_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[175]_equal_31_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[183]_equal_32_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[191]_equal_33_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[199]_equal_34_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[207]_equal_35_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[215]_equal_36_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[223]_equal_37_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[231]_equal_38_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[239]_equal_39_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[247]_equal_40_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[255]_equal_41_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[263]_equal_42_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[271]_equal_43_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[279]_equal_44_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[287]_equal_45_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[295]_equal_46_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[303]_equal_47_o> created at line 94
-    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[311]_equal_48_o> created at line 94
-    Found 4-bit comparator equal for signal <M_paddlecounter_q[3]_paddle[3]_equal_96_o> created at line 165
-    Found 8-bit comparator equal for signal <M_ballcounter_q[7]_ball[7]_equal_140_o> created at line 223
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[7]_equal_142_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[15]_equal_143_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[23]_equal_144_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[31]_equal_145_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[39]_equal_146_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[47]_equal_147_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[55]_equal_148_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[63]_equal_149_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[71]_equal_150_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[79]_equal_151_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[87]_equal_152_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[95]_equal_153_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[103]_equal_154_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[111]_equal_155_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[119]_equal_156_o> created at line 226
-    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[127]_equal_157_o> created at line 226
-    Found 8-bit comparator not equal for signal <M_brickcounter_q[7]_M_ballcounter_q[7]_equal_219_o> created at line 315
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[7]_equal_244_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[15]_equal_245_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[23]_equal_246_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[31]_equal_247_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[39]_equal_248_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[47]_equal_249_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[55]_equal_250_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[63]_equal_251_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[71]_equal_252_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[79]_equal_253_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[87]_equal_254_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[95]_equal_255_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[103]_equal_256_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[111]_equal_257_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[119]_equal_258_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[127]_equal_259_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[135]_equal_260_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[143]_equal_261_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[151]_equal_262_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[159]_equal_263_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[167]_equal_264_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[175]_equal_265_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[183]_equal_266_o> created at line 346
-    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[191]_equal_267_o> created at line 346
-    Found 7-bit comparator greater for signal <GND_17_o_M_timecounter_q[6]_LessThan_278_o> created at line 363
-    Found 7-bit comparator greater for signal <GND_17_o_M_timecounter_q[6]_LessThan_296_o> created at line 388
+    Found 8-bit adder for signal <M_gamestartcounter_q[7]_GND_18_o_add_63_OUT> created at line 136.
+    Found 4-bit adder for signal <M_paddlecounter_q[3]_GND_18_o_add_258_OUT> created at line 388.
+    Found 2-bit adder for signal <M_paddlelencounter_q[1]_GND_18_o_add_259_OUT> created at line 389.
+    Found 8-bit adder for signal <M_ballcounter_q[7]_GND_18_o_add_371_OUT> created at line 516.
+    Found 8-bit adder for signal <M_secondballcounter_q[7]_GND_18_o_add_374_OUT> created at line 519.
+    Found 8-bit adder for signal <M_brickcounter_q[7]_GND_18_o_add_376_OUT> created at line 522.
+    Found 8-bit adder for signal <M_gameovercounter_q[7]_GND_18_o_add_438_OUT> created at line 574.
+    Found 7-bit adder for signal <M_timecounter_q[6]_GND_18_o_add_455_OUT> created at line 600.
+    Found 13-bit adder for signal <M_tbitcounter_q[12]_GND_18_o_add_457_OUT> created at line 602.
+    Found 5-bit adder for signal <M_bitcounter_q[4]_GND_18_o_add_458_OUT> created at line 603.
+    Found 17-bit adder for signal <M_pause_q[16]_GND_18_o_add_463_OUT> created at line 610.
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[7]_equal_10_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[15]_equal_11_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[23]_equal_12_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[31]_equal_13_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[39]_equal_14_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[47]_equal_15_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[55]_equal_16_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[63]_equal_17_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[71]_equal_18_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[79]_equal_19_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[87]_equal_20_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[95]_equal_21_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[103]_equal_22_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[111]_equal_23_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[119]_equal_24_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[127]_equal_25_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[135]_equal_26_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[143]_equal_27_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[151]_equal_28_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[159]_equal_29_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[167]_equal_30_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[175]_equal_31_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[183]_equal_32_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[191]_equal_33_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[199]_equal_34_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[207]_equal_35_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[215]_equal_36_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[223]_equal_37_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[231]_equal_38_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[239]_equal_39_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[247]_equal_40_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[255]_equal_41_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[263]_equal_42_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[271]_equal_43_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[279]_equal_44_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[287]_equal_45_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[295]_equal_46_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[303]_equal_47_o> created at line 111
+    Found 8-bit comparator equal for signal <M_gamestartcounter_q[7]_gamestart[311]_equal_48_o> created at line 111
+    Found 4-bit comparator equal for signal <M_paddlecounter_q[3]_paddle[3]_equal_242_o> created at line 363
+    Found 8-bit comparator equal for signal <M_ballcounter_q[7]_ball[7]_equal_288_o> created at line 422
+    Found 8-bit comparator equal for signal <M_secondballcounter_q[7]_secondball[7]_equal_289_o> created at line 422
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[7]_equal_291_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[15]_equal_292_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[23]_equal_293_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[31]_equal_294_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[39]_equal_295_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[47]_equal_296_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[55]_equal_297_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[63]_equal_298_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[71]_equal_299_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[79]_equal_300_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[87]_equal_301_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[95]_equal_302_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[103]_equal_303_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[111]_equal_304_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[119]_equal_305_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_brick[127]_equal_306_o> created at line 425
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_M_ballcounter_q[7]_equal_371_o> created at line 515
+    Found 8-bit comparator equal for signal <M_brickcounter_q[7]_M_secondballcounter_q[7]_equal_374_o> created at line 518
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[7]_equal_400_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[15]_equal_401_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[23]_equal_402_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[31]_equal_403_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[39]_equal_404_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[47]_equal_405_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[55]_equal_406_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[63]_equal_407_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[71]_equal_408_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[79]_equal_409_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[87]_equal_410_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[95]_equal_411_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[103]_equal_412_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[111]_equal_413_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[119]_equal_414_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[127]_equal_415_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[135]_equal_416_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[143]_equal_417_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[151]_equal_418_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[159]_equal_419_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[167]_equal_420_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[175]_equal_421_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[183]_equal_422_o> created at line 549
+    Found 8-bit comparator equal for signal <M_gameovercounter_q[7]_gameover[191]_equal_423_o> created at line 549
+    Found 7-bit comparator greater for signal <GND_18_o_M_timecounter_q[6]_LessThan_434_o> created at line 566
+    Found 7-bit comparator greater for signal <GND_18_o_M_timecounter_q[6]_LessThan_452_o> created at line 591
     Summary:
-	inferred  10 Adder/Subtractor(s).
-	inferred  81 D-type flip-flop(s).
-	inferred  84 Comparator(s).
-	inferred  45 Multiplexer(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  89 D-type flip-flop(s).
+	inferred  86 Comparator(s).
+	inferred  69 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
-Unit <ws2812b_3> synthesized.
+Unit <ws2812b_4> synthesized.
 
-Synthesizing Unit <brickgen_4>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/brickgen_4.v".
+Synthesizing Unit <brickgen_5>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/brickgen_5.v".
     Found 5-bit register for signal <M_bone_q>.
     Found 4-bit register for signal <M_btwo_q>.
     Found 4-bit register for signal <M_bthree_q>.
@@ -452,168 +518,189 @@ Synthesizing Unit <brickgen_4>.
     Found 4-bit register for signal <M_bysixteen_q>.
     Found 1-bit register for signal <M_end_q>.
     Found 1-bit register for signal <M_state_q>.
-    Found 22-bit register for signal <M_counter_q>.
-    Found 12-bit adder for signal <n0535> created at line 115.
-    Found 12-bit adder for signal <n0335> created at line 115.
-    Found 12-bit adder for signal <n0540> created at line 116.
-    Found 12-bit adder for signal <n0338> created at line 116.
-    Found 12-bit adder for signal <n0545> created at line 117.
-    Found 12-bit adder for signal <n0341> created at line 117.
-    Found 12-bit adder for signal <n0550> created at line 118.
-    Found 12-bit adder for signal <n0344> created at line 118.
-    Found 12-bit adder for signal <n0555> created at line 119.
-    Found 12-bit adder for signal <n0347> created at line 119.
-    Found 12-bit adder for signal <n0560> created at line 120.
-    Found 12-bit adder for signal <n0350> created at line 120.
-    Found 12-bit adder for signal <n0565> created at line 121.
-    Found 12-bit adder for signal <n0353> created at line 121.
-    Found 12-bit adder for signal <n0570> created at line 122.
-    Found 12-bit adder for signal <n0356> created at line 122.
-    Found 12-bit adder for signal <n0575> created at line 123.
-    Found 12-bit adder for signal <n0359> created at line 123.
-    Found 12-bit adder for signal <n0580> created at line 124.
-    Found 12-bit adder for signal <n0362> created at line 124.
-    Found 12-bit adder for signal <n0585> created at line 125.
-    Found 12-bit adder for signal <n0365> created at line 125.
-    Found 12-bit adder for signal <n0590> created at line 126.
-    Found 12-bit adder for signal <n0368> created at line 126.
-    Found 12-bit adder for signal <n0595> created at line 127.
-    Found 12-bit adder for signal <n0371> created at line 127.
-    Found 12-bit adder for signal <n0600> created at line 128.
-    Found 12-bit adder for signal <n0374> created at line 128.
-    Found 12-bit adder for signal <n0605> created at line 129.
-    Found 12-bit adder for signal <n0377> created at line 129.
-    Found 12-bit adder for signal <n0610> created at line 130.
-    Found 12-bit adder for signal <n0380> created at line 130.
-    Found 22-bit adder for signal <M_counter_q[21]_GND_18_o_add_99_OUT> created at line 190.
-    Found 4095-bit shifter logical right for signal <n0336> created at line 115
-    Found 4095-bit shifter logical right for signal <n0339> created at line 116
-    Found 4095-bit shifter logical right for signal <n0342> created at line 117
-    Found 4095-bit shifter logical right for signal <n0345> created at line 118
-    Found 4095-bit shifter logical right for signal <n0348> created at line 119
-    Found 4095-bit shifter logical right for signal <n0351> created at line 120
-    Found 4095-bit shifter logical right for signal <n0354> created at line 121
-    Found 4095-bit shifter logical right for signal <n0357> created at line 122
-    Found 4095-bit shifter logical right for signal <n0360> created at line 123
-    Found 4095-bit shifter logical right for signal <n0363> created at line 124
-    Found 4095-bit shifter logical right for signal <n0366> created at line 125
-    Found 4095-bit shifter logical right for signal <n0369> created at line 126
-    Found 4095-bit shifter logical right for signal <n0372> created at line 127
-    Found 4095-bit shifter logical right for signal <n0375> created at line 128
-    Found 4095-bit shifter logical right for signal <n0378> created at line 129
-    Found 4095-bit shifter logical right for signal <n0381> created at line 130
-    Found 8-bit comparator not equal for signal <PWR_16_o_ballpos[7]_equal_102_o> created at line 192
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_106_o> created at line 198
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_110_o> created at line 204
-    Found 8-bit comparator not equal for signal <PWR_16_o_ballpos[7]_equal_114_o> created at line 210
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_118_o> created at line 216
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_122_o> created at line 222
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_126_o> created at line 228
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_130_o> created at line 234
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_134_o> created at line 240
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_138_o> created at line 246
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_142_o> created at line 252
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_146_o> created at line 258
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_150_o> created at line 264
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_154_o> created at line 270
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_158_o> created at line 276
-    Found 8-bit comparator equal for signal <PWR_16_o_ballpos[7]_equal_162_o> created at line 282
+    Found 20-bit register for signal <M_counter_q>.
+    Found 12-bit adder for signal <n0568> created at line 116.
+    Found 12-bit adder for signal <n0368> created at line 116.
+    Found 12-bit adder for signal <n0573> created at line 117.
+    Found 12-bit adder for signal <n0371> created at line 117.
+    Found 12-bit adder for signal <n0578> created at line 118.
+    Found 12-bit adder for signal <n0374> created at line 118.
+    Found 12-bit adder for signal <n0583> created at line 119.
+    Found 12-bit adder for signal <n0377> created at line 119.
+    Found 12-bit adder for signal <n0588> created at line 120.
+    Found 12-bit adder for signal <n0380> created at line 120.
+    Found 12-bit adder for signal <n0593> created at line 121.
+    Found 12-bit adder for signal <n0383> created at line 121.
+    Found 12-bit adder for signal <n0598> created at line 122.
+    Found 12-bit adder for signal <n0386> created at line 122.
+    Found 12-bit adder for signal <n0603> created at line 123.
+    Found 12-bit adder for signal <n0389> created at line 123.
+    Found 12-bit adder for signal <n0608> created at line 124.
+    Found 12-bit adder for signal <n0392> created at line 124.
+    Found 12-bit adder for signal <n0613> created at line 125.
+    Found 12-bit adder for signal <n0395> created at line 125.
+    Found 12-bit adder for signal <n0618> created at line 126.
+    Found 12-bit adder for signal <n0398> created at line 126.
+    Found 12-bit adder for signal <n0623> created at line 127.
+    Found 12-bit adder for signal <n0401> created at line 127.
+    Found 12-bit adder for signal <n0628> created at line 128.
+    Found 12-bit adder for signal <n0404> created at line 128.
+    Found 12-bit adder for signal <n0633> created at line 129.
+    Found 12-bit adder for signal <n0407> created at line 129.
+    Found 12-bit adder for signal <n0638> created at line 130.
+    Found 12-bit adder for signal <n0410> created at line 130.
+    Found 12-bit adder for signal <n0643> created at line 131.
+    Found 12-bit adder for signal <n0413> created at line 131.
+    Found 20-bit adder for signal <M_counter_q[19]_GND_19_o_add_99_OUT> created at line 191.
+    Found 4095-bit shifter logical right for signal <n0369> created at line 116
+    Found 4095-bit shifter logical right for signal <n0372> created at line 117
+    Found 4095-bit shifter logical right for signal <n0375> created at line 118
+    Found 4095-bit shifter logical right for signal <n0378> created at line 119
+    Found 4095-bit shifter logical right for signal <n0381> created at line 120
+    Found 4095-bit shifter logical right for signal <n0384> created at line 121
+    Found 4095-bit shifter logical right for signal <n0387> created at line 122
+    Found 4095-bit shifter logical right for signal <n0390> created at line 123
+    Found 4095-bit shifter logical right for signal <n0393> created at line 124
+    Found 4095-bit shifter logical right for signal <n0396> created at line 125
+    Found 4095-bit shifter logical right for signal <n0399> created at line 126
+    Found 4095-bit shifter logical right for signal <n0402> created at line 127
+    Found 4095-bit shifter logical right for signal <n0405> created at line 128
+    Found 4095-bit shifter logical right for signal <n0408> created at line 129
+    Found 4095-bit shifter logical right for signal <n0411> created at line 130
+    Found 4095-bit shifter logical right for signal <n0414> created at line 131
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_102_o> created at line 193
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_103_o> created at line 193
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_107_o> created at line 199
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_108_o> created at line 199
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_112_o> created at line 205
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_113_o> created at line 205
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_117_o> created at line 211
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_118_o> created at line 211
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_122_o> created at line 217
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_123_o> created at line 217
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_127_o> created at line 223
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_128_o> created at line 223
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_132_o> created at line 229
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_133_o> created at line 229
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_137_o> created at line 235
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_138_o> created at line 235
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_142_o> created at line 241
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_143_o> created at line 241
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_147_o> created at line 247
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_148_o> created at line 247
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_152_o> created at line 253
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_153_o> created at line 253
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_157_o> created at line 259
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_158_o> created at line 259
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_162_o> created at line 265
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_163_o> created at line 265
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_167_o> created at line 271
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_168_o> created at line 271
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_172_o> created at line 277
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_173_o> created at line 277
+    Found 8-bit comparator equal for signal <PWR_17_o_ballpos[7]_equal_177_o> created at line 283
+    Found 8-bit comparator equal for signal <PWR_17_o_secondballpos[7]_equal_178_o> created at line 283
     Summary:
 	inferred  33 Adder/Subtractor(s).
-	inferred 153 D-type flip-flop(s).
-	inferred  16 Comparator(s).
+	inferred 151 D-type flip-flop(s).
+	inferred  32 Comparator(s).
 	inferred  15 Multiplexer(s).
 	inferred  16 Combinational logic shifter(s).
-Unit <brickgen_4> synthesized.
+Unit <brickgen_5> synthesized.
 
-Synthesizing Unit <gamestart_5>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gamestart_5.v".
+Synthesizing Unit <gamestart_6>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gamestart_6.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
-Unit <gamestart_5> synthesized.
+Unit <gamestart_6> synthesized.
 
-Synthesizing Unit <gameover_6>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gameover_6.v".
+Synthesizing Unit <gameover_7>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/gameover_7.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
-Unit <gameover_6> synthesized.
+Unit <gameover_7> synthesized.
 
-Synthesizing Unit <reset_conditioner_11>.
-    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/reset_conditioner_11.v".
+Synthesizing Unit <reset_conditioner_12>.
+    Related source file is "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws2812.srcs/sources_1/imports/verilog/reset_conditioner_12.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
-Unit <reset_conditioner_11> synthesized.
+Unit <reset_conditioner_12> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 16x16-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 53
- 12-bit adder                                          : 34
+# Multipliers                                          : 3
+ 16x16-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 59
+ 12-bit adder                                          : 36
  13-bit adder                                          : 1
- 16-bit addsub                                         : 2
+ 16-bit addsub                                         : 3
  17-bit adder                                          : 1
  2-bit adder                                           : 1
- 20-bit adder                                          : 4
- 22-bit adder                                          : 2
- 29-bit adder                                          : 1
+ 20-bit adder                                          : 5
+ 22-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 29-bit adder                                          : 2
  4-bit adder                                           : 1
  5-bit adder                                           : 1
  7-bit adder                                           : 1
- 8-bit adder                                           : 4
-# Registers                                            : 67
- 1-bit register                                        : 8
+ 8-bit adder                                           : 5
+# Registers                                            : 74
+ 1-bit register                                        : 9
  13-bit register                                       : 1
  17-bit register                                       : 1
  2-bit register                                        : 6
- 20-bit register                                       : 4
- 22-bit register                                       : 2
- 29-bit register                                       : 1
- 4-bit register                                        : 36
+ 20-bit register                                       : 5
+ 22-bit register                                       : 1
+ 23-bit register                                       : 1
+ 29-bit register                                       : 2
+ 4-bit register                                        : 38
  5-bit register                                        : 2
  7-bit register                                        : 1
- 8-bit register                                        : 5
-# Comparators                                          : 105
- 4-bit comparator equal                                : 6
+ 8-bit register                                        : 7
+# Comparators                                          : 128
+ 4-bit comparator equal                                : 11
  7-bit comparator greater                              : 2
- 8-bit comparator equal                                : 94
- 8-bit comparator not equal                            : 3
-# Multiplexers                                         : 138
- 1-bit 4-to-1 multiplexer                              : 2
- 13-bit 2-to-1 multiplexer                             : 3
- 16-bit 16-to-1 multiplexer                            : 2
- 16-bit 2-to-1 multiplexer                             : 24
- 16-bit 3-to-1 multiplexer                             : 2
- 16-bit 4-to-1 multiplexer                             : 5
- 16-bit 7-to-1 multiplexer                             : 1
+ 8-bit comparator equal                                : 115
+# Multiplexers                                         : 221
+ 1-bit 4-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 2
+ 16-bit 16-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 41
+ 16-bit 3-to-1 multiplexer                             : 4
+ 16-bit 4-to-1 multiplexer                             : 7
+ 16-bit 7-to-1 multiplexer                             : 2
  17-bit 2-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 3
- 22-bit 2-to-1 multiplexer                             : 6
- 29-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 29
- 5-bit 2-to-1 multiplexer                              : 17
- 6-bit 2-to-1 multiplexer                              : 12
- 7-bit 2-to-1 multiplexer                              : 19
- 8-bit 2-to-1 multiplexer                              : 10
- 8-bit 7-to-1 multiplexer                              : 1
-# Logic shifters                                       : 23
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
- 4095-bit shifter logical right                        : 17
+ 2-bit 2-to-1 multiplexer                              : 2
+ 2-bit 4-to-1 multiplexer                              : 1
+ 20-bit 2-to-1 multiplexer                             : 1
+ 22-bit 2-to-1 multiplexer                             : 5
+ 23-bit 2-to-1 multiplexer                             : 5
+ 29-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 43
+ 5-bit 2-to-1 multiplexer                              : 27
+ 6-bit 2-to-1 multiplexer                              : 19
+ 6-bit 4-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 29
+ 8-bit 2-to-1 multiplexer                              : 21
+ 8-bit 7-to-1 multiplexer                              : 2
+# Logic shifters                                       : 27
+ 16-bit shifter arithmetic right                       : 3
+ 16-bit shifter logical left                           : 3
+ 16-bit shifter logical right                          : 3
+ 4095-bit shifter logical right                        : 18
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 4
-# Xors                                                 : 4
- 1-bit xor2                                            : 2
- 16-bit xor2                                           : 2
+# FSMs                                                 : 5
+# Xors                                                 : 6
+ 1-bit xor2                                            : 3
+ 16-bit xor2                                           : 3
 
 =========================================================================
 
@@ -626,122 +713,152 @@ Synthesizing (advanced) Unit <ballcontrol_2>.
 The following registers are absorbed into counter <M_tempcounter_q>: 1 register on signal <M_tempcounter_q>.
 Unit <ballcontrol_2> synthesized (advanced).
 
-Synthesizing (advanced) Unit <brickgen_4>.
+Synthesizing (advanced) Unit <brickgen_5>.
 The following registers are absorbed into counter <M_counter_q>: 1 register on signal <M_counter_q>.
-Unit <brickgen_4> synthesized (advanced).
+Unit <brickgen_5> synthesized (advanced).
 
-Synthesizing (advanced) Unit <button_conditioner_9>.
+Synthesizing (advanced) Unit <button_conditioner_10>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_9> synthesized (advanced).
+Unit <button_conditioner_10> synthesized (advanced).
 
-Synthesizing (advanced) Unit <ws2812b_3>.
-The following registers are absorbed into counter <M_paddlecounter_q>: 1 register on signal <M_paddlecounter_q>.
+Synthesizing (advanced) Unit <secondballcontrol_3>.
+The following registers are absorbed into counter <M_tempcounter_q>: 1 register on signal <M_tempcounter_q>.
+Unit <secondballcontrol_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ws2812b_4>.
 The following registers are absorbed into counter <M_paddlelencounter_q>: 1 register on signal <M_paddlelencounter_q>.
+The following registers are absorbed into counter <M_paddlecounter_q>: 1 register on signal <M_paddlecounter_q>.
+The following registers are absorbed into counter <M_secondballcounter_q>: 1 register on signal <M_secondballcounter_q>.
 The following registers are absorbed into counter <M_gamestartcounter_q>: 1 register on signal <M_gamestartcounter_q>.
 The following registers are absorbed into counter <M_gameovercounter_q>: 1 register on signal <M_gameovercounter_q>.
 The following registers are absorbed into counter <M_pause_q>: 1 register on signal <M_pause_q>.
-Unit <ws2812b_3> synthesized (advanced).
+Unit <ws2812b_4> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 16x16-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 42
- 11-bit adder                                          : 34
+# Multipliers                                          : 3
+ 16x16-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 46
+ 11-bit adder                                          : 36
  13-bit adder                                          : 1
- 16-bit addsub                                         : 2
+ 16-bit addsub                                         : 3
  22-bit adder                                          : 1
+ 23-bit adder                                          : 1
  5-bit adder                                           : 1
  7-bit adder                                           : 1
  8-bit adder                                           : 2
-# Counters                                             : 11
+# Counters                                             : 13
  17-bit up counter                                     : 1
  2-bit up counter                                      : 1
- 20-bit up counter                                     : 4
- 22-bit up counter                                     : 1
- 29-bit up counter                                     : 1
+ 20-bit up counter                                     : 5
+ 29-bit up counter                                     : 2
  4-bit up counter                                      : 1
- 8-bit up counter                                      : 2
-# Registers                                            : 234
- Flip-Flops                                            : 234
-# Comparators                                          : 105
- 4-bit comparator equal                                : 6
+ 8-bit up counter                                      : 3
+# Registers                                            : 274
+ Flip-Flops                                            : 274
+# Comparators                                          : 128
+ 4-bit comparator equal                                : 11
  7-bit comparator greater                              : 2
- 8-bit comparator equal                                : 94
- 8-bit comparator not equal                            : 3
-# Multiplexers                                         : 134
- 1-bit 4-to-1 multiplexer                              : 2
- 13-bit 2-to-1 multiplexer                             : 3
- 16-bit 16-to-1 multiplexer                            : 2
- 16-bit 2-to-1 multiplexer                             : 24
- 16-bit 3-to-1 multiplexer                             : 2
- 16-bit 4-to-1 multiplexer                             : 5
- 16-bit 7-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 2
+ 8-bit comparator equal                                : 115
+# Multiplexers                                         : 215
+ 1-bit 4-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 2
+ 16-bit 16-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 41
+ 16-bit 3-to-1 multiplexer                             : 4
+ 16-bit 4-to-1 multiplexer                             : 7
+ 16-bit 7-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
  22-bit 2-to-1 multiplexer                             : 5
- 4-bit 2-to-1 multiplexer                              : 29
- 5-bit 2-to-1 multiplexer                              : 17
- 6-bit 2-to-1 multiplexer                              : 12
- 7-bit 2-to-1 multiplexer                              : 19
- 8-bit 2-to-1 multiplexer                              : 10
- 8-bit 7-to-1 multiplexer                              : 1
-# Logic shifters                                       : 23
- 16-bit shifter arithmetic right                       : 2
- 16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
- 4095-bit shifter logical right                        : 17
-# FSMs                                                 : 4
-# Xors                                                 : 4
- 1-bit xor2                                            : 2
- 16-bit xor2                                           : 2
+ 23-bit 2-to-1 multiplexer                             : 5
+ 4-bit 2-to-1 multiplexer                              : 43
+ 5-bit 2-to-1 multiplexer                              : 27
+ 6-bit 2-to-1 multiplexer                              : 19
+ 6-bit 4-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 29
+ 8-bit 2-to-1 multiplexer                              : 20
+ 8-bit 7-to-1 multiplexer                              : 2
+# Logic shifters                                       : 27
+ 16-bit shifter arithmetic right                       : 3
+ 16-bit shifter logical left                           : 3
+ 16-bit shifter logical right                          : 3
+ 4095-bit shifter logical right                        : 18
+# FSMs                                                 : 5
+# Xors                                                 : 6
+ 1-bit xor2                                            : 3
+ 16-bit xor2                                           : 3
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_byfour_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfive_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byeight_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bysix_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byseven_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bynine_q_0> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byten_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byeleven_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bytwelve_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfifthteen_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bythirteen_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfourteen_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bysixteen_q_1> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bone_q_4> has a constant value of 0 in block <brickgen_4>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <M_byfour_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfour_q_2> <M_byfour_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byseven_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byseven_q_2> <M_byseven_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byten_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byten_q_2> <M_byten_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bythirteen_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bythirteen_q_2> <M_bythirteen_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bythree_q_0> in Unit <brickgen_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bythree_q_1> <M_bythree_q_2> <M_bythree_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bynine_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bynine_q_2> <M_bynine_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bytwelve_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bytwelve_q_2> <M_bytwelve_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byeight_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byeight_q_2> <M_byeight_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bysixteen_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bysixteen_q_2> <M_bysixteen_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byone_q_0> in Unit <brickgen_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_byone_q_1> <M_byone_q_2> <M_byone_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bysix_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bysix_q_2> <M_bysix_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bytwo_q_0> in Unit <brickgen_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bytwo_q_1> <M_bytwo_q_2> <M_bytwo_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bone_q_0> in Unit <brickgen_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bone_q_1> <M_bone_q_2> <M_bone_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_bfour_q_0> in Unit <brickgen_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bfour_q_1> <M_bfour_q_2> <M_bfour_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byfifthteen_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfifthteen_q_2> <M_byfifthteen_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byeleven_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byeleven_q_2> <M_byeleven_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byfourteen_q_0> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfourteen_q_2> <M_byfourteen_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_byfive_q_1> in Unit <brickgen_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfive_q_2> <M_byfive_q_3> 
+WARNING:Xst:1293 - FF/Latch <M_byfour_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfive_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bysix_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byseven_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byeight_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bynine_q_0> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byten_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byeleven_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bytwelve_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bythirteen_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfourteen_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_byfifthteen_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bysixteen_q_1> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_bone_q_4> has a constant value of 0 in block <brickgen_5>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_bytwelve_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bytwelve_q_2> <M_bytwelve_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byfifthteen_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfifthteen_q_2> <M_byfifthteen_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byone_q_0> in Unit <brickgen_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_byone_q_1> <M_byone_q_2> <M_byone_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bynine_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bynine_q_2> <M_bynine_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byeleven_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byeleven_q_2> <M_byeleven_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byfourteen_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfourteen_q_2> <M_byfourteen_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byseven_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byseven_q_2> <M_byseven_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byten_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byten_q_2> <M_byten_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bythirteen_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bythirteen_q_2> <M_bythirteen_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bysixteen_q_0> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bysixteen_q_2> <M_bysixteen_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bytwo_q_0> in Unit <brickgen_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bytwo_q_1> <M_bytwo_q_2> <M_bytwo_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bysix_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_bysix_q_2> <M_bysix_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byfive_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfive_q_2> <M_byfive_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byeight_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byeight_q_2> <M_byeight_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bythree_q_0> in Unit <brickgen_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bythree_q_1> <M_bythree_q_2> <M_bythree_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bfour_q_0> in Unit <brickgen_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bfour_q_1> <M_bfour_q_2> <M_bfour_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_bone_q_0> in Unit <brickgen_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_bone_q_1> <M_bone_q_2> <M_bone_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_byfour_q_1> in Unit <brickgen_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_byfour_q_2> <M_byfour_q_3> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <M_state_q[1:2]> with user encoding.
+Optimizing FSM <FSM_0> on signal <M_state_q[1:4]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
- 00    | 00
- 01    | 01
- 10    | 10
+ 00    | 0001
+ 01    | 0010
+ 10    | 0100
+ 11    | 1000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <M_state_q[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 011
+ 001   | 001
+ 010   | 010
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_3> on signal <M_state_q[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 011
+ 001   | 001
+ 010   | 010
+ 100   | 100
 -------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <mypc/FSM_1> on signal <M_state_q[1:2]> with gray encoding.
@@ -754,67 +871,69 @@ Optimizing FSM <mypc/FSM_1> on signal <M_state_q[1:2]> with gray encoding.
  11    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <myball/FSM_2> on signal <M_state_q[1:3]> with user encoding.
--------------------
- State | Encoding
--------------------
- 000   | 000
- 011   | 011
- 001   | 001
- 010   | 010
- 100   | 100
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <myws/FSM_3> on signal <M_state_q[1:27]> with one-hot encoding.
---------------------------------------
- State | Encoding
---------------------------------------
- 00000 | 000000000000000000000000001
- 00001 | 000000000000000000000000010
- 11010 | 000000000000000000000000100
- 00010 | 000000000000000000000001000
- 00100 | 000000000000000000000010000
- 00011 | 000000000000000000000100000
- 00101 | 000000000000000000001000000
- 00111 | 000000000000000000010000000
- 01000 | 000000000000000000100000000
- 01010 | 000000000000000001000000000
- 00110 | 000000000000000010000000000
- 01001 | 000000000000000100000000000
- 01011 | 000000000000001000000000000
- 01100 | 000000000000010000000000000
- 10000 | 000000000000100000000000000
- 01110 | 000000000001000000000000000
- 01101 | 000000000010000000000000000
- 01111 | 000000000100000000000000000
- 10010 | 000000001000000000000000000
- 10001 | 000000010000000000000000000
- 10011 | 000000100000000000000000000
- 10101 | 000001000000000000000000000
- 10110 | 000010000000000000000000000
- 10100 | 000100000000000000000000000
- 11000 | 001000000000000000000000000
- 10111 | 010000000000000000000000000
- 11001 | 100000000000000000000000000
---------------------------------------
-WARNING:Xst:2973 - All outputs of instance <myalu/myboole> of block <boole_23> are unconnected in block <playercontrol_1>. Underlying logic will be removed.
-WARNING:Xst:2677 - Node <myalu/myadder/mymultiplier/Mmult_n0003> of sequential type is unconnected in block <playercontrol_1>.
-WARNING:Xst:2973 - All outputs of instance <myalu/myboole> of block <boole_23> are unconnected in block <ballcontrol_2>. Underlying logic will be removed.
-WARNING:Xst:2677 - Node <myalu/myadder/mymultiplier/Mmult_n0003> of sequential type is unconnected in block <ballcontrol_2>.
+Optimizing FSM <myws/FSM_4> on signal <M_state_q[1:41]> with one-hot encoding.
+-----------------------------------------------------
+ State  | Encoding
+-----------------------------------------------------
+ 000000 | 00000000000000000000000000000000000000001
+ 000001 | 00000000000000000000000000000000000000010
+ 101000 | 00000000000000000000000000000000000000100
+ 000010 | 00000000000000000000000000000000000001000
+ 000100 | 00000000000000000000000000000000000010000
+ 000011 | 00000000000000000000000000000000000100000
+ 000101 | 00000000000000000000000000000000001000000
+ 000111 | 00000000000000000000000000000000010000000
+ 001000 | 00000000000000000000000000000000100000000
+ 001010 | 00000000000000000000000000000001000000000
+ 000110 | 00000000000000000000000000000010000000000
+ 001001 | 00000000000000000000000000000100000000000
+ 001011 | 00000000000000000000000000001000000000000
+ 001100 | 00000000000000000000000000010000000000000
+ 010000 | 00000000000000000000000000100000000000000
+ 001110 | 00000000000000000000000001000000000000000
+ 001101 | 00000000000000000000000010000000000000000
+ 001111 | 00000000000000000000000100000000000000000
+ 010010 | 00000000000000000000001000000000000000000
+ 010001 | 00000000000000000000010000000000000000000
+ 010011 | 00000000000000000000100000000000000000000
+ 010101 | 00000000000000000001000000000000000000000
+ 010110 | 00000000000000000010000000000000000000000
+ 011000 | 00000000000000000100000000000000000000000
+ 010100 | 00000000000000001000000000000000000000000
+ 010111 | 00000000000000010000000000000000000000000
+ 011001 | 00000000000000100000000000000000000000000
+ 011010 | 00000000000001000000000000000000000000000
+ 011110 | 00000000000010000000000000000000000000000
+ 011100 | 00000000000100000000000000000000000000000
+ 011011 | 00000000001000000000000000000000000000000
+ 011101 | 00000000010000000000000000000000000000000
+ 100000 | 00000000100000000000000000000000000000000
+ 011111 | 00000001000000000000000000000000000000000
+ 100001 | 00000010000000000000000000000000000000000
+ 100011 | 00000100000000000000000000000000000000000
+ 100100 | 00001000000000000000000000000000000000000
+ 100010 | 00010000000000000000000000000000000000000
+ 100110 | 00100000000000000000000000000000000000000
+ 100101 | 01000000000000000000000000000000000000000
+ 100111 | 10000000000000000000000000000000000000000
+-----------------------------------------------------
+WARNING:Xst:2973 - All outputs of instance <myball/myalu/myboole> of block <boole_25> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <myballtwo/myalu/myboole> of block <boole_25> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <myball/myalu/myadder/mymultiplier/Mmult_n0003> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myballtwo/myalu/myadder/mymultiplier/Mmult_n0003> of sequential type is unconnected in block <mojo_top_0>.
 
 Optimizing unit <mojo_top_0> ...
 
 Optimizing unit <playercontrol_1> ...
+WARNING:Xst:2677 - Node <myalu/myadder/mymultiplier/Mmult_n0003> of sequential type is unconnected in block <playercontrol_1>.
 
-Optimizing unit <adder_30> ...
+Optimizing unit <adder_36> ...
 
-Optimizing unit <boole_23> ...
+Optimizing unit <boole_25> ...
 
-Optimizing unit <ballcontrol_2> ...
+Optimizing unit <ws2812b_4> ...
 
-Optimizing unit <ws2812b_3> ...
-
-Optimizing unit <brickgen_4> ...
+Optimizing unit <brickgen_5> ...
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_10> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_11> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_12> 
@@ -853,9 +972,7 @@ INFO:Xst:2261 - The FF/Latch <button_cond_left/M_ctr_q_7> in Unit <mojo_top_0> i
 INFO:Xst:2261 - The FF/Latch <button_cond_left/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_left/M_ctr_q_8> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_bseven_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mybrick/M_bseven_q_1> 
 INFO:Xst:2261 - The FF/Latch <button_cond_left/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_left/M_ctr_q_9> 
-INFO:Xst:2261 - The FF/Latch <M_playing_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_state_q_FSM_FFd2> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_0> 
-INFO:Xst:2261 - The FF/Latch <M_playing_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_state_q_FSM_FFd1> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_1> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_2> 
 INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mypc/button_cond_right/M_ctr_q_3> 
@@ -869,7 +986,7 @@ INFO:Xst:2261 - The FF/Latch <button_cond_right/M_ctr_q_9> in Unit <mojo_top_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_bfourteen_q_3> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <mybrick/M_bfourteen_q_2> <mybrick/M_bfourteen_q_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_bthirteen_q_2> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <mybrick/M_bthirteen_q_1> <mybrick/M_bthirteen_q_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_beight_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mybrick/M_beight_q_2> 
-INFO:Xst:2261 - The FF/Latch <mybrick/M_bsixteen_q_2> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <mybrick/M_bsixteen_q_1> <mybrick/M_bfourteen_q_1> <mybrick/M_bthirteen_q_3> <mybrick/M_bfifthteen_q_3> <mybrick/M_bfifthteen_q_1> <mybrick/M_btwelve_q_3> <mybrick/M_btwelve_q_2> <mybrick/M_beleven_q_2> <mybrick/M_bten_q_3> <mybrick/M_bten_q_2> <mybrick/M_bten_q_1> <mybrick/M_bnine_q_0> <mybrick/M_bseven_q_3> <mybrick/M_bseven_q_0> <mybrick/M_bsix_q_3> <mybrick/M_bsix_q_1> <mybrick/M_bsix_q_0> <mybrick/M_beight_q_1> <mybrick/M_beight_q_0> <mybrick/M_bfive_q_3> <mybrick/M_bfive_q_2> <mybrick/M_bfive_q_0> <mybrick/M_bthree_q_3> <mybrick/M_bthree_q_1> <mybrick/M_btwo_q_2> <mybrick/M_bfour_q_0> 
+INFO:Xst:2261 - The FF/Latch <mybrick/M_bsixteen_q_2> in Unit <mojo_top_0> is equivalent to the following 26 FFs/Latches, which will be removed : <mybrick/M_bsixteen_q_1> <mybrick/M_bfifthteen_q_3> <mybrick/M_bfifthteen_q_1> <mybrick/M_bfourteen_q_1> <mybrick/M_bthirteen_q_3> <mybrick/M_btwelve_q_3> <mybrick/M_btwelve_q_2> <mybrick/M_beleven_q_2> <mybrick/M_bten_q_3> <mybrick/M_bten_q_2> <mybrick/M_bten_q_1> <mybrick/M_bnine_q_0> <mybrick/M_beight_q_1> <mybrick/M_beight_q_0> <mybrick/M_bseven_q_3> <mybrick/M_bseven_q_0> <mybrick/M_bsix_q_3> <mybrick/M_bsix_q_1> <mybrick/M_bsix_q_0> <mybrick/M_bfive_q_3> <mybrick/M_bfive_q_2> <mybrick/M_bfive_q_0> <mybrick/M_bthree_q_3> <mybrick/M_bthree_q_1> <mybrick/M_btwo_q_2> <mybrick/M_bfour_q_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_bsixteen_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mybrick/M_bsixteen_q_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_bthree_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mybrick/M_bthree_q_0> 
 INFO:Xst:2261 - The FF/Latch <mybrick/M_btwelve_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mybrick/M_btwelve_q_0> 
@@ -878,12 +995,11 @@ INFO:Xst:2261 - The FF/Latch <edge_detector_left/M_last_q> in Unit <mojo_top_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 15.
-FlipFlop myball/M_counter_q_1 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 23.
 FlipFlop myball/M_posy_q_0 has been replicated 1 time(s)
 FlipFlop myball/M_state_q_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop myball/M_state_q_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop myball/M_state_q_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop myballtwo/M_posx_q_3 has been replicated 1 time(s)
+FlipFlop myballtwo/M_posy_q_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -897,8 +1013,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 294
- Flip-Flops                                            : 294
+# Registers                                            : 389
+ Flip-Flops                                            : 389
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -924,7 +1040,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 298   |
+clk                                | BUFGP                  | 393   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -935,9 +1051,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 16.218ns (Maximum Frequency: 61.660MHz)
+   Minimum period: 18.672ns (Maximum Frequency: 53.557MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 11.562ns
+   Maximum output required time after clock: 11.319ns
    Maximum combinational path delay: No path found
 
 =========================================================================

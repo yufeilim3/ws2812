@@ -4,11 +4,12 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module brickgen_4 (
+module brickgen_5 (
     input clk,
     input rst,
     output reg [127:0] brickpos,
     input [7:0] ballpos,
+    input [7:0] secondballpos,
     input [1:0] playing,
     output reg endgame
   );
@@ -19,7 +20,7 @@ module brickgen_4 (
   
   reg [2047:0] array;
   
-  reg [21:0] M_counter_d, M_counter_q = 1'h0;
+  reg [19:0] M_counter_d, M_counter_q = 1'h0;
   reg [4:0] M_bone_d, M_bone_q = 1'h0;
   reg [3:0] M_btwo_d, M_btwo_q = 1'h0;
   reg [3:0] M_bthree_d, M_bthree_q = 1'h0;
@@ -181,105 +182,105 @@ module brickgen_4 (
         M_byfourteen_d = 4'hd;
         M_byfifthteen_d = 4'hd;
         M_bysixteen_d = 4'hd;
-        if (M_counter_q[21+0-:1] == 1'h1) begin
+        if (M_counter_q[19+0-:1] == 1'h1) begin
           M_counter_d = 1'h0;
           M_state_d = MINUSBRICK_state;
         end
       end
       MINUSBRICK_state: begin
         M_counter_d = M_counter_q + 1'h1;
-        if (M_counter_q[21+0-:1] == 1'h1) begin
-          if (bricks[0+7-:8] == ballpos) begin
+        if (M_counter_q[19+0-:1] == 1'h1) begin
+          if (bricks[0+7-:8] == ballpos || bricks[0+7-:8] == secondballpos) begin
             M_byone_d = 8'h00;
             M_bone_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[8+7-:8] == ballpos) begin
+          if (bricks[8+7-:8] == ballpos || bricks[8+7-:8] == secondballpos) begin
             M_bytwo_d = 8'h00;
             M_btwo_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[16+7-:8] == ballpos) begin
+          if (bricks[16+7-:8] == ballpos || bricks[16+7-:8] == secondballpos) begin
             M_bythree_d = 8'h00;
             M_bthree_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[24+7-:8] == ballpos) begin
+          if (bricks[24+7-:8] == ballpos || bricks[24+7-:8] == secondballpos) begin
             M_byfour_d = 8'h00;
             M_bfour_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[32+7-:8] == ballpos) begin
+          if (bricks[32+7-:8] == ballpos || bricks[32+7-:8] == secondballpos) begin
             M_byfive_d = 8'h00;
             M_bfive_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[40+7-:8] == ballpos) begin
+          if (bricks[40+7-:8] == ballpos || bricks[40+7-:8] == secondballpos) begin
             M_bysix_d = 8'h00;
             M_bsix_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[48+7-:8] == ballpos) begin
+          if (bricks[48+7-:8] == ballpos || bricks[48+7-:8] == secondballpos) begin
             M_byseven_d = 8'h00;
             M_bseven_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[56+7-:8] == ballpos) begin
+          if (bricks[56+7-:8] == ballpos || bricks[56+7-:8] == secondballpos) begin
             M_byeight_d = 8'h00;
             M_beight_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[64+7-:8] == ballpos) begin
+          if (bricks[64+7-:8] == ballpos || bricks[64+7-:8] == secondballpos) begin
             M_bynine_d = 8'h00;
             M_bnine_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[72+7-:8] == ballpos) begin
+          if (bricks[72+7-:8] == ballpos || bricks[72+7-:8] == secondballpos) begin
             M_byten_d = 8'h00;
             M_bten_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[80+7-:8] == ballpos) begin
+          if (bricks[80+7-:8] == ballpos || bricks[80+7-:8] == secondballpos) begin
             M_byeleven_d = 8'h00;
             M_beleven_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[88+7-:8] == ballpos) begin
+          if (bricks[88+7-:8] == ballpos || bricks[88+7-:8] == secondballpos) begin
             M_bytwelve_d = 8'h00;
             M_btwelve_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[96+7-:8] == ballpos) begin
+          if (bricks[96+7-:8] == ballpos || bricks[96+7-:8] == secondballpos) begin
             M_bythirteen_d = 8'h00;
             M_bthirteen_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[104+7-:8] == ballpos) begin
+          if (bricks[104+7-:8] == ballpos || bricks[104+7-:8] == secondballpos) begin
             M_byfourteen_d = 8'h00;
             M_bfourteen_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[112+7-:8] == ballpos) begin
+          if (bricks[112+7-:8] == ballpos || bricks[112+7-:8] == secondballpos) begin
             M_byfifthteen_d = 8'h00;
             M_bfifthteen_d = 8'h0f;
             M_counter_d = 1'h0;
             M_state_d = MINUSBRICK_state;
           end
-          if (bricks[120+7-:8] == ballpos) begin
+          if (bricks[120+7-:8] == ballpos || bricks[120+7-:8] == secondballpos) begin
             M_bysixteen_d = 8'h00;
             M_bsixteen_d = 8'h0f;
             M_counter_d = 1'h0;

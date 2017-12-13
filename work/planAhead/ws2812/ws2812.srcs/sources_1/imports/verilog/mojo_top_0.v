@@ -56,19 +56,38 @@ module mojo_top_0 (
     .ballposy(M_myball_ballposy),
     .endgame(M_myball_endgame)
   );
+  wire [8-1:0] M_myballtwo_ballpos;
+  wire [4-1:0] M_myballtwo_ballposx;
+  wire [4-1:0] M_myballtwo_ballposy;
+  wire [1-1:0] M_myballtwo_endgame;
+  reg [1-1:0] M_myballtwo_rst;
+  reg [4-1:0] M_myballtwo_paddlepos;
+  reg [2-1:0] M_myballtwo_playing;
+  secondballcontrol_3 myballtwo (
+    .clk(clk),
+    .rst(M_myballtwo_rst),
+    .paddlepos(M_myballtwo_paddlepos),
+    .playing(M_myballtwo_playing),
+    .ballpos(M_myballtwo_ballpos),
+    .ballposx(M_myballtwo_ballposx),
+    .ballposy(M_myballtwo_ballposy),
+    .endgame(M_myballtwo_endgame)
+  );
   wire [1-1:0] M_myws_datain;
   reg [1-1:0] M_myws_rst;
   reg [4-1:0] M_myws_paddle;
   reg [8-1:0] M_myws_ball;
+  reg [8-1:0] M_myws_secondball;
   reg [128-1:0] M_myws_brick;
   reg [2-1:0] M_myws_playing;
   reg [312-1:0] M_myws_gamestart;
   reg [192-1:0] M_myws_gameover;
-  ws2812b_3 myws (
+  ws2812b_4 myws (
     .clk(clk),
     .rst(M_myws_rst),
     .paddle(M_myws_paddle),
     .ball(M_myws_ball),
+    .secondball(M_myws_secondball),
     .brick(M_myws_brick),
     .playing(M_myws_playing),
     .gamestart(M_myws_gamestart),
@@ -79,25 +98,27 @@ module mojo_top_0 (
   wire [1-1:0] M_mybrick_endgame;
   reg [1-1:0] M_mybrick_rst;
   reg [8-1:0] M_mybrick_ballpos;
+  reg [8-1:0] M_mybrick_secondballpos;
   reg [2-1:0] M_mybrick_playing;
-  brickgen_4 mybrick (
+  brickgen_5 mybrick (
     .clk(clk),
     .rst(M_mybrick_rst),
     .ballpos(M_mybrick_ballpos),
+    .secondballpos(M_mybrick_secondballpos),
     .playing(M_mybrick_playing),
     .brickpos(M_mybrick_brickpos),
     .endgame(M_mybrick_endgame)
   );
   wire [312-1:0] M_mygs_gamestart;
   reg [1-1:0] M_mygs_rst;
-  gamestart_5 mygs (
+  gamestart_6 mygs (
     .clk(clk),
     .rst(M_mygs_rst),
     .gamestart(M_mygs_gamestart)
   );
   wire [192-1:0] M_mygo_gameover;
   reg [1-1:0] M_mygo_rst;
-  gameover_6 mygo (
+  gameover_7 mygo (
     .clk(clk),
     .rst(M_mygo_rst),
     .gameover(M_mygo_gameover)
@@ -105,40 +126,41 @@ module mojo_top_0 (
   reg [1:0] M_playing_d, M_playing_q = 1'h0;
   localparam GAMESTART_state = 2'd0;
   localparam PLAYING_state = 2'd1;
-  localparam GAMEOVER_state = 2'd2;
+  localparam PLAYTWO_state = 2'd2;
+  localparam GAMEOVER_state = 2'd3;
   
   reg [1:0] M_state_d, M_state_q = GAMESTART_state;
   wire [1-1:0] M_edge_detector_left_out;
   reg [1-1:0] M_edge_detector_left_in;
-  edge_detector_7 edge_detector_left (
+  edge_detector_8 edge_detector_left (
     .clk(clk),
     .in(M_edge_detector_left_in),
     .out(M_edge_detector_left_out)
   );
   wire [1-1:0] M_edge_detector_right_out;
   reg [1-1:0] M_edge_detector_right_in;
-  edge_detector_7 edge_detector_right (
+  edge_detector_8 edge_detector_right (
     .clk(clk),
     .in(M_edge_detector_right_in),
     .out(M_edge_detector_right_out)
   );
   wire [1-1:0] M_button_cond_left_out;
   reg [1-1:0] M_button_cond_left_in;
-  button_conditioner_9 button_cond_left (
+  button_conditioner_10 button_cond_left (
     .clk(clk),
     .in(M_button_cond_left_in),
     .out(M_button_cond_left_out)
   );
   wire [1-1:0] M_button_cond_right_out;
   reg [1-1:0] M_button_cond_right_in;
-  button_conditioner_9 button_cond_right (
+  button_conditioner_10 button_cond_right (
     .clk(clk),
     .in(M_button_cond_right_in),
     .out(M_button_cond_right_out)
   );
   wire [1-1:0] M_reset_cond_out;
   reg [1-1:0] M_reset_cond_in;
-  reset_conditioner_11 reset_cond (
+  reset_conditioner_12 reset_cond (
     .clk(clk),
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
@@ -163,6 +185,7 @@ module mojo_top_0 (
     M_mygo_rst = rst;
     M_mybrick_rst = rst;
     M_mybrick_ballpos = M_myball_ballpos;
+    M_mybrick_secondballpos = M_myballtwo_ballpos;
     M_mybrick_playing = M_playing_q;
     M_mypc_lb = lb;
     M_mypc_rb = rb;
@@ -170,11 +193,15 @@ module mojo_top_0 (
     M_myball_rst = rst;
     M_myball_paddlepos = M_mypc_out;
     M_myball_playing = M_playing_q;
+    M_myballtwo_rst = rst;
+    M_myballtwo_paddlepos = M_mypc_out;
+    M_myballtwo_playing = M_playing_q;
     M_myws_playing = M_playing_q;
     M_myws_gameover = M_mygo_gameover;
     M_myws_gamestart = M_mygs_gamestart;
     M_myws_rst = rst;
     M_myws_ball = M_myball_ballpos;
+    M_myws_secondball = M_myballtwo_ballpos;
     M_myws_paddle = M_mypc_out;
     M_myws_brick = M_mybrick_brickpos;
     dataOut = M_myws_datain;
@@ -189,9 +216,13 @@ module mojo_top_0 (
         M_myws_gamestart = M_mygs_gamestart;
         dataOut = M_myws_datain;
         M_playing_d = 2'h0;
-        if (M_edge_detector_left_out == 1'h1 || M_edge_detector_right_out == 1'h1) begin
+        if (M_edge_detector_left_out == 1'h1) begin
           M_playing_d = 2'h1;
           M_state_d = PLAYING_state;
+        end
+        if (M_edge_detector_right_out == 1'h1) begin
+          M_playing_d = 2'h2;
+          M_state_d = PLAYTWO_state;
         end
       end
       PLAYING_state: begin
@@ -202,12 +233,25 @@ module mojo_top_0 (
         M_myws_brick = M_mybrick_brickpos;
         dataOut = M_myws_datain;
         if (M_myball_endgame == 1'h1 || M_mybrick_endgame == 1'h1) begin
-          M_playing_d = 2'h2;
+          M_playing_d = 2'h3;
+          M_state_d = GAMEOVER_state;
+        end
+      end
+      PLAYTWO_state: begin
+        M_playing_d = 2'h2;
+        M_myws_playing = M_playing_q;
+        M_myws_ball = M_myball_ballpos;
+        M_myws_secondball = M_myballtwo_ballpos;
+        M_myws_paddle = M_mypc_out;
+        M_myws_brick = M_mybrick_brickpos;
+        dataOut = M_myws_datain;
+        if (M_myballtwo_endgame == 1'h1 || M_myball_endgame == 1'h1 || M_mybrick_endgame == 1'h1) begin
+          M_playing_d = 2'h3;
           M_state_d = GAMEOVER_state;
         end
       end
       GAMEOVER_state: begin
-        M_playing_d = 2'h2;
+        M_playing_d = 2'h3;
         M_myws_playing = M_playing_q;
         M_myws_gameover = M_mygo_gameover;
         dataOut = M_myws_datain;
