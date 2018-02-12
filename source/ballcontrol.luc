@@ -13,7 +13,7 @@ module ballcontrol (
   sig bally[4];
   sig pleft[4];
   sig pright[4];
-  sig pcenter[3][4];
+  sig pcenter[4][4];
   alu16bit myalu;  //alu
   sig aluout[4];
   sig array[16][16][8];
@@ -40,71 +40,71 @@ module ballcontrol (
     case(paddlepos){  //sets the pos of for paddle collisions
       default:
         pleft = b0000;
-        pcenter = {4b0000,4b0001,4b0010};
-        pright = b0011;
+        pcenter = {4b0000,4b0001,4b0010,4b0011};
+        pright = b0100;
       b0000:
         pleft = b0000;
-        pcenter = {4b0000,4b0001,4b0010};
-        pright = b0011;
+        pcenter = {4b0000,4b0001,4b0010,4b0011};
+        pright = b0100;
       b0001:
         pleft = b0000;
-        pcenter = {4b0001,4b0010,4b0011};
-        pright = b0100;
+        pcenter = {4b0001,4b0010,4b0011,4b0100};
+        pright = b0101;
       b0010:
         pleft = b0001;
-        pcenter = {4b0010,4b0011,4b0100};
-        pright = b0101;
+        pcenter = {4b0010,4b0011,4b0100,4b0101};
+        pright = b0110;
       b0011:
         pleft = b0010;
-        pcenter = {4b0011,4b0100,4b0101};
-        pright = b0110;
+        pcenter = {4b0011,4b0100,4b0101,4b0110};
+        pright = b0111;
       b0100:
         pleft = b0011;
-        pcenter = {4b0100,4b0101,4b0110};
-        pright = b0111;
+        pcenter = {4b0100,4b0101,4b0110,4b0111};
+        pright = b1000;
       b0101:
         pleft = b0100;
-        pcenter = {4b0101,4b0110,4b0111};
-        pright = b1000;
+        pcenter = {4b0101,4b0110,4b0111,4b1000};
+        pright = b1001;
       b0110:
         pleft = b0101;
-        pcenter = {4b0110,4b0111,4b1000};
-        pright = b1001;
+        pcenter = {4b0110,4b0111,4b1000,4b1001};
+        pright = b1010;
       b0111:
         pleft = b0110;
-        pcenter = {4b0111,4b1000,4b1001};
-        pright = b1010;
+        pcenter = {4b0111,4b1000,4b1001,4b1010};
+        pright = b1011;
       b1000:
         pleft = b0111;
-        pcenter = {4b1000,4b1001,4b1010};
-        pright = b1011;
+        pcenter = {4b1000,4b1001,4b1010,4b1011};
+        pright = b1100;
       b1001:
         pleft = b1000;
-        pcenter = {4b1001,4b1010,4b1011};
-        pright = b1100;
+        pcenter = {4b1001,4b1010,4b1011,4b1100};
+        pright = b1101;
       b1010:
         pleft = b1001;
-        pcenter = {4b1010,4b1011,4b1100};
-        pright = b1101;
+        pcenter = {4b1010,4b1011,4b1100,4b1101};
+        pright = b1110;
       b1011:
         pleft = b1010;
-        pcenter = {4b1011,4b1100,4b1101};
-        pright = b1110;
+        pcenter = {4b1011,4b1100,4b1101,4b1110};
+        pright = b1111;
       b1100:
         pleft = b1011;
-        pcenter = {4b1100,4b1101,4b1110};
+        pcenter = {4b1100,4b1101,4b1110,4b1111};
         pright = b1111;
       b1101:
         pleft = b1100;
-        pcenter = {4b1101,4b1110,4b1111};
+        pcenter = {4b1101,4b1110,4b1111,4b1111};
         pright = b1111;
       b1110:
         pleft = b1101;
-        pcenter = {4b1110,4b1111,4b1111};
+        pcenter = {4b1110,4b1111,4b1111,4b1111};
         pright = b1111;
       b1111:
         pleft = b1110;
-        pcenter = {4b1111,4b1111,4b1111};
+        pcenter = {4b1111,4b1111,4b1111,4b1111};
         pright = b1111;
     }
     array[0] = {8d15,8d14,8d13,8d12,8d11,8d10,8d9,8d8,8d7,8d6,8d5,8d4,8d3,8d2,8d1,8d0};                  //generates led array
@@ -265,7 +265,7 @@ module ballcontrol (
                 counter.d = 0;
                 state.d = state.LEFTUP;
               }
-              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout){
+              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout||pcenter[3]==aluout){
                 ball = array[posy.q][posx.q];
                 pos.d = ball;
                 counter.d = 0;
@@ -341,7 +341,7 @@ module ballcontrol (
                 counter.d = 0;
                 state.d = state.RIGHTUP;
               }
-              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout){
+              else if(pcenter[0]==aluout || pcenter[1]==aluout || pcenter[2]==aluout||pcenter[3]==aluout){
                 ball = array[posy.q][posx.q];
                 pos.d = ball;
                 counter.d = 0;

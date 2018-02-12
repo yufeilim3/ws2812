@@ -36,7 +36,7 @@ module playercontrol (
         state.d = state.LEFTSCREEN;
       
       state.CENTERSCREEN:
-        if (pos.q ==b1100){  //decrement position if lb is pressed, increment when rb is pressed
+        if (pos.q ==b1011){  //decrement position if lb is pressed, increment when rb is pressed
           if (edge_detector_left.out==1){
             myalu.a = pos.q;
             myalu.b = 8b1;

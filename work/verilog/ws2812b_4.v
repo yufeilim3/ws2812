@@ -25,7 +25,7 @@ module ws2812b_4 (
   reg [12:0] M_tbitcounter_d, M_tbitcounter_q = 1'h0;
   reg [4:0] M_bitcounter_d, M_bitcounter_q = 1'h0;
   reg [3:0] M_paddlecounter_d, M_paddlecounter_q = 1'h0;
-  reg [1:0] M_paddlelencounter_d, M_paddlelencounter_q = 1'h0;
+  reg [2:0] M_paddlelencounter_d, M_paddlelencounter_q = 1'h0;
   reg [7:0] M_ballcounter_d, M_ballcounter_q = 1'h0;
   reg [7:0] M_secondballcounter_d, M_secondballcounter_q = 1'h0;
   reg [7:0] M_gamestartcounter_d, M_gamestartcounter_q = 1'h0;
@@ -208,7 +208,7 @@ module ws2812b_4 (
           M_paddlelencounter_d = M_paddlelencounter_q + 1'h1;
           M_bitcounter_d = 1'h0;
         end
-        if (M_paddlelencounter_q == 2'h3) begin
+        if (M_paddlelencounter_q == 3'h4) begin
           M_paddlelencounter_d = 1'h0;
           M_state_d = PONELOW_state;
         end
@@ -389,7 +389,7 @@ module ws2812b_4 (
           M_paddlelencounter_d = M_paddlelencounter_q + 1'h1;
           M_bitcounter_d = 1'h0;
         end
-        if (M_paddlelencounter_q == 2'h3) begin
+        if (M_paddlelencounter_q == 3'h4) begin
           M_paddlelencounter_d = 1'h0;
           M_state_d = SPONELOW_state;
         end

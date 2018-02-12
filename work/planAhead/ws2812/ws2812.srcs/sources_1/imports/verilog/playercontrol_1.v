@@ -88,7 +88,7 @@ module playercontrol_1 (
         M_state_d = LEFTSCREEN_state;
       end
       CENTERSCREEN_state: begin
-        if (M_pos_q == 4'hc) begin
+        if (M_pos_q == 4'hb) begin
           if (M_edge_detector_left_out == 1'h1) begin
             M_myalu_a = M_pos_q;
             M_myalu_b = 8'h01;

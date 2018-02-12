@@ -22,7 +22,7 @@ module ws2812b
       dff bitcounter[5];  //counts up to 24 bits for one data sent in, order of bits (GRB), each colour 8bits.
       
       dff paddlecounter[4];  //counts pos of paddle
-      dff paddlelencounter[2];  //counts len of paddle
+      dff paddlelencounter[3];  //counts len of paddle
       
       dff ballcounter[8];  //counts pos of ball
       
@@ -179,7 +179,7 @@ module ws2812b
           paddlelencounter.d = paddlelencounter.q+1;  //makes length of paddle 3
           bitcounter.d = 0;
         }
-        if (paddlelencounter.q == 3){
+        if (paddlelencounter.q == 4){
           paddlelencounter.d = 0;
           state.d = state.PONELOW;
         }
@@ -363,7 +363,7 @@ module ws2812b
           paddlelencounter.d = paddlelencounter.q+1;  //makes length of paddle 3
           bitcounter.d = 0;
         }
-        if (paddlelencounter.q == 3){
+        if (paddlelencounter.q == 4){
           paddlelencounter.d = 0;
           state.d = state.SPONELOW;
         }

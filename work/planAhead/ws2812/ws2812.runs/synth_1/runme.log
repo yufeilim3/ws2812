@@ -278,22 +278,23 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
     -----------------------------------------------------------------------
     Found 29-bit adder for signal <M_tempcounter_q[28]_GND_16_o_add_3_OUT> created at line 190.
     Found 22-bit adder for signal <M_counter_q[21]_GND_16_o_add_115_OUT> created at line 320.
-    Found 12-bit adder for signal <n0294> created at line 336.
-    Found 12-bit adder for signal <n0213> created at line 336.
-    Found 4095-bit shifter logical right for signal <n0214> created at line 336
+    Found 12-bit adder for signal <n0296> created at line 336.
+    Found 12-bit adder for signal <n0215> created at line 336.
+    Found 4095-bit shifter logical right for signal <n0216> created at line 336
     Found 16-bit 7-to-1 multiplexer for signal <M_myalu_b> created at line 188.
     Found 8-bit 7-to-1 multiplexer for signal <ball> created at line 188.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0408> created at line 214.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0443> created at line 268.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0392> created at line 214.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0430> created at line 268.
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_118_o> created at line 329
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_122_o> created at line 335
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_123_o> created at line 335
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_124_o> created at line 335
-    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_192_o> created at line 408
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_125_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_193_o> created at line 408
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  68 D-type flip-flop(s).
-	inferred   5 Comparator(s).
+	inferred   6 Comparator(s).
 	inferred  50 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
@@ -327,22 +328,23 @@ INFO:Xst:3210 - "C:/Users/User/Documents/mojo/ws2812/work/planAhead/ws2812/ws281
     -----------------------------------------------------------------------
     Found 29-bit adder for signal <M_tempcounter_q[28]_GND_17_o_add_3_OUT> created at line 190.
     Found 23-bit adder for signal <M_counter_q[22]_GND_17_o_add_114_OUT> created at line 320.
-    Found 12-bit adder for signal <n0292> created at line 336.
-    Found 12-bit adder for signal <n0211> created at line 336.
-    Found 4095-bit shifter logical right for signal <n0212> created at line 336
+    Found 12-bit adder for signal <n0294> created at line 336.
+    Found 12-bit adder for signal <n0213> created at line 336.
+    Found 4095-bit shifter logical right for signal <n0214> created at line 336
     Found 16-bit 7-to-1 multiplexer for signal <M_myalu_b> created at line 188.
     Found 8-bit 7-to-1 multiplexer for signal <ball> created at line 188.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0399> created at line 268.
-    Found 16-bit 3-to-1 multiplexer for signal <_n0440> created at line 214.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0412> created at line 268.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0452> created at line 214.
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_117_o> created at line 329
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_121_o> created at line 335
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_122_o> created at line 335
     Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_123_o> created at line 335
-    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_191_o> created at line 408
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_124_o> created at line 335
+    Found 4-bit comparator equal for signal <paddlepos[3]_M_myalu_out[3]_equal_192_o> created at line 408
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  69 D-type flip-flop(s).
-	inferred   5 Comparator(s).
+	inferred   6 Comparator(s).
 	inferred  50 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
@@ -353,7 +355,7 @@ Synthesizing Unit <ws2812b_4>.
     Found 13-bit register for signal <M_tbitcounter_q>.
     Found 5-bit register for signal <M_bitcounter_q>.
     Found 4-bit register for signal <M_paddlecounter_q>.
-    Found 2-bit register for signal <M_paddlelencounter_q>.
+    Found 3-bit register for signal <M_paddlelencounter_q>.
     Found 8-bit register for signal <M_ballcounter_q>.
     Found 8-bit register for signal <M_secondballcounter_q>.
     Found 8-bit register for signal <M_gamestartcounter_q>.
@@ -379,7 +381,7 @@ Synthesizing Unit <ws2812b_4>.
     -----------------------------------------------------------------------
     Found 8-bit adder for signal <M_gamestartcounter_q[7]_GND_18_o_add_63_OUT> created at line 136.
     Found 4-bit adder for signal <M_paddlecounter_q[3]_GND_18_o_add_258_OUT> created at line 388.
-    Found 2-bit adder for signal <M_paddlelencounter_q[1]_GND_18_o_add_259_OUT> created at line 389.
+    Found 3-bit adder for signal <M_paddlelencounter_q[2]_GND_18_o_add_259_OUT> created at line 389.
     Found 8-bit adder for signal <M_ballcounter_q[7]_GND_18_o_add_371_OUT> created at line 516.
     Found 8-bit adder for signal <M_secondballcounter_q[7]_GND_18_o_add_374_OUT> created at line 519.
     Found 8-bit adder for signal <M_brickcounter_q[7]_GND_18_o_add_376_OUT> created at line 522.
@@ -476,7 +478,7 @@ Synthesizing Unit <ws2812b_4>.
     Found 7-bit comparator greater for signal <GND_18_o_M_timecounter_q[6]_LessThan_452_o> created at line 591
     Summary:
 	inferred  11 Adder/Subtractor(s).
-	inferred  89 D-type flip-flop(s).
+	inferred  90 D-type flip-flop(s).
 	inferred  86 Comparator(s).
 	inferred  69 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -642,11 +644,11 @@ Macro Statistics
  13-bit adder                                          : 1
  16-bit addsub                                         : 3
  17-bit adder                                          : 1
- 2-bit adder                                           : 1
  20-bit adder                                          : 5
  22-bit adder                                          : 1
  23-bit adder                                          : 1
  29-bit adder                                          : 2
+ 3-bit adder                                           : 1
  4-bit adder                                           : 1
  5-bit adder                                           : 1
  7-bit adder                                           : 1
@@ -655,17 +657,18 @@ Macro Statistics
  1-bit register                                        : 9
  13-bit register                                       : 1
  17-bit register                                       : 1
- 2-bit register                                        : 6
+ 2-bit register                                        : 5
  20-bit register                                       : 5
  22-bit register                                       : 1
  23-bit register                                       : 1
  29-bit register                                       : 2
+ 3-bit register                                        : 1
  4-bit register                                        : 38
  5-bit register                                        : 2
  7-bit register                                        : 1
  8-bit register                                        : 7
-# Comparators                                          : 128
- 4-bit comparator equal                                : 11
+# Comparators                                          : 130
+ 4-bit comparator equal                                : 13
  7-bit comparator greater                              : 2
  8-bit comparator equal                                : 115
 # Multiplexers                                         : 221
@@ -677,12 +680,13 @@ Macro Statistics
  16-bit 4-to-1 multiplexer                             : 7
  16-bit 7-to-1 multiplexer                             : 2
  17-bit 2-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 1
  2-bit 4-to-1 multiplexer                              : 1
  20-bit 2-to-1 multiplexer                             : 1
  22-bit 2-to-1 multiplexer                             : 5
  23-bit 2-to-1 multiplexer                             : 5
  29-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 1
  4-bit 2-to-1 multiplexer                              : 43
  5-bit 2-to-1 multiplexer                              : 27
  6-bit 2-to-1 multiplexer                              : 19
@@ -751,15 +755,15 @@ Macro Statistics
  8-bit adder                                           : 2
 # Counters                                             : 13
  17-bit up counter                                     : 1
- 2-bit up counter                                      : 1
  20-bit up counter                                     : 5
  29-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
  4-bit up counter                                      : 1
  8-bit up counter                                      : 3
 # Registers                                            : 274
  Flip-Flops                                            : 274
-# Comparators                                          : 128
- 4-bit comparator equal                                : 11
+# Comparators                                          : 130
+ 4-bit comparator equal                                : 13
  7-bit comparator greater                              : 2
  8-bit comparator equal                                : 115
 # Multiplexers                                         : 215
@@ -997,8 +1001,6 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 23.
 FlipFlop myball/M_posy_q_0 has been replicated 1 time(s)
-FlipFlop myball/M_state_q_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop myballtwo/M_posx_q_3 has been replicated 1 time(s)
 FlipFlop myballtwo/M_posy_q_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1013,8 +1015,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 389
- Flip-Flops                                            : 389
+# Registers                                            : 388
+ Flip-Flops                                            : 388
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1040,7 +1042,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 393   |
+clk                                | BUFGP                  | 392   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1051,9 +1053,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 18.672ns (Maximum Frequency: 53.557MHz)
+   Minimum period: 19.791ns (Maximum Frequency: 50.527MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 11.319ns
+   Maximum output required time after clock: 11.583ns
    Maximum combinational path delay: No path found
 
 =========================================================================

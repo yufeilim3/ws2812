@@ -27,7 +27,7 @@ module ballcontrol_2 (
   
   reg [3:0] pright;
   
-  reg [11:0] pcenter;
+  reg [15:0] pcenter;
   
   wire [1-1:0] M_myalu_z;
   wire [1-1:0] M_myalu_v;
@@ -84,87 +84,87 @@ module ballcontrol_2 (
     case (paddlepos)
       default: begin
         pleft = 4'h0;
-        pcenter = 12'h012;
-        pright = 4'h3;
+        pcenter = 16'h0123;
+        pright = 4'h4;
       end
       4'h0: begin
         pleft = 4'h0;
-        pcenter = 12'h012;
-        pright = 4'h3;
+        pcenter = 16'h0123;
+        pright = 4'h4;
       end
       4'h1: begin
         pleft = 4'h0;
-        pcenter = 12'h123;
-        pright = 4'h4;
+        pcenter = 16'h1234;
+        pright = 4'h5;
       end
       4'h2: begin
         pleft = 4'h1;
-        pcenter = 12'h234;
-        pright = 4'h5;
+        pcenter = 16'h2345;
+        pright = 4'h6;
       end
       4'h3: begin
         pleft = 4'h2;
-        pcenter = 12'h345;
-        pright = 4'h6;
+        pcenter = 16'h3456;
+        pright = 4'h7;
       end
       4'h4: begin
         pleft = 4'h3;
-        pcenter = 12'h456;
-        pright = 4'h7;
+        pcenter = 16'h4567;
+        pright = 4'h8;
       end
       4'h5: begin
         pleft = 4'h4;
-        pcenter = 12'h567;
-        pright = 4'h8;
+        pcenter = 16'h5678;
+        pright = 4'h9;
       end
       4'h6: begin
         pleft = 4'h5;
-        pcenter = 12'h678;
-        pright = 4'h9;
+        pcenter = 16'h6789;
+        pright = 4'ha;
       end
       4'h7: begin
         pleft = 4'h6;
-        pcenter = 12'h789;
-        pright = 4'ha;
+        pcenter = 16'h789a;
+        pright = 4'hb;
       end
       4'h8: begin
         pleft = 4'h7;
-        pcenter = 12'h89a;
-        pright = 4'hb;
+        pcenter = 16'h89ab;
+        pright = 4'hc;
       end
       4'h9: begin
         pleft = 4'h8;
-        pcenter = 12'h9ab;
-        pright = 4'hc;
+        pcenter = 16'h9abc;
+        pright = 4'hd;
       end
       4'ha: begin
         pleft = 4'h9;
-        pcenter = 12'habc;
-        pright = 4'hd;
+        pcenter = 16'habcd;
+        pright = 4'he;
       end
       4'hb: begin
         pleft = 4'ha;
-        pcenter = 12'hbcd;
-        pright = 4'he;
+        pcenter = 16'hbcde;
+        pright = 4'hf;
       end
       4'hc: begin
         pleft = 4'hb;
-        pcenter = 12'hcde;
+        pcenter = 16'hcdef;
         pright = 4'hf;
       end
       4'hd: begin
         pleft = 4'hc;
-        pcenter = 12'hdef;
+        pcenter = 16'hdeff;
         pright = 4'hf;
       end
       4'he: begin
         pleft = 4'hd;
-        pcenter = 12'heff;
+        pcenter = 16'hefff;
         pright = 4'hf;
       end
       4'hf: begin
         pleft = 4'he;
-        pcenter = 12'hfff;
+        pcenter = 16'hffff;
         pright = 4'hf;
       end
     endcase
@@ -332,7 +332,7 @@ module ballcontrol_2 (
                 M_counter_d = 1'h0;
                 M_state_d = LEFTUP_state;
               end else begin
-                if (pcenter[0+3-:4] == aluout || pcenter[4+3-:4] == aluout || pcenter[8+3-:4] == aluout) begin
+                if (pcenter[0+3-:4] == aluout || pcenter[4+3-:4] == aluout || pcenter[8+3-:4] == aluout || pcenter[12+3-:4] == aluout) begin
                   ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
                   M_pos_d = ball;
                   M_counter_d = 1'h0;
@@ -411,7 +411,7 @@ module ballcontrol_2 (
                 M_counter_d = 1'h0;
                 M_state_d = RIGHTUP_state;
               end else begin
-                if (pcenter[0+3-:4] == aluout || pcenter[4+3-:4] == aluout || pcenter[8+3-:4] == aluout) begin
+                if (pcenter[0+3-:4] == aluout || pcenter[4+3-:4] == aluout || pcenter[8+3-:4] == aluout || pcenter[12+3-:4] == aluout) begin
                   ball = array[(M_posy_q)*128+(M_posx_q)*8+7-:8];
                   M_pos_d = ball;
                   M_counter_d = 1'h0;

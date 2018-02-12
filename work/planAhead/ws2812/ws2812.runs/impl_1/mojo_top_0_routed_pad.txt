@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Dec 13 02:46:09 2017
+Wed Dec 13 09:58:23 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -53,8 +53,8 @@ Pinout by Pin Number:
 |P31       |            |         |VCCO_3                    |         |           |3             |          |         |           |         |3.30     |          |           |                |
 |P32       |            |IOBS     |IO_L2N_3                  |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |P33       |            |IOBM     |IO_L2P_3                  |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|P34       |io_led[4]   |IOB      |IO_L1N_VREF_3             |OUTPUT   |LVTTL      |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P35       |io_led[22]  |IOB      |IO_L1P_3                  |OUTPUT   |LVTTL      |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|P34       |io_led[22]  |IOB      |IO_L1N_VREF_3             |OUTPUT   |LVTTL      |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|P35       |io_led[4]   |IOB      |IO_L1P_3                  |OUTPUT   |LVTTL      |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P36       |            |         |VCCAUX                    |         |           |              |          |         |           |         |3.3      |          |           |                |
 |P37       |            |         |PROGRAM_B_2               |         |           |              |          |         |           |         |         |          |           |                |
 |P38       |rst_n       |IOB      |IO_L65N_CSO_B_2           |INPUT    |LVTTL      |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
